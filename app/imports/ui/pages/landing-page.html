@@ -1,0 +1,225 @@
+<template name="Landing_Page">
+
+  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+
+  <div class="land-body-one"> <!--LAND BODY ONE DIV-->
+    <div class="ui two row centered grid container" style="padding-top: 317px;"> <!--UI THREE ROW GRID DIV-->
+
+      <div class="row"> <!--FIRST ROW-->
+        <h1 style="color: white; font-size: 72px; font-family: 'Coiny', cursive;
+">MOAR CHOW</h1> <!--LOGO IMAGE-->
+      </div> <!--FIRST /ROW-->
+
+      <div class="row"> <!--SECOND ROW-->
+        <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
+          <center>
+            <button class="ui massive green button" type="submit" href="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT BUTTON-->
+              <i class="sign in icon"></i>
+              Get Started
+            </button> <!--SUBMIT /BUTTON-->
+          </center>
+        </form> <!--SUBMIT /FORM-->
+      </div> <!--SECOND /ROW-->
+
+    </div> <!--UI TWOROW GRID /DIV-->
+  </div> <!--LAND BODY ONE /DIV-->
+
+  <div class="land-body-two"> <!--LAND BODY TWO DIV-->
+    <div class="ui equal width centered grid container" style="padding-top: 128px;"> <!--UI EQUAL GRID DIV-->
+
+      <div class="row"> <!--FIRST ROW-->
+        <h2 style="color: white; font-size: 36px;">What is Munchies?</h2>
+      </div> <!--FIRST /ROW-->
+
+      <div class="equal width row"> <!--SECOND ROW-->
+
+        <div class="column"></div> <!--EMPTY SECOND ROW FIRST COLUMN-->
+
+        <div class="column" id="about"> <!--SECOND ROW SECOND COLUMN-->
+          Alloy (the team-builder application) is a social network oriented that connects people to projects based on
+          the “skill graph,” allowing like-minded people with complementing skills to find each other and work on
+          projects together.
+        </div> <!--SECOND ROW SECOND /COLUMN-->
+
+        <div class="column"></div> <!--EMPTY SECOND ROW THIRD COLUMN-->
+
+      </div> <!--SECOND /ROW-->
+
+      <div class="row"> <!--THIRD ROW-->
+        <h3 style="color: white; font-size: 30px;">Features</h3>
+      </div> <!--THIRD /ROW-->
+
+      <div class="equal width row" style="padding-bottom: 0px;"> <!--FOURTH ROW-->
+
+        <div class="column"></div> <!--EMPTY FOURTH ROW FIRST COLUMN-->
+
+        <div class="column" id="even"> <!--FOURTH ROW SECOND COLUMN-->
+          Allows students and faculty to create profiles that list their skills, their interests, and their
+          availability/willingness to collaborate.
+        </div> <!--FOURTH ROW SECOND /COLUMN-->
+
+        <div class="column" id="odd"> <!--FOURTH ROW THIRD COLUMN-->
+          Users can also create project proposals with slots for the various skillsets they think the project needs.
+        </div> <!--FOURTH ROW THIRD COLUMN-->
+
+        <div class="column"></div> <!--EMPTY FOURTH ROW FOURTH COLUMN-->
+
+      </div> <!--FOURTH /ROW-->
+
+      <div class="equal width row" style="padding-top: 0px; padding-bottom: 0px;">  <!--FIFTH ROW-->
+
+        <div class="column"></div>  <!--EMPTY FIFTH ROW FIRST COLUMN-->
+
+        <div class="column" id="odd">  <!--FIFTH ROW SECOND COLUMN-->
+          Users can search for other users or proposals by skill, interest, and availability.
+        </div> <!--FIFTH ROW SECOND /COLUMN-->
+
+        <div class="column" id="even">  <!--FIFTH ROW THIRD COLUMN-->
+          Users can set up automatic alerts for projects that fall under their interests, or new users in their area
+          with skills they need.
+        </div> <!--FIFTH ROW SECOND /COLUMN-->
+
+        <div class="column"></div>  <!--EMPTY FIFTH ROW FOURTH COLUMN-->
+
+      </div>  <!--FIFTH /ROW-->
+
+      <div class="equal width row" style="padding-top: 0px;">  <!--SIXTH ROW-->
+
+        <div class="column"></div> <!--EMPTY SIXTH ROW FIRST COLUMN-->
+
+        <div class="column" id="even"> <!--SIXTH ROW SECOND COLUMN-->
+          Users can asymmetrically follow other users to keep track of their project proposals.
+        </div> <!--SIXTH ROW SECOND /COLUMN-->
+
+        <div class="column" id="odd"> <!--SIXTH ROW THIRD COLUMN-->
+          Faculty, students, and admins must log in with UHMid.
+        </div><!--SIXTH ROW THIRD /COLUMN-->
+
+        <div class="column"></div> <!--EMPTY SIXTH ROW FOURTH COLUMN-->
+
+      </div> <!--SIXTH /ROW-->
+
+    </div> <!--UI EQUAL GRID /DIV-->
+  </div> <!--LAND BODY TWO /DIV-->
+
+  <div class="land-body-three"> <!--LAND BODY THREE DIV-->
+    <div class="ui centered grid" style="padding-top: 167px;"> <!--UI CENTERED GRID DIV-->
+
+      <div class="row">
+        <h2 style="color: white; font-size: 36px;">Team Munch</h2>
+      </div>
+
+      <div class="row">
+        <div class="ui link cards">
+
+          <div class="card">
+            <div class="image">
+              <img src="/images/circle-user.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Kasey Hagi</div>
+              <div class="meta">
+                Computer Engineer
+              </div>
+              <div class="description">
+                Computer Engineer major.
+              </div>
+            </div>
+            <div class="extra content">
+            <span>
+        <i class="student icon"></i>
+        Expected Graduation:
+      </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="/images/mMangro-1.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Michael MAngrobang</div>
+              <div class="meta">
+                Computer Science
+              </div>
+              <div class="description">
+                Computer Science major.
+              </div>
+            </div>
+            <div class="extra content">
+            <span>
+        <i class="student icon"></i>
+        Expected Graduation: Fall 2018
+      </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="/images/circle-user.jpg">
+            </div>
+            <div class="content">
+              <div class="header">Ryan Theriot</div>
+              <div class="meta">
+                Computer Science
+              </div>
+              <div class="description">
+                Computer Science major.
+              </div>
+            </div>
+            <div class="extra content">
+            <span>
+        <i class="student icon"></i>
+        Expected Graduation:
+      </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="image">
+              <img src="/images/circle-user.jpg">
+            </div>
+            <div class="content">
+              <div class="header">William Siu</div>
+              <div class="meta">
+                Computer Science
+              </div>
+              <div class="description">
+                Computer Science major.
+              </div>
+            </div>
+            <div class="extra content">
+            <span>
+        <i class="student icon"></i>
+        Expected Graduation:
+      </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row"> <!--SECOND ROW-->
+        <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
+          <center>
+            <button class="ui massive green button" type="submit" href="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT BUTTON-->
+              <i class="sign in icon"></i>
+              Get Started Now
+            </button> <!--SUBMIT /BUTTON-->
+          </center>
+        </form> <!--SUBMIT /FORM-->
+      </div> <!--SECOND /ROW-->
+
+    </div> <!--UI CENTERED GRID /DIV-->
+  </div> <!--LAND BODY THREE /DIV-->
+
+  {{> Footer}}
+
+  <script>
+    $('.ui.two.row.centered.grid.container')
+        .transition('hide')
+        .transition('fade right','2s')
+    ;
+  </script>
+
+</template>

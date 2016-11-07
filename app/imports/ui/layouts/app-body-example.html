@@ -1,11 +1,11 @@
-<template name="App_Body">
+<template name="AppExample_Body">
 
   <div id="app"> <!--APP DIV-->
 
     <div class="ui left vertical inverted labeled icon sidebar menu"> <!--UI SIDEBAR DIV-->
 
-      <a class="item" href="{{pathFor 'User_Profile_Page'}}"> <!--FIRST ITEM-->
-        <div class="image"><img class="ui tiny centered circular image" src="/images/circle-user.jpg"/></div>
+      <a class="item"> <!--FIRST ITEM-->
+        <div class="image"><img class="ui tiny centered circular image" src="/images/mMangro-1.jpg"/></div>
         My Account
       </a> <!--FIRST /ITEM-->
 
@@ -16,12 +16,12 @@
         My Projects
       </a> <!--SECOND /ITEM-->
 
-      <a class="item" href="{{pathFor 'List_Invites_Page'}}"> <!--THIRD ITEM-->
+      <a class="item"> <!--THIRD ITEM-->
         <i class="mail icon"></i>
         My Messages
       </a> <!--THIRD /ITEM-->
 
-      <a class="item" href="{{pathFor 'List_Projects_Page'}}"> <!--FOURTH ITEM-->
+      <a class="item"> <!--FOURTH ITEM-->
         <i class="grid layout icon"></i>
         Available Projects
       </a> <!--FOURTH /ITEM-->
@@ -41,8 +41,8 @@
         List a New Project
       </a> <!--SEVENTH /ITEM-->
 
-      <a class="item" href="{{pathFor 'Landing_Page'}}"> <!--EIGHTH ITEM-->
-        <i class="sign out icon" ></i>
+      <a class="item"> <!--EIGHTH ITEM-->
+        <i class="sign out icon"></i>
         Log Out
       </a> <!--EIGHTH /ITEM-->
 
@@ -59,11 +59,11 @@
 
         <div class="ui container"> <!--UI CONTAINER DIV-->
 
-          <button class="ui tiny right launch button"> <!--UI BUTTON-->
+          <button class="ui tiny right button"> <!--UI BUTTON-->
             <center><i class="large inverted list icon"></i></center>
           </button> <!--UI /BUTTON-->
 
-          {{> Header}}
+          {{> HeaderExample}}
 
         </div> <!--UI CONTAINER /DIV-->
 
@@ -84,7 +84,7 @@
     $('#app .ui.sidebar')
         .sidebar({ context: $('#app') })
         .sidebar('setting', 'transition', 'overlay')
-        .sidebar('attach events', '.ui.launch.button');
+        .sidebar('attach events', '.ui.button');
   </script>
 
 </template>
