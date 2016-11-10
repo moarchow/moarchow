@@ -35,31 +35,10 @@ FlowRouter.route('/user', {
   },
 });
 
-FlowRouter.route('/user/mjm4', {
-  name: 'User_Profile_Page_Example',
-  action() {
-    BlazeLayout.render('AppExample_Body', { main: 'User_Profile_Page_Example' });
-  },
-});
-
 FlowRouter.route('/list', {
   name: 'List_Stuff_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'List_Stuff_Page' });
-  },
-});
-
-FlowRouter.route('/invites', {
-  name: 'List_Invites_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'List_Invites_Page' });
-  },
-});
-
-FlowRouter.route('/projects', {
-  name: 'List_Projects_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'List_Projects_Page' });
   },
 });
 
