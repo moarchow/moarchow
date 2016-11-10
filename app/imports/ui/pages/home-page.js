@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
@@ -35,3 +36,6 @@ Template.Home_Page.helpers({
   },
 
 });
+=======
+import { Template } from 'meteor/templating';
+>>>>>>> michael-m1

@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   padding-top: 61px; /* Move body of page below navbar. */
 }
 
@@ -30,3 +31,156 @@ body {
   box-shadow: none;
   border-radius: 0;
 }
+=======
+  /*padding-top: 71px; */ /* Sidebar is part of body. Increasing padding pushes entire site down */
+}
+
+footer {
+  /*background-color: #014C37; */
+  background-color: #16ab39;
+  height: 87px;
+  color: rgba(255, 255, 255, 0.901961);
+  position: relative;
+}
+
+h4 {
+  text-align: center;
+}
+.ui.top.fixed.borderless.inverted.menu {
+  /*background-color: #014C37; */
+  background-color: #16ab39;
+}
+
+.ui.right.button {
+  /*background-color: #014C37; */
+  background-color: #16ab39;
+}
+
+.ui.left.vertical.inverted.labeled.icon.sidebar.menu {
+  /*background-color: #014C37;
+  background-color: forestgreen; */
+  background-color: cornflowerblue;
+}
+
+#login-buttons a, .accounts-dialog a {
+  color: rgba(255, 255, 255, 0.901961);
+}
+
+.land-body-one {
+  height: 960px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/landing-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.land-body-two {
+  height: 960px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background-color: cornflowerblue;
+}
+
+#about {
+  /*color: white;*/
+  padding: 15px;
+  font-size: 18px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+#even {
+  height: 125px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+#odd {
+  height: 125px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgba(192, 192, 192, 0.75);
+}
+
+.land-body-three {
+  height: 960px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: url('/images/overlooking.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#founder {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding:5px;
+  border:1px solid #021a40;
+  background-color:#fff;
+}
+
+#body-three-row {
+  padding: 15px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.login-body {
+  height: 720px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/white-desk.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.form-background {
+  padding: 15px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.user-body {
+  height: 720px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/user-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+#profile-info {
+  font-size: 20px;
+  padding: 15px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+#user-picture {
+  padding:5px;
+  border:1px solid #021a40;
+  background-color:#fff;
+}
+
+.invites-body {
+  height: 720px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/user-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.projects-body {
+  height: 720px;
+  overflow: hidden;
+  margin: 0px;
+  border-radius:0px;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/mauna-kea.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+>>>>>>> michael-m1
