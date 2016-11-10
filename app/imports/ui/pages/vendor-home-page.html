@@ -4,12 +4,15 @@
     <div class="title-header">
 
       <!--VENDOR'S NAME-->
-      <div style="padding-top: 120px; padding-bottom: 15px">{{ vendorField 'name' }}</div>
+      <div style="padding-top: 120px; padding-bottom: 15px">
+        {{ vendorField 'name' }}
+      </div>
       <h4>Located at {{vendorField 'location'}}</h4>
     </div>
     <div class="ui container" style="padding-top: 20px">
       <div class="ui two column grid">
         <div class="ui seven wide column">
+          <img src="\images\le-crepe.jpg" class="ui fluid image">
           <div class="ui segment" style="background-color: #E0F2F1; box-shadow: none;
   border-radius: 0;">
 
@@ -19,15 +22,15 @@
   border-radius: 0;">
             <h4>Hours of Operation</h4>
             <p>Monday<br/>
-            {{ vendorHours 'monday' }}</p>
+              {{ vendorHours 'monday' }}</p>
             <p> Tuesday <br/>
-            {{ vendorHours 'tuesday' }}</p>
+              {{ vendorHours 'tuesday' }}</p>
             <p> Wednesday <br/>
-            {{ vendorHours 'wednesday' }}</p>
+              {{ vendorHours 'wednesday' }}</p>
             <p> Thursday <br/>
-            {{ vendorHours 'thursday' }}</p>
+              {{ vendorHours 'thursday' }}</p>
             <p> Friday <br/>
-            {{ vendorHours 'friday' }}</p>
+              {{ vendorHours 'friday' }}</p>
           </div>
         </div>
 
