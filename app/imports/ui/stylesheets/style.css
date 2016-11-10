@@ -26,3 +26,7 @@ body {
   font-size: medium;
   color: #004D40;
 }
+.ui.segment{
+  box-shadow: none;
+  border-radius: 0;
+}

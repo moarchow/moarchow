@@ -1,47 +1,99 @@
 <template name="Home_Page">
-  <div class="ui container">
+  <div class="ui container" style="margin-top: 20px">
+
     <div class="ui two column grid">
       {{#if Template.subscriptionsReady}}
       <div class="ui column">
+        <div class="ui segment">
 
-        <table style="margin-top: 20px" class="ui table">
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Location</th>
-            <th>Description</th>
-          </tr>
-          </thead>
-          <tbody>
-          {{#each vendor in VendorsList}}
-          <tr>
-            <td><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></td>
-            <td>{{vendor.location}}</td>
-            <td>{{vendor.description}}</td>
-          </tr>
-          {{/each}}
-          </tbody>
-        </table>
+          <div class="ui form">
+            <div class="inline fields">
+              <label>Where? </label>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>Open Now</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>Top Picks for Me</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="ui table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each vendor in VendorsList}}
+            <tr>
+              <td><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></td>
+              <td>{{vendor.location}}</td>
+              <td>{{vendor.description}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="ui column">
-        <table style="margin-top: 20px" class="ui inverted table">
-          <thead>
-          <th>Item Name</th>
-          <th>Sold At</th>
-          <th>Description</th>
-          </thead>
-          <tbody>
-          {{#each menu in MenusList}}
+        <div class="ui segment">
 
-          <tr>
-            <td>{{menu.name}}</td>
-            <td> {{menu.vendor}}</td>
-            <td> {{menu.description}}</td>
-          </tr>
-          {{/each}}
-          </tbody>
-        </table>
+          <div class="ui form">
+            <div class="inline fields">
+              <label>I'm craving:</label>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>Asian</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>French</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>Mexican</label>
+                </div>
+              </div>
+              <div class="field">
+                <div class="ui radio checkbox">
+                  <input type="radio" name="fruit" tabindex="0" class="hidden">
+                  <label>Mediterranean</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="ui inverted table">
+            <thead>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Sold At</th>
+            </thead>
+            <tbody>
+            {{#each menu in MenusList}}
+
+            <tr>
+              <td>{{menu.name}}</td>
+              <td> {{menu.description}}</td>
+              <td> {{menu.vendor}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
       </div>
       {{else}}
       {{> Loading}}
@@ -51,3 +103,4 @@
 
   </div>
 </template>
+

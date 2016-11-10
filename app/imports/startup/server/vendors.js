@@ -18,7 +18,7 @@ const vendorSeeds = [
       friday: '8:00am-2:00pm',
     },
     foodTypes: ["French", "Coffee", "Dessert"],
-    menus: ['Savory Crepes', 'Sweet Crepes', 'Drinks', 'Fresh Salads'],
+    menus: ['Savory Crepes', 'Sweet Crepes', 'Fresh Salads', 'Drinks'],
     image: 'le-crepe.jpg',
 
   },
