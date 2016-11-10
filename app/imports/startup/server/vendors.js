@@ -7,6 +7,7 @@ import { _ } from 'meteor/underscore';
  */
 const vendorSeeds = [
   {
+    id: 'daSpot',
     name: 'Da Spot',
     location: 'Sustainability Courtyard',
     description: 'Da Spot serves an all vegeterian menu of fresh health foods from around the globe, including Hawaiian, Eqyptian, Mediterranean, European, & Asian gourmet foods.',
@@ -18,8 +19,10 @@ const vendorSeeds = [
       friday: '8:30am-3:00pm',
     },
     foodTypes: [],
+    menus: ['Monday', 'Tuesday', 'Smoothies']
   },
   {
+    id: 'leCrepeCafe',
       name: 'Le Crepe Cafe',
       location: 'Richardson School of Law',
       description: "Le Crêpe Café makes traditional French crêpes, cooked to order in front of customers. They specialize in a flavorsome menu of sweet and savory crêpes and use fresh ingredients, organic when possible. Their utensils are even bio-compostable. Enjoy a crêpe any time of day, as a breakfast, snack, main course, or dessert - close your eyes and you're in Paris!",
@@ -31,6 +34,7 @@ const vendorSeeds = [
         friday: '8:00am-2:00pm',
       },
       foodTypes: [],
+    menus: ['Savory Crepes', 'Sweet Crepes', 'Drinks', 'Fresh Salads'],
 
 },
 ];

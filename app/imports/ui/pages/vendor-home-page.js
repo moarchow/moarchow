@@ -1,4 +1,5 @@
 import {ReactiveDict} from 'meteor/reactive-dict';
+import {Mongo} from 'meteor/mongo';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {Template} from 'meteor/templating';
 import {_} from 'meteor/underscore';
@@ -37,11 +38,29 @@ Template.Vendor_Home_Page.helpers({
     return Menus.find();
   },
   MenuSpecific() {
-    /* returns a menu specific to a vendor */
-    // filter Menus for specific vendor
-    /* Eventually want to organize menu items based on "other" field */
-      //  create list of all "other" fields within filtered menu
-      //  create a collection of menu items for each field
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    const vendorName = vendor['name'];
+    const categories = vendor['menus'];
+    const filteredMenu = Menus.find({ vendor: vendorName });
+
+    return filteredMenu;
 
   },
+  MenuCategories(){
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    const vendorName = vendor['name'];
+    const categories = vendor['menus'];
+    console.log(categories);
+    let menu = [];
+    for (var category in categories) {
+      var categoryName = categories[category];
+      menu[category] = {
+        list: Menus.find({ vendor: vendorName , other: categoryName }),
+        name: categoryName,
+      };
+    }
+    console.log(menu);
+    return menu;
+  },
+
 });

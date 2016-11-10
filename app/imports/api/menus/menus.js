@@ -1,5 +1,7 @@
 import {Mongo} from 'meteor/mongo';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
+import { Vendors } from '../../api/vendors/vendors.js';
+
 
 /* eslint-disable object-shorthand */
 
@@ -31,6 +33,11 @@ export const MenusSchema = new SimpleSchema({
     type: String,
     optional: true,
   },
+  foodTypes: {
+    label: 'foodTypes',
+    type: Object,
+    optional: true,
+  }
   /* Need to add: Food Type */
   /* wasn't sure how to include an array into the schema since a dish could have multiple food types */
 
