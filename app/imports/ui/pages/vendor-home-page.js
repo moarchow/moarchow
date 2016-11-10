@@ -15,7 +15,10 @@ Template.Vendor_Home_Page.onCreated(function onCreated() {
 });
 
 Template.Vendor_Home_Page.helpers({
-
+  'vendorImage': function(){
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    return vendor.image;
+  },
   vendorField(fieldName) {
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     // See https://dweldon.silvrback.com/guards to understand '&&' in next line.
@@ -50,7 +53,6 @@ Template.Vendor_Home_Page.helpers({
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     const vendorName = vendor['name'];
     const categories = vendor['menus'];
-    console.log(categories);
     let menu = [];
     for (var category in categories) {
       var categoryName = categories[category];
@@ -59,7 +61,6 @@ Template.Vendor_Home_Page.helpers({
         name: categoryName,
       };
     }
-    console.log(menu);
     return menu;
   },
 
