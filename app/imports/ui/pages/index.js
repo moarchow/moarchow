@@ -16,6 +16,9 @@ import './vendor-home-page.js';
 import './landing-page.html';
 import './landing-page.js';
 
+import './food-truck-map.html';
+import './food-truck-map.js';
+
 import './user-profile.html';
 import './user-profile';
 
