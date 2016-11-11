@@ -14,3 +14,6 @@ import './app-body-example.html';
 import './app-body-example.js';
 import './header-example.html';
 import './header-example.js';
+
+import './cas-login.html';
+import './cas-login.js';

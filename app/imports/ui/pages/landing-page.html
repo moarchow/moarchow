@@ -16,10 +16,10 @@
       <div class="row"> <!--THIRD ROW-->
         <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
           <center>
-            <button class="ui massive green button" type="submit" href="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT BUTTON-->
+            <div class="ui massive green button"> <!--SUBMIT BUTTON-->
               <i class="sign in icon"></i>
-              Get Started
-            </button> <!--SUBMIT /BUTTON-->
+              {{> Cas_Login }}
+            </div> <!--SUBMIT /BUTTON-->
           </center>
         </form> <!--SUBMIT /FORM-->
       </div> <!--THIRD /ROW-->
@@ -205,10 +205,10 @@
       <div class="row"> <!--SECOND ROW-->
         <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
           <center>
-            <button class="ui massive green button" type="submit" href="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT BUTTON-->
+            <div class="ui massive green button" type="submit"> <!--SUBMIT BUTTON-->
               <i class="sign in icon"></i>
-              Get Started Now
-            </button> <!--SUBMIT /BUTTON-->
+              {{> Cas_Login }}
+            </div> <!--SUBMIT /BUTTON-->
           </center>
         </form> <!--SUBMIT /FORM-->
       </div> <!--SECOND /ROW-->
