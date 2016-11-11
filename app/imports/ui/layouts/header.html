@@ -2,6 +2,11 @@
 
   <div class="ui top fixed borderless inverted menu">
 
+    <div class="ui container">
+      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>meteor-example-cas-uh</h1></a>
+      {{> Cas_Login }}
+    </div>
+
     <a class="item"><img class="ui tiny image" src="/images/alloy-wordmark.svg"/></a> <!--LOGO GOES HERE-->
 
     <a class="item"><h3>Hello, {{#if currentUser}}Name{{/if}}</h3></a> <!--DISPLAYS USER'S NAME-->
