@@ -35,7 +35,7 @@ export const MenusSchema = new SimpleSchema({
   },
   foodTypes: {
     label: 'foodTypes',
-    type: String,
+    type: Object,
     optional: true,
   }
   /* Need to add: Food Type */
