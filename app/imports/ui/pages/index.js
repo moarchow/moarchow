@@ -12,3 +12,12 @@ import './list-stuff-page.js';
 
 import './vendor-home-page.html';
 import './vendor-home-page.js';
+
+import './landing-page.html';
+import './landing-page.js';
+
+import './user-profile.html';
+import './user-profile';
+
+import './user-profile-example.html';
+import './user-profile-example.js';

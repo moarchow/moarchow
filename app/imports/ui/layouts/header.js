@@ -5,3 +5,11 @@ import { Template } from 'meteor/templating';
 Template.Header.onRendered(function enableDropDown() {
   this.$('.dropdown').dropdown();
 });
+
+/*Template.Header.events({
+  'click .ui.sidebar'() {
+    $('.ui.labeled.icon.sidebar')
+        .sidebar('toggle')
+    ;
+  },
+ });*/
