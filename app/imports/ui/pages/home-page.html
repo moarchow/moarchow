@@ -1,4 +1,5 @@
 <template name="Home_Page">
+  {{#If_Logged_In}}
   <div class="ui container" style="margin-top: 20px">
     <div class="ui two column grid">
       {{#if Template.subscriptionsReady}}
@@ -99,5 +100,6 @@
       {{/if}}
     </div>
   </div>
+  {{/If_Logged_In}}
 </template>
 

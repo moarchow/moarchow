@@ -1,5 +1,6 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.Cas_Login.helpers({
   /**
@@ -17,8 +18,20 @@ Template.Cas_Login.events({
    * @returns {boolean} False.
    */
   'click .cas-logout': function casLogout(event) {
+    FlowRouter.go('Landing_Page');
     event.preventDefault();
     Meteor.logout();
+    return false;
+  },
+
+  /**
+   * Handle the click on the profile link.
+   * @param event The click event.
+   * @returns {boolean} False.
+   */
+  'click .cas-profile': function casProfile(event) {
+    FlowRouter.go('User_Profile_Page');
+    event.preventDefault();
     return false;
   },
 
@@ -28,6 +41,7 @@ Template.Cas_Login.events({
    * @returns {boolean} False.
    */
   'click .cas-login': function casLogin(event, instance) {
+    FlowRouter.go('Home_Page');
     event.preventDefault();
     const callback = function loginCallback(error) {
       if (error) {
