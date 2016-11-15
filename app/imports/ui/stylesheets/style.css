@@ -32,8 +32,8 @@ body {
 }
 
 footer {
-  background: linear-gradient(#16ab39,#014C37);
-  height: 61px;
+  background: linear-gradient(#00B628,#009320);
+  height: 87px;
   color: rgba(255, 255, 255, 0.901961);
   position: relative;
 }
@@ -42,17 +42,16 @@ h4 {
   text-align: center;
 }
 .ui.top.fixed.borderless.inverted.menu {
-  background: linear-gradient(#014C37,#16ab39);
-  height: 61px;
+  background: linear-gradient(#00B628,#009320);
 }
 
 .ui.right.button {
   /*background-color: #014C37; */
-  background-color: #16ab39;
+  background-color: #00B628;
 }
 
 #login-buttons a, .accounts-dialog a {
-  color: rgba(255, 255, 255, 0.901961);
+  color: #16ab39;
 }
 
 .land-body-one {
@@ -60,7 +59,7 @@ h4 {
   overflow: hidden;
   margin: 0px;
   border-radius:0px;
-  background: url('/images/landing-image.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/landingbackground.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -69,7 +68,7 @@ h4 {
   overflow: hidden;
   margin: 0px;
   border-radius:0px;
-  background-color: #014C37;
+  background-color: #00771A;
 }
 
 #about {
@@ -138,4 +137,12 @@ h4 {
   padding:5px;
   border:1px solid #021a40;
   background-color:#fff;
+}
+
+.map-container {
+  width: 60%;
+  max-width: 60%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
