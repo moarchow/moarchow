@@ -1,16 +1,16 @@
 <template name="Header">
 
-  <div class="ui top fixed borderless inverted menu">
+  <div class="ui top fixed borderless inverted menu" style="height: 91.68px;">
 
     <div class="ui container">
 
-      <div class="item"><h1>Moar Chow</h1></div> <!--LOGO GOES HERE(?)-->
-
       {{#if currentUser}}
+
+      <div class="item"><h1>Moar Chow</h1></div> <!--LOGO GOES HERE(?)-->
 
       <a class="{{ isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page'}}"><h3>Home</h3></a>
 
-      <a class="{{ isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page'}}"><h3>Vendors</h3></a>
+      <a class="{{ isActiveRoute 'Vendor_List_Page'}} item" href="{{pathFor 'Vendor_List_Page'}}"><h3>Vendors</h3></a>
 
       <a class="{{ isActiveRoute 'Food_Truck_Map'}} item" href="{{pathFor 'Food_Truck_Map'}}"><h3>Map</h3></a>
 

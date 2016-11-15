@@ -14,10 +14,18 @@ FlowRouter.route('/home', {
     BlazeLayout.render('App_Body', { main: 'Home_Page' });
   },
 });
+
 FlowRouter.route('/vendor/:_id', {
   name: 'Vendor_Home_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Vendor_Home_Page' });
+  },
+});
+
+FlowRouter.route('/vendors', {
+  name: 'Vendor_List_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Vendor_List_Page' });
   },
 });
 
