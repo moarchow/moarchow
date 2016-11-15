@@ -8,13 +8,11 @@
 
       {{#if currentUser}}
 
-      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Home</h3></a>
+      <a class="{{ isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page'}}"><h3>Home</h3></a>
 
-      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Vendors</h3></a>
+      <a class="{{ isActiveRoute 'Home_Page'}} item" href="{{pathFor 'Home_Page'}}"><h3>Vendors</h3></a>
 
-      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Map</h3></a>
-
-      <a class="right item"><h3>Hello, {{user}}!</h3></a> <!--DISPLAYS USER'S NAME-->
+      <a class="{{ isActiveRoute 'Food_Truck_Map'}} item" href="{{pathFor 'Food_Truck_Map'}}"><h3>Map</h3></a>
 
       <a class="right item">{{> Cas_Login }}</a>
 
@@ -23,5 +21,6 @@
     </div>
 
   </div>
+
 
 </template>
