@@ -1,7 +1,11 @@
 <template name="Cas_Login">
-  {{#if currentUser}}
-  <div class="item cas-logout"><h3>Logout&nbsp;<i class="sign out icon"></i></h3></div>
-  {{else}}
-  <div class="item cas-login"><i class="sign in icon"></i>Get Started!</div>
-  {{/if}}
+
+  <div class="ui item">
+    {{#if currentUser}}
+    <div class="item cas-logout">Logout</div>
+    {{else}}
+    <div class="item cas-login"><i class="sign in icon"></i>Login</div>
+    {{/if}}
+  </div>
+
 </template>

@@ -49,6 +49,13 @@ FlowRouter.route('/add', {
   },
 });
 
+FlowRouter.route('/map', {
+  name: 'Food_Truck_Map',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Food_Truck_Map' });
+  },
+});
+
 FlowRouter.route('/stuff/:_id', {
   name: 'Edit_Stuff_Page',
   action() {
@@ -61,3 +68,4 @@ FlowRouter.notFound = {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
   },
 };
+
