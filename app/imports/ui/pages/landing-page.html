@@ -1,6 +1,6 @@
 <template name="Landing_Page">
 
-  <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
 
   <div class="land-body-one"> <!--LAND BODY ONE DIV-->
     <div class="ui three row centered grid container" style="padding-top: 317px;"> <!--UI THREE ROW GRID DIV-->
@@ -10,16 +10,15 @@
       </div> <!--FIRST /ROW-->
 
       <div class="row"> <!--SECOND ROW-->
-        <h1 style="color: white; font-size: 72px; font-family: 'Coiny', cursive;">Hush Hunger's Roar and More!</h1>
+        <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px; font-family: 'Ravi Prakash', cursive;">Hush Hunger's Roar and More!</h1>
       </div> <!-- SECOND /ROW-->
 
       <div class="row"> <!--THIRD ROW-->
-        <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
+        <form> <!--SUBMIT FORM-->
           <center>
-            <div class="ui massive green button"> <!--SUBMIT BUTTON-->
-              <i class="sign in icon"></i>
+            <a class="ui massive green button"> <!--SUBMIT BUTTON-->
               {{> Cas_Login }}
-            </div> <!--SUBMIT /BUTTON-->
+            </a> <!--SUBMIT /BUTTON-->
           </center>
         </form> <!--SUBMIT /FORM-->
       </div> <!--THIRD /ROW-->
@@ -31,7 +30,7 @@
     <div class="ui equal width centered grid container" style="padding-top: 128px;"> <!--UI EQUAL GRID DIV-->
 
       <div class="row"> <!--FIRST ROW-->
-        <h2 style="color: white; font-size: 36px;">What is Munchies?</h2>
+        <h2 style="color: white; font-size: 36px;">What is Moar Chow?</h2>
       </div> <!--FIRST /ROW-->
 
       <div class="equal width row"> <!--SECOND ROW-->
@@ -39,9 +38,7 @@
         <div class="column"></div> <!--EMPTY SECOND ROW FIRST COLUMN-->
 
         <div class="column" id="about"> <!--SECOND ROW SECOND COLUMN-->
-          Alloy (the team-builder application) is a social network oriented that connects people to projects based on
-          the “skill graph,” allowing like-minded people with complementing skills to find each other and work on
-          projects together.
+          There are many food choices on campus at UH Manoa and knowing what each place serves and when can be confusing. Moar Chow will allow you to browse all the menus on campus, search by cuisine type, and view the location of all the food trucks from day to day. Users will also be able to rate/review dishes, save their favorite cuisines.
         </div> <!--SECOND ROW SECOND /COLUMN-->
 
         <div class="column"></div> <!--EMPTY SECOND ROW THIRD COLUMN-->
@@ -57,12 +54,11 @@
         <div class="column"></div> <!--EMPTY FOURTH ROW FIRST COLUMN-->
 
         <div class="column" id="even"> <!--FOURTH ROW SECOND COLUMN-->
-          Allows students and faculty to create profiles that list their skills, their interests, and their
-          availability/willingness to collaborate.
+          Allows Univeristy of Hawaii users to search by cuisine type.
         </div> <!--FOURTH ROW SECOND /COLUMN-->
 
         <div class="column" id="odd"> <!--FOURTH ROW THIRD COLUMN-->
-          Users can also create project proposals with slots for the various skillsets they think the project needs.
+          Univeristy of Hawaii users can also view daily food truck locations and hours of operation.
         </div> <!--FOURTH ROW THIRD COLUMN-->
 
         <div class="column"></div> <!--EMPTY FOURTH ROW FOURTH COLUMN-->
@@ -74,33 +70,16 @@
         <div class="column"></div>  <!--EMPTY FIFTH ROW FIRST COLUMN-->
 
         <div class="column" id="odd">  <!--FIFTH ROW SECOND COLUMN-->
-          Users can search for other users or proposals by skill, interest, and availability.
+          University of Hawaii users can rate and review dishes.
         </div> <!--FIFTH ROW SECOND /COLUMN-->
 
         <div class="column" id="even">  <!--FIFTH ROW THIRD COLUMN-->
-          Users can set up automatic alerts for projects that fall under their interests, or new users in their area
-          with skills they need.
+          University of Hawaii users can save their favorite dishes to their own personal profile.
         </div> <!--FIFTH ROW SECOND /COLUMN-->
 
         <div class="column"></div>  <!--EMPTY FIFTH ROW FOURTH COLUMN-->
 
       </div>  <!--FIFTH /ROW-->
-
-      <div class="equal width row" style="padding-top: 0px;">  <!--SIXTH ROW-->
-
-        <div class="column"></div> <!--EMPTY SIXTH ROW FIRST COLUMN-->
-
-        <div class="column" id="even"> <!--SIXTH ROW SECOND COLUMN-->
-          Users can asymmetrically follow other users to keep track of their project proposals.
-        </div> <!--SIXTH ROW SECOND /COLUMN-->
-
-        <div class="column" id="odd"> <!--SIXTH ROW THIRD COLUMN-->
-          Faculty, students, and admins must log in with UHMid.
-        </div><!--SIXTH ROW THIRD /COLUMN-->
-
-        <div class="column"></div> <!--EMPTY SIXTH ROW FOURTH COLUMN-->
-
-      </div> <!--SIXTH /ROW-->
 
     </div> <!--UI EQUAL GRID /DIV-->
   </div> <!--LAND BODY TWO /DIV-->
@@ -109,13 +88,13 @@
     <div class="ui centered grid" style="padding-top: 167px;"> <!--UI CENTERED GRID DIV-->
 
       <div class="row">
-        <h2 style="color: white; font-size: 36px;">Team Munch</h2>
+        <h2 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 52px; font-family: 'Ravi Prakash', cursive;">Team Munch</h2>
       </div>
 
       <div class="row">
         <div class="ui link cards">
 
-          <div class="card">
+          <a class="card" href="https://kaseyhagi.github.io/">
             <div class="image">
               <img src="/images/kasey.jpg">
             </div>
@@ -134,9 +113,9 @@
         Interests:<br />Software<br />Mathematics<br />Physics
       </span>
             </div>
-          </div>
+          </a>
 
-          <div class="card">
+          <a class="card" href="https://mickyjm.github.io/">
             <div class="image">
               <img src="/images/mMangro-1.jpg">
             </div>
@@ -155,9 +134,9 @@
         Interests:<br />artificial intelligence<br />software engineering<br />video game development
       </span>
             </div>
-          </div>
+          </a>
 
-          <div class="card">
+          <a class="card" href="https://rctheriot.github.io/">
             <div class="image">
               <img src="/images/ryan.jpg">
             </div>
@@ -176,9 +155,9 @@
         Interests:<br />Computer Graphics<br />Unity3D<br />Virtual Reality
       </span>
             </div>
-          </div>
+          </a>
 
-          <div class="card">
+          <a class="card" href="https://williamycsiu.github.io/">
             <div class="image">
               <img src="/images/william.jpg">
             </div>
@@ -194,10 +173,10 @@
             <div class="extra content">
             <span>
         <i class="student icon"></i>
-        Interests:<br />drawing, video games, video game design, anime, building desktop computers
+        Interests:<br />drawing, video games,<br />video game design, anime,<br />building desktop computers
       </span>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -205,10 +184,9 @@
       <div class="row"> <!--SECOND ROW-->
         <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
           <center>
-            <div class="ui massive green button" type="submit"> <!--SUBMIT BUTTON-->
-              <i class="sign in icon"></i>
+            <a class="ui massive green button" type="submit"> <!--SUBMIT BUTTON-->
               {{> Cas_Login }}
-            </div> <!--SUBMIT /BUTTON-->
+            </a> <!--SUBMIT /BUTTON-->
           </center>
         </form> <!--SUBMIT /FORM-->
       </div> <!--SECOND /ROW-->
@@ -216,10 +194,8 @@
     </div> <!--UI CENTERED GRID /DIV-->
   </div> <!--LAND BODY THREE /DIV-->
 
-  {{> Footer}}
-
   <script>
-    $('.ui.two.row.centered.grid.container')
+    $('.ui.three.row.centered.grid.container')
         .transition('hide')
         .transition('fade right','2s')
     ;

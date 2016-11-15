@@ -1,19 +1,7 @@
-  <template name="Cas_Login">
-  <div class="ui simple dropdown item">
-    {{#if currentUser}}
-    <div class="text">Welcome {{ user }} </div>
-    {{else}}
-    <div class="text">Get Started! Login Here</div>
-    {{/if}}
-    <i class="dropdown icon"></i>
-    <div class="menu">
-      {{#if currentUser}}
-      <div class="item cas-profile">Profile</div> <!-- link to user profile? -->
-      <div class="item cas-logout">Logout</div>
-      {{else}}
-      <div class="item cas-login">Login</div>
-      {{/if}}
-    </div>
-  </div>
-
+<template name="Cas_Login">
+  {{#if currentUser}}
+  <div class="item cas-logout"><h3>Logout&nbsp;<i class="sign out icon"></i></h3></div>
+  {{else}}
+  <div class="item cas-login"><i class="sign in icon"></i>Get Started!</div>
+  {{/if}}
 </template>

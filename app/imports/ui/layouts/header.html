@@ -1,37 +1,27 @@
 <template name="Header">
 
-  {{#if currentUser}}
-
   <div class="ui top fixed borderless inverted menu">
 
     <div class="ui container">
 
-      <a class="item" href="{{pathFor 'Home_Page'}}"><h1>Moar Chow</h1></a> <!--LOGO GOES HERE-->
+      <div class="item"><h1>Moar Chow</h1></div> <!--LOGO GOES HERE(?)-->
 
-      <a class="item"><h3>Hello, {{user}}!</h3></a> <!--DISPLAYS USER'S NAME-->
-      <a class="fitted right item">{{> Cas_Login }}</a>
+      {{#if currentUser}}
+
+      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Home</h3></a>
+
+      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Vendors</h3></a>
+
+      <a class="item" action="{{pathFor 'Home_Page'}}"><h3>Map</h3></a>
+
+      <a class="right item"><h3>Hello, {{user}}!</h3></a> <!--DISPLAYS USER'S NAME-->
+
+      <a class="right item">{{> Cas_Login }}</a>
+
+      {{/if}}
+
     </div>
 
-    <div class="right item"> <!--FRIST RIGHT ITEM DIV-->
-
-      <div class="ui category search"> <!--SEARCH BAR DIV-->
-
-        <div class="ui icon input"> <!--UI ICON INPUT DIV-->
-
-          <input class="prompt" type="text" placeholder="Search Projects...">
-
-          <i class="search icon"></i>
-
-        </div> <!--UI ICON INPUT /DIV-->
-
-      </div> <!--SEARCH BAR /DIV-->
-
-    </div> <!--FIRST RIGHT ITEM /DIV-->
-
   </div>
-
-  {{else}}
-  {{> Landing_Page}}
-  {{/if}}
 
 </template>
