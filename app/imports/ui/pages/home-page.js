@@ -4,6 +4,7 @@ import { Template } from 'meteor/templating';
 import { _ } from 'meteor/underscore';
 import { Vendors } from '../../api/vendors/vendors.js';
 import { Menus } from '../../api/menus/menus.js';
+import './home-page.html';
 
 Template.Home_Page.onCreated(function onCreated() {
   this.autorun(() => {
@@ -34,4 +35,12 @@ Template.Home_Page.helpers({
     return Menus.find();
   },
 
+});
+
+Template.Home_Page.events({});
+
+Template.Home_Page.onRendered(function () {
+  this.$('.dropdown').dropdown({
+    allowAdditions: true,
+  });
 });

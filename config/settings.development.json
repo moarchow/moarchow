@@ -1,4 +1,5 @@
 {
+
   "cas": {
     "baseUrl": "https://cas-test.its.hawaii.edu/cas/",
     "autoClose": true
@@ -10,5 +11,10 @@
       "popupWidth": 810,
       "popupHeight": 610
     }
-  }
+  },
+  "allowed_users": [
+    "johnson",
+    "cmoore",
+    "rtheriot"
+  ]
 }

@@ -10,6 +10,9 @@ import './home-page.js';
 import './list-stuff-page.html';
 import './list-stuff-page.js';
 
+import './vendor-list-page.html';
+import './vendor-list-page.js';
+
 import './vendor-home-page.html';
 import './vendor-home-page.js';
 
@@ -21,3 +24,4 @@ import './food-truck-map.js';
 
 import './user-profile.html';
 import './user-profile';
+
