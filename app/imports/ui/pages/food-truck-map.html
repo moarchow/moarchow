@@ -1,7 +1,38 @@
 <template name="Food_Truck_Map">
 
-  <div class="map-container">
-    {{> googleMap name="map" options=mapOptions}}
+
+  <div class="ui container" style="margin-top: 40px; margin-bottom: 20px;">
+
+    <div class="ui two column grid">
+
+      <div class="ui twelve wide column">
+
+        <div class="map-container">
+          {{> googleMap name="map" options=mapOptions}}
+        </div>
+
+      </div>
+
+      <div class="ui four wide column">
+
+        <div class="ui segment">
+          <table class="ui table">
+            <thead>
+            <tr>
+              <th>Vendors</th>
+            </tr></thead>
+            <tbody>
+            {{#each vendor in VendorsList}}
+            <tr>
+              <td class="collapsing"><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 </template>

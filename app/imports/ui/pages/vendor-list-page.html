@@ -1,0 +1,42 @@
+<template name="Vendor_List_Page">
+  {{#If_Logged_In}}
+  <div class="ui container" style="margin-top: 20px">
+    <div class="ui grid" style="padding-top: 20px; padding-bottom: 20px;">
+      {{#if Template.subscriptionsReady}}
+      <div class="ui column">
+        <div class="ui segment">
+          <table class="ui celled padded table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+              <th>Description</th>
+              <th>Rating</th>
+            </tr></thead>
+            <tbody>
+            {{#each vendor in VendorsList}}
+            <tr>
+              <td class="collapsing"><h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3></td>
+              <td>{{vendor.location}}</td>
+              <td>{{vendor.description}}</td>
+              <td class="collapsing">
+                <i class="yellow star icon"></i>
+                <i class="yellow star icon"></i>
+                <i class="yellow star icon"></i>
+                <i class="yellow star icon"></i>
+                <i class="yellow star icon"></i>
+              </td>
+            </tr>
+            {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {{else}}
+      {{> Loading}}
+      {{/if}}
+    </div>
+  </div>
+  {{/If_Logged_In}}
+</template>
+

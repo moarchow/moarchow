@@ -9,6 +9,8 @@ const vendorSeeds = [
   {
     name: 'Le Crepe Cafe',
     location: 'Richardson School of Law',
+    latitude: 21.296527,
+    longitude: -157.818289,
     description: "Le Crêpe Café makes traditional French crêpes, cooked to order in front of customers. They specialize in a flavorsome menu of sweet and savory crêpes and use fresh ingredients, organic when possible. Their utensils are even bio-compostable. Enjoy a crêpe any time of day, as a breakfast, snack, main course, or dessert - close your eyes and you're in Paris!",
     hours: {
       monday: '8:00am-2:00pm',
@@ -25,6 +27,8 @@ const vendorSeeds = [
   {
     name: 'Da Spot',
     location: 'Sustainability Courtyard',
+    latitude: 21.298536,
+    longitude: -157.816875,
     description: 'Da Spot serves an all vegeterian menu of fresh health foods from around the globe, including Hawaiian, Eqyptian, Mediterranean, European, & Asian gourmet foods.',
     hours: {
       monday: '8:30am-3:00pm',
@@ -41,6 +45,8 @@ const vendorSeeds = [
   {
     name: "Serg's Mexican Kitchen",
     location: 'Krauss Hall or Holmes Hall',
+    latitude: 21.298061,
+    longitude: -157.818189,
     description: "Serg's Mexican Kitchen, 'Home of the Famous Flautas' sells everything from nachos, quesadillas, to their mouthwatering flautas and enchiladas. Serg's placed Bronze in the 2013 Hale Aina Awards, Silver in the 2014 Hale Aina Awards and 'Best Mexican Food' in Ka Leo, which was voted on by UH students.",
     hours: {
       monday: '10:00am-2:00pm',
