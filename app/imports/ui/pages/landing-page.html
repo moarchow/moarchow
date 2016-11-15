@@ -1,25 +1,25 @@
 <template name="Landing_Page">
 
+
   <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
 
   <div class="land-body-one"> <!--LAND BODY ONE DIV-->
-    <div class="ui three row centered grid container" style="padding-top: 317px;"> <!--UI THREE ROW GRID DIV-->
+    <div class="ui three row centered grid container" style="padding-top: 175px;"> <!--UI THREE ROW GRID DIV-->
 
-      <div class="row"> <!--FIRST ROW-->
-        <img class="ui image" style="height: 200px; width: 200px;" src="/images/need-real-food.jpg" /> <!--LOGO IMAGE-->
+      <div class="ui medium image"> <!--FIRST ROW-->
+        <img src="/images/need-real-food.png">
       </div> <!--FIRST /ROW-->
 
       <div class="row"> <!--SECOND ROW-->
-        <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px; font-family: 'Ravi Prakash', cursive;">Hush Hunger's Roar and More!</h1>
+        <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px; font-family: 'Ravi Prakash', cursive;">
+          Hush Hunger's Roar and More!</h1>
       </div> <!-- SECOND /ROW-->
 
       <div class="row"> <!--THIRD ROW-->
         <form> <!--SUBMIT FORM-->
-          <center>
-            <a class="ui massive green button"> <!--SUBMIT BUTTON-->
-              {{> Cas_Login }}
-            </a> <!--SUBMIT /BUTTON-->
-          </center>
+          <a class="ui massive green button"> <!--SUBMIT BUTTON-->
+            {{> Cas_Login }}
+          </a> <!--SUBMIT /BUTTON-->
         </form> <!--SUBMIT /FORM-->
       </div> <!--THIRD /ROW-->
 
@@ -38,7 +38,9 @@
         <div class="column"></div> <!--EMPTY SECOND ROW FIRST COLUMN-->
 
         <div class="column" id="about"> <!--SECOND ROW SECOND COLUMN-->
-          There are many food choices on campus at UH Manoa and knowing what each place serves and when can be confusing. Moar Chow will allow you to browse all the menus on campus, search by cuisine type, and view the location of all the food trucks from day to day. Users will also be able to rate/review dishes, save their favorite cuisines.
+          There are many food choices on campus at UH Manoa and knowing what each place serves and when can be
+          confusing. Moar Chow will allow you to browse all the menus on campus, view the location of restaurants and
+          food trucks. Users will also be able to rate/review vendors and save their favorite dishes.
         </div> <!--SECOND ROW SECOND /COLUMN-->
 
         <div class="column"></div> <!--EMPTY SECOND ROW THIRD COLUMN-->
@@ -88,7 +90,7 @@
     <div class="ui centered grid" style="padding-top: 167px;"> <!--UI CENTERED GRID DIV-->
 
       <div class="row">
-        <h2 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 52px; font-family: 'Ravi Prakash', cursive;">Team Munch</h2>
+        <h2 style="color: white; font-size: 36px;">MOAR CHOW TEAM</h2>
       </div>
 
       <div class="row">
@@ -104,13 +106,14 @@
                 Computer Engineer
               </div>
               <div class="description">
-                I am studying for a B.S. in Computer Engineering in the College of Engineering at the University of Hawaii. I expect to graduate in Spring, 2018.
+                I am studying for a B.S. in Computer Engineering in the College of Engineering at the University of
+                Hawaii. I expect to graduate in Spring, 2018.
               </div>
             </div>
             <div class="extra content">
             <span>
         <i class="student icon"></i>
-        Interests:<br />Software<br />Mathematics<br />Physics
+        Interests:<br/>Software<br/>Mathematics<br/>Physics
       </span>
             </div>
           </a>
@@ -125,13 +128,14 @@
                 Computer Science
               </div>
               <div class="description">
-                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2018.
+                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at
+                the University of Hawaii. I expect to graduate in Spring, 2018.
               </div>
             </div>
             <div class="extra content">
             <span>
         <i class="student icon"></i>
-        Interests:<br />artificial intelligence<br />software engineering<br />video game development
+        Interests:<br/>artificial intelligence<br/>software engineering<br/>video game development
       </span>
             </div>
           </a>
@@ -146,13 +150,14 @@
                 Computer Science
               </div>
               <div class="description">
-                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Fall, 2017.
+                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at
+                the University of Hawaii. I expect to graduate in Fall, 2017.
               </div>
             </div>
             <div class="extra content">
             <span>
         <i class="student icon"></i>
-        Interests:<br />Computer Graphics<br />Unity3D<br />Virtual Reality
+        Interests:<br/>Computer Graphics<br/>Unity3D<br/>Virtual Reality
       </span>
             </div>
           </a>
@@ -173,7 +178,7 @@
             <div class="extra content">
             <span>
         <i class="student icon"></i>
-        Interests:<br />drawing, video games,<br />video game design, anime,<br />building desktop computers
+        Interests:<br/>drawing, video games,<br/>video game design, anime,<br/>building desktop computers
       </span>
             </div>
           </a>
@@ -181,15 +186,6 @@
         </div>
       </div>
 
-      <div class="row"> <!--SECOND ROW-->
-        <form action="{{pathFor 'Log_In_Page'}}"> <!--SUBMIT FORM-->
-          <center>
-            <a class="ui massive green button" type="submit"> <!--SUBMIT BUTTON-->
-              {{> Cas_Login }}
-            </a> <!--SUBMIT /BUTTON-->
-          </center>
-        </form> <!--SUBMIT /FORM-->
-      </div> <!--SECOND /ROW-->
 
     </div> <!--UI CENTERED GRID /DIV-->
   </div> <!--LAND BODY THREE /DIV-->
@@ -197,7 +193,7 @@
   <script>
     $('.ui.three.row.centered.grid.container')
         .transition('hide')
-        .transition('fade right','2s')
+        .transition('fade right', '2s')
     ;
   </script>
 
