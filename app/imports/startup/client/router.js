@@ -4,7 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 FlowRouter.route('/', {
   name: 'Landing_Page',
   action() {
-    BlazeLayout.render('Landing', { main: 'Landing_Page' });
+    BlazeLayout.render('App_Body', { main: 'Landing_Page' });
   },
 });
 
@@ -18,13 +18,6 @@ FlowRouter.route('/vendor/:_id', {
   name: 'Vendor_Home_Page',
   action() {
     BlazeLayout.render('App_Body', { main: 'Vendor_Home_Page' });
-  },
-});
-
-FlowRouter.route('/login', {
-  name: 'Log_In_Page',
-  action() {
-    BlazeLayout.render('Landing', { main: 'Log_In_Page' });
   },
 });
 
