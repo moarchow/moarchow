@@ -8,13 +8,14 @@
         {{ vendorField 'name' }}
       </div>
       <h4>Located at {{vendorField 'location'}}</h4>
+
     </div>
-    <div class="ui container" style="padding-top: 20px">
+    <div class="ui container" style="padding-top: 20px; padding-bottom: 20px">
       <div class="ui two column grid">
         <div class="ui seven wide column">
+          <button class="fluid ui toggle inverted green button">Add to Favorites</button>
           <img src="/images/{{vendorImage}}" class="ui fluid image">
           <div class="ui segment">
-
             {{ vendorField 'description' }}
           </div>
           <div class=" ui segment">
@@ -54,6 +55,7 @@
   {{else}}
   {{> Loading}}
   {{/if}}
+
 </template>
 
 
