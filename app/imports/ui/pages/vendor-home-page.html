@@ -12,7 +12,9 @@
     <div class="ui container" style="padding-top: 20px">
       <div class="ui two column grid">
         <div class="ui seven wide column">
-          <img src="/images/{{vendorImage}}" class="ui fluid image">
+          <div class="map-container" style="height: 250px">
+            {{> googleMap name="map" options=mapOptions}}
+          </div>
           <div class="ui segment">
 
             {{ vendorField 'description' }}
@@ -33,13 +35,15 @@
         </div>
 
         <div class="ui nine wide column">
-          {{#each category in MenuCategories}}
+          {{#each menu in vendorField 'menus'}}
           <div class="ui segment" id="menu-list">
-            <div id="menu-category">{{category.name}}</div>
+            <div id="menu-category">{{menu.name}}</div>
+            <div id="menu-description">{{menu.description}}</div>
             <br/>
-            {{#each item in category.list}}
+            {{#each item in menu.items}}
             <div id="menu-item">{{item.name}}</div>
             <div style="color: #616161">{{item.description}}</div>
+            <div style="color: #616161">{{item.price}}</div>
             <br>
             {{/each}}
 
