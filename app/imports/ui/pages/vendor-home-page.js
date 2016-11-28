@@ -4,14 +4,49 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 import {Template} from 'meteor/templating';
 import {_} from 'meteor/underscore';
 import {Vendors} from '../../api/vendors/vendors.js';
-import {Menus} from '../../api/menus/menus.js';
 
 Template.Vendor_Home_Page.onCreated(function onCreated() {
   this.autorun(() => {
     this.subscribe('Vendors');
-    this.subscribe('Menus');
   });
-  // this.context = Vendors.namedContext('Vendor_Home_Page');
+
+  GoogleMaps.ready('map', function (map) {
+
+    Vendors.find().observe({
+
+      added: function (document) {
+        var icon = 'http://maps.google.com/mapfiles/ms/icons/red-dot.png';
+        if (document._id == Vendors.findOne(FlowRouter.getParam('_id'))._id)
+        {
+            icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+        }
+        var marker = new google.maps.Marker({
+          draggable: false,
+          animation: google.maps.Animation.DROP,
+          position: new google.maps.LatLng(document.latitude, document.longitude),
+          title: document.name,
+          map: map.instance,
+          id: document._id,
+          icon: icon
+        });
+
+        var name = document.name;
+        var description = document.description;
+
+        var contentString =
+            '<h2>' + name + '</h2>'+
+            '<p>' + description + '</p>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+      }});
+  });
 });
 
 Template.Vendor_Home_Page.helpers({
@@ -29,39 +64,23 @@ Template.Vendor_Home_Page.helpers({
     return vendor.hours[field];
 
   },
-
-  /**
-   * @returns {*} All of the Stuff documents.
-   */
   VendorsList() {
     return Vendors.find();
   },
-  MenusList() {
-    /* returns all menu items */
-    return Menus.find();
-  },
-  MenuSpecific() {
-    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    const vendorName = vendor['name'];
-    const categories = vendor['menus'];
-    const filteredMenu = Menus.find({ vendor: vendorName });
 
-    return filteredMenu;
-
-  },
-  MenuCategories(){
-    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    const vendorName = vendor['name'];
-    const categories = vendor['menus'];
-    let menu = [];
-    for (var category in categories) {
-      var categoryName = categories[category];
-      menu[category] = {
-        list: Menus.find({ vendor: vendorName , other: categoryName }),
-        name: categoryName,
+  mapOptions: function () {
+    if (GoogleMaps.loaded()) {
+      const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+      return {
+        center: new google.maps.LatLng(vendor.latitude, vendor.longitude),
+        zoom: 17
       };
     }
-    return menu;
-  },
+  }
+
+});
+
+Meteor.startup(function () {
+  GoogleMaps.load({ key: 'AIzaSyDmoMBN4kRbUeOzHIacLxerbY50amm9EnA' });
 
 });
