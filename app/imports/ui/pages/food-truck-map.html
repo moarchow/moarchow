@@ -1,5 +1,5 @@
 <template name="Food_Truck_Map">
-
+  {{#If_Logged_In}}
 
   <div class="ui container" style="margin-top: 40px; margin-bottom: 20px;">
 
@@ -20,7 +20,8 @@
             <thead>
             <tr>
               <th>Vendors</th>
-            </tr></thead>
+            </tr>
+            </thead>
             <tbody>
             {{#each vendor in VendorsList}}
             <tr>
@@ -34,7 +35,7 @@
       </div>
     </div>
   </div>
-
+  {{/If_Logged_In}}
 </template>
 
 
