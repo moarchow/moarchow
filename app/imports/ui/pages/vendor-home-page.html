@@ -1,4 +1,5 @@
 <template name="Vendor_Home_Page">
+  {{#If_Logged_In}}
   {{#if Template.subscriptionsReady}}
   <div class="ui center aligned fluid container">
     <div class="title-header">
@@ -58,6 +59,7 @@
   {{else}}
   {{> Loading}}
   {{/if}}
+  {{/If_Logged_In}}
 </template>
 
 
