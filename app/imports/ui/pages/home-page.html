@@ -22,7 +22,11 @@
               {{#each vendor in VendorsList}}
               <tr>
                 <td>
+                  {{#if isOpen vendor }}
+                  <button class="ui green button">Open</button>
+                  {{else}}
                   <button class="ui red button">Closed</button>
+                  {{/if}}
                 </td>
                 <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>

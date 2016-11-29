@@ -13,6 +13,15 @@
     <div class="ui container" style="padding-top: 20px">
       <div class="ui two column grid">
         <div class="ui seven wide column">
+          {{#if isOpen }}
+          <div class="ui inverted green segment">
+            Open Now
+          </div>
+          {{else}}
+          <div class="ui inverted red segment">
+            Closed
+          </div>
+          {{/if}}
           <div class="map-container" style="height: 250px">
             {{> googleMap name="map" options=mapOptions}}
           </div>
