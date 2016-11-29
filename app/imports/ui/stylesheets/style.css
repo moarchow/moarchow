@@ -45,6 +45,7 @@ h4 {
   text-align: center;
 }
 .ui.top.fixed.borderless.inverted.menu {
+  height: 66px;
   background: linear-gradient(#00B628,#009320);
 }
 .ui.right.button {
