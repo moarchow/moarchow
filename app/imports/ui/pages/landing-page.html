@@ -3,21 +3,21 @@
   <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
 
   <div class="land-body-one"> <!--LAND BODY ONE DIV-->
-    <div class="ui three row centered grid container" style="padding-top: 175px;"> <!--UI THREE ROW GRID DIV-->
+    <div class="ui three row centered grid container" style="padding-top: 100px; padding-bottom: 100px;"> <!--UI THREE ROW GRID DIV-->
 
       <div class="ui medium image"> <!--FIRST ROW-->
         <img src="/images/need-real-food.png" /> <!--LOGO IMAGE-->
       </div> <!--FIRST /ROW-->
 
       <div class="row"> <!--SECOND ROW-->
-        <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px;
-         font-family: 'Ravi Prakash', cursive;">
-          Hush Hunger's Roar and More!
-        </h1>
+        <div class="tagline">
+          <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px;
+         font-family: 'Ravi Prakash', cursive;">Hush Hunger's Roar and More!</h1>
+        </div>
       </div> <!-- SECOND /ROW-->
 
       <div class="row"> <!--THIRD ROW-->
-        <form> <!--SUBMIT FORM-->
+        <form class="log-button"> <!--SUBMIT FORM-->
             <a class="ui massive green button"> <!--SUBMIT BUTTON-->
               {{> Cas_Login }}
             </a> <!--SUBMIT /BUTTON-->
@@ -28,10 +28,10 @@
   </div> <!--LAND BODY ONE /DIV-->
 
   <div class="land-body-two"> <!--LAND BODY TWO DIV-->
-    <div class="ui equal width centered grid container" style="padding-top: 128px;"> <!--UI EQUAL GRID DIV-->
+    <div class="ui equal width centered grid container" style="padding-top: 100px;padding-bottom: 100px;"> <!--UI EQUAL GRID DIV-->
 
       <div class="row"> <!--FIRST ROW-->
-        <h2 style="color: white; font-size: 36px;">What is Moar Chow?</h2>
+        <h2 style="color: white; font-size: 36px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">What is Moar Chow?</h2>
       </div> <!--FIRST /ROW-->
 
       <div class="equal width row"> <!--SECOND ROW-->
@@ -41,7 +41,7 @@
         <div class="column" id="about"> <!--SECOND ROW SECOND COLUMN-->
           There are many food choices on campus at UH Manoa and knowing what each place serves and when can be
           confusing. Moar Chow will allow you to browse all the menus on campus, view the location of restaurants and
-          food trucks. Users will also be able to rate/review vendors and save their favorite dishes.
+          food trucks.
         </div> <!--SECOND ROW SECOND /COLUMN-->
 
         <div class="column"></div> <!--EMPTY SECOND ROW THIRD COLUMN-->
@@ -49,34 +49,34 @@
       </div> <!--SECOND /ROW-->
 
       <div class="row"> <!--THIRD ROW-->
-        <h3 style="color: white; font-size: 30px;">Features</h3>
+        <h3 style="color: white; font-size: 30px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Features</h3>
       </div> <!--THIRD /ROW-->
 
       <div class="equal width row" style="padding-bottom: 0px;"> <!--FOURTH ROW-->
 
         <div class="column"></div> <!--EMPTY FOURTH ROW FIRST COLUMN-->
 
-        <div class="column" id="even"> <!--FOURTH ROW SECOND COLUMN-->
-          Allows Univeristy of Hawaii users to search by cuisine type.
+        <div class="column" id="even-one"> <!--FOURTH ROW SECOND COLUMN-->
+          Allows University of Hawaii users to search by cuisine type.
         </div> <!--FOURTH ROW SECOND /COLUMN-->
 
-        <div class="column" id="odd"> <!--FOURTH ROW THIRD COLUMN-->
-          Univeristy of Hawaii users can also view daily food truck locations and hours of operation.
+        <div class="column" id="odd-one"> <!--FOURTH ROW THIRD COLUMN-->
+          University of Hawaii users can also view daily food truck locations and hours of operation.
         </div> <!--FOURTH ROW THIRD COLUMN-->
 
         <div class="column"></div> <!--EMPTY FOURTH ROW FOURTH COLUMN-->
 
       </div> <!--FOURTH /ROW-->
 
-      <div class="equal width row" style="padding-top: 0px; padding-bottom: 0px;">  <!--FIFTH ROW-->
+      <div class="equal width row" style="padding-top: 0px;">  <!--FIFTH ROW-->
 
         <div class="column"></div>  <!--EMPTY FIFTH ROW FIRST COLUMN-->
 
-        <div class="column" id="odd">  <!--FIFTH ROW SECOND COLUMN-->
+        <div class="column" id="odd-two">  <!--FIFTH ROW SECOND COLUMN-->
           University of Hawaii users can rate and review dishes.
         </div> <!--FIFTH ROW SECOND /COLUMN-->
 
-        <div class="column" id="even">  <!--FIFTH ROW THIRD COLUMN-->
+        <div class="column" id="even-two">  <!--FIFTH ROW THIRD COLUMN-->
           University of Hawaii users can save their favorite dishes to their own personal profile.
         </div> <!--FIFTH ROW SECOND /COLUMN-->
 
@@ -88,113 +88,87 @@
   </div> <!--LAND BODY TWO /DIV-->
 
   <div class="land-body-three"> <!--LAND BODY THREE DIV-->
-    <div class="ui centered grid" style="padding-top: 167px;"> <!--UI CENTERED GRID DIV-->
+    <div class="ui centered grid" style="padding-top: 100px;padding-bottom: 100px;"> <!--UI CENTERED GRID DIV-->
 
       <div class="row">
-        <h2 style="color: white; font-size: 36px;">MOAR CHOW TEAM</h2>
+        <h2 style="color: #16ab39; font-size: 36px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Moar Chow Team</h2>
       </div>
 
       <div class="row">
-        <div class="ui link cards">
+        <div class="ui doubling cards">
 
-          <a class="card" href="https://kaseyhagi.github.io/">
-            <div class="image">
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted green button" href="https://kaseyhagi.github.io/" target="_blank">My Techfolio!</a>
+                  </div>
+                </div>
+              </div>
               <img src="/images/kasey.jpg">
             </div>
             <div class="content">
               <div class="header">Kasey Hagi</div>
-              <div class="meta">
-                Computer Engineer
-              </div>
-              <div class="description">
-                I am studying for a B.S. in Computer Engineering in the College of Engineering at the University of
-                Hawaii. I expect to graduate in Spring, 2018.
-              </div>
+              <div class="meta">Computer Engineering</div>
             </div>
-            <div class="extra content">
-            <span>
-        <i class="student icon"></i>
-        Interests:<br />Software<br />Mathematics<br />Physics
-      </span>
-            </div>
-          </a>
+          </div>
 
-          <a class="card" href="https://mickyjm.github.io/">
-            <div class="image">
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted green button" href="https://mickyjm.github.io/" target="_blank">My Techfolio!</a>
+                  </div>
+                </div>
+              </div>
               <img src="/images/mMangro-1.jpg">
             </div>
             <div class="content">
               <div class="header">Michael Mangrobang</div>
-              <div class="meta">
-                Computer Science
-              </div>
-              <div class="description">
-                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at
-                the University of Hawaii. I expect to graduate in Spring, 2018.
-              </div>
+              <div class="meta">Computer Science</div>
             </div>
-            <div class="extra content">
-            <span>
-        <i class="student icon"></i>
-        Interests:<br/>artificial intelligence<br/>software engineering<br/>video game development
-      </span>
-            </div>
-          </a>
+          </div>
 
-          <a class="card" href="https://rctheriot.github.io/">
-            <div class="image">
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted green button" href="https://rctheriot.github.io/" target="_blank">My Techfolio!</a>
+                  </div>
+                </div>
+              </div>
               <img src="/images/ryan.jpg">
             </div>
             <div class="content">
               <div class="header">Ryan Theriot</div>
-              <div class="meta">
-                Computer Science
-              </div>
-              <div class="description">
-                I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at
-                the University of Hawaii. I expect to graduate in Fall, 2017.
-              </div>
+              <div class="meta">Computer Science</div>
             </div>
-            <div class="extra content">
-            <span>
-        <i class="student icon"></i>
-        Interests:<br/>Computer Graphics<br/>Unity3D<br/>Virtual Reality
-      </span>
-            </div>
-          </a>
+          </div>
 
-          <a class="card" href="https://williamycsiu.github.io/">
-            <div class="image">
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <a class="ui inverted green button" href="https://williamycsiu.github.io/" target="_blank">My Techfolio!</a>
+                  </div>
+                </div>
+              </div>
               <img src="/images/william.jpg">
             </div>
             <div class="content">
               <div class="header">William Siu</div>
-              <div class="meta">
-                Computer Science
-              </div>
-              <div class="description">
-                I am a student majoring in Computer Science at the University of Hawaii of Manoa.
-              </div>
+              <div class="meta">Computer Science</div>
             </div>
-            <div class="extra content">
-            <span>
-        <i class="student icon"></i>
-        Interests:<br/>drawing, video games,<br/>video game design, anime,<br/>building desktop computers
-      </span>
-            </div>
-          </a>
+          </div>
 
         </div>
       </div>
 
     </div> <!--UI CENTERED GRID /DIV-->
   </div> <!--LAND BODY THREE /DIV-->
-
-  <script>
-    $('.ui.three.row.centered.grid.container')
-        .transition('hide')
-        .transition('fade right', '2s')
-    ;
-  </script>
 
 </template>

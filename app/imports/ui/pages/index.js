@@ -24,4 +24,3 @@ import './food-truck-map.js';
 
 import './user-profile.html';
 import './user-profile';
-

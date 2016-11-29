@@ -39,8 +39,8 @@ Template.Home_Page.helpers({
 
 Template.Home_Page.events({});
 
-Template.Home_Page.onRendered(function () {
-  this.$('.dropdown').dropdown({
-    allowAdditions: true,
+Template.Home_Page.onRendered(function() {
+  this.$('.ui.dropdown').dropdown({
+    allowAdditions: true
   });
 });
