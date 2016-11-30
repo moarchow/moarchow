@@ -8,6 +8,7 @@
         <div class="ui column">
 
           <div><h2>My Favorite Chow Spots</h2></div>
+          {{ currentUser.username}}
           <div class="ui segment">
             <table class="ui single line table">
               <thead>
@@ -15,11 +16,11 @@
                 <th class="two wide">Status</th>
                 <th class="six wide">Name</th>
                 <th class="six wide">My Rating</th>
-                <th class="two wide">Remove</th>
               </tr>
               </thead>
               <tbody>
-              {{#each vendor in VendorsList}}
+              {{#each vendor in FavoriteVendors}}
+              {{#if isFavorite vendor}}
               <tr>
                 <td>
                   {{#if isOpen vendor }}
@@ -38,10 +39,9 @@
                   <i class="yellow star icon"></i>
                   <i class="yellow star icon"></i>
                 </td>
-                <td>
-                  <button class="ui blue button">Remove</button>
-                </td>
               </tr>
+              {{else}}
+              {{/if}}
               {{/each}}
               </tbody>
             </table>
@@ -54,8 +54,8 @@
           <div><h2>Search For Chow</h2></div>
           <div class="ui segment">
 
-           <h2>Select Chow Type</h2>
-            <select name="chow" multiple="" class="ui fluid multiple selection dropdown">
+            <h3>Select Chow Type</h3>
+            <select multiple="" name="chow" class="ui fluid dropdown">
               <option value="American">American</option>
               <option value="British">British</option>
               <option value="Chinese">Chinese</option>
@@ -70,17 +70,30 @@
             <table class="ui table" style="color: #616161;">
               <thead>
               <th>Item Name</th>
+              <th>Category</th>
               <th>Description</th>
+              <th>Price</th>
               <th>Sold At</th>
+              <th>Type</th>
+
               </thead>
               <tbody>
-              {{#each menu in MenusList}}
-
+              {{#each vendor in VendorsList}}
+              {{#each menu in vendor.menus}}
+              {{#each item in menu.items}}
               <tr>
+                <td>{{item.name}}</td>
                 <td>{{menu.name}}</td>
-                <td> {{menu.description}}</td>
-                <td> {{menu.vendor}}</td>
+                <td> {{item.description}}</td>
+                <td> {{item.price}}</td>
+                <td>{{vendor.name}} </td>
+                <td>{{#each type in vendor.foodTypes }}
+                  {{type}}
+                  {{/each}}
+                </td>
               </tr>
+              {{/each}}
+              {{/each}}
               {{/each}}
               </tbody>
             </table>

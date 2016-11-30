@@ -4,6 +4,8 @@ import {FlowRouter} from 'meteor/kadira:flow-router';
 import {Template} from 'meteor/templating';
 import {_} from 'meteor/underscore';
 import {Vendors} from '../../api/vendors/vendors.js';
+import { Meteor } from 'meteor/meteor';
+
 
 Template.Vendor_Home_Page.onCreated(function onCreated() {
   this.autorun(() => {
@@ -54,11 +56,12 @@ Template.Vendor_Home_Page.helpers({
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     return vendor.image;
   },
+
   vendorField(fieldName) {
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    // See https://dweldon.silvrback.com/guards to understand '&&' in next line.
     return vendor[fieldName];
   },
+
   vendorHours(field){
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     return vendor.hours[field];
@@ -119,10 +122,38 @@ Template.Vendor_Home_Page.helpers({
             return true;
           else return false;
     }
+  },
+  isFavorite(){
+    console.log(Meteor.userId());
+
+    //returns true if this vendor is not in the user's favorites
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    console.log(vendor['favorite']);
+    const userID = Meteor.userId();
+    if( _.contains(vendor['favorite'], userID)){
+      return true;
+    }
+    else return false;
+
   }
 
 });
-
+Template.Vendor_Home_Page.events({
+  'click .add-favorite-button'(event, instance) {
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    vendor['favorite'].push(Meteor.userId());
+    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
+    console.log(vendor['favorite']);
+    FlowRouter.go('Home_Page');
+  },
+  'click .remove-favorite-button'(event, instance) {
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    vendor['favorite'].pop(Meteor.userId());
+    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
+    console.log(vendor['favorite']);
+    FlowRouter.go('Home_Page');
+  },
+});
 Meteor.startup(function () {
   GoogleMaps.load({ key: 'AIzaSyDmoMBN4kRbUeOzHIacLxerbY50amm9EnA' });
 

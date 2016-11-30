@@ -1,9 +1,9 @@
-import { ReactiveDict } from 'meteor/reactive-dict';
-import { FlowRouter } from 'meteor/kadira:flow-router';
-import { Template } from 'meteor/templating';
-import { _ } from 'meteor/underscore';
-import { Vendors } from '../../api/vendors/vendors.js';
-import { Menus } from '../../api/menus/menus.js';
+import {ReactiveDict} from 'meteor/reactive-dict';
+import {FlowRouter} from 'meteor/kadira:flow-router';
+import {Template} from 'meteor/templating';
+import {_} from 'meteor/underscore';
+import {Vendors} from '../../api/vendors/vendors.js';
+import {Menus} from '../../api/menus/menus.js';
 import './home-page.html';
 
 Template.Home_Page.onCreated(function onCreated() {
@@ -15,19 +15,14 @@ Template.Home_Page.onCreated(function onCreated() {
 
 Template.Home_Page.helpers({
 
-  // vendorField(fieldName){
-  //   const vendor = Vendors.findOne(id='subway');
-  //   return vendor && vendor[fieldName];
-  // },
-  // vendorHours(fieldName){
-    //   return vendorField(fieldName).hours;
-    // },
-
-
   /**
    * @returns {*} All of the Stuff documents.
    */
   VendorsList() {
+    return Vendors.find();
+  },
+  FavoriteVendors(){
+
     return Vendors.find();
   },
   MenusList() {
@@ -76,13 +71,30 @@ Template.Home_Page.helpers({
             return true;
           else return false;
     }
-  }
+  },
+  isFavorite(vendor){
+    if (_.contains(vendor['favorite'], Meteor.userId())) return true;
+    else {
+      console.log(vendor['favorite']);
+      console.log(Meteor.userId());
+      return false;
+    }
+  },
 
 });
 
-Template.Home_Page.events({});
+Template.Home_Page.events({
+  'click .ui.button'(event, instance) {
 
-Template.Home_Page.onRendered(function() {
+    const vendor = Vendors.findOne(instance);
+    vendor['favorite'].pop(Meteor.userId());
+    Vendors.update(instance, { $set: vendor });
+    console.log(vendor['favorite']);
+    FlowRouter.go('Home_Page');
+  },
+});
+
+Template.Home_Page.onRendered(function () {
   this.$('.ui.dropdown').dropdown({
     allowAdditions: true
   });

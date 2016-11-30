@@ -1,6 +1,6 @@
-import { Menus } from '../../api/menus/menus.js';
-import { Vendors } from '../../api/vendors/vendors.js';
-import { _ } from 'meteor/underscore';
+import {Menus} from '../../api/menus/menus.js';
+import {Vendors} from '../../api/vendors/vendors.js';
+import {_} from 'meteor/underscore';
 
 /**
  * A list of Menu Items to pre-fill the Menus Collection.
@@ -34,9 +34,9 @@ const menuSeeds = [
     description: 'Strawberries, Haupia, Sorbet, Soymilk',
     other: 'Smoothies',
   },
- /*   LE CREPE CAFE
- *    SAVORY CREPES
- * */
+  /*   LE CREPE CAFE
+   *    SAVORY CREPES
+   * */
   {
     name: 'Cheese Louise',
     vendor: 'Le Crepe Cafe',
@@ -84,7 +84,7 @@ const menuSeeds = [
     vendor: 'Le Crepe Cafe',
     description: '	Mozzarella, pepperoni, tomato sauce , and fresh basil',
     other: 'Savory Crepes'
-  },{
+  }, {
     name: 'Tsunami',
     vendor: 'Le Crepe Cafe',
     description: 'Mozzarella, turkey breast slices, and all of the veggies',
@@ -201,3 +201,5 @@ if (Menus.find().count() === 0) {
     Menus.insert(menu);
   });
 }
+
+
