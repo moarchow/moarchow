@@ -1,15 +1,16 @@
-import { ReactiveDict } from 'meteor/reactive-dict';
-import { FlowRouter } from 'meteor/kadira:flow-router';
-import { Template } from 'meteor/templating';
-import { _ } from 'meteor/underscore';
-import { Vendors } from '../../api/vendors/vendors.js';
-import { Menus } from '../../api/menus/menus.js';
+import {ReactiveDict} from 'meteor/reactive-dict';
+import {Session} from 'meteor/session';
+import {FlowRouter} from 'meteor/kadira:flow-router';
+import {Template} from 'meteor/templating';
+import {_} from 'meteor/underscore';
+import {Vendors} from '../../api/vendors/vendors.js';
 import './home-page.html';
+
+var chowSearch = '';
 
 Template.Home_Page.onCreated(function onCreated() {
   this.autorun(() => {
     this.subscribe('Vendors');
-    this.subscribe('Menus');
   })
 });
 
@@ -20,19 +21,14 @@ Template.Home_Page.helpers({
   //   return vendor && vendor[fieldName];
   // },
   // vendorHours(fieldName){
-    //   return vendorField(fieldName).hours;
-    // },
-
+  //   return vendorField(fieldName).hours;
+  // },
 
   /**
    * @returns {*} All of the Stuff documents.
    */
   VendorsList() {
     return Vendors.find();
-  },
-  MenusList() {
-    /* returns all menu items */
-    return Menus.find();
   },
   isOpen(vendor){
     const day = new Date();
@@ -76,14 +72,41 @@ Template.Home_Page.helpers({
             return true;
           else return false;
     }
+  },
+
+  VendorsFoodTypes() {
+    var typeArray = [];
+    Vendors.find().forEach(function (vendor) {
+      typeArray.push(vendor.foodTypes);
+    });
+    return _.sortBy(_.uniq(_.flatten(typeArray)), function (name) {
+      return name;
+    });
+  },
+
+});
+
+Template.Home_Page.events({
+
+  'click .chow-search': function (event) {
+    event.preventDefault();
+    var value = document.getElementById("chowSelect").value;
+
+    var searchList = [];
+
+    Vendors.find().forEach(function (vendor) {
+      for (var i = 0; i < vendor.foodTypes.length; i++) {
+        if (vendor.foodTypes[i] == value) {
+          searchList.push(vendor);
+        }
+      }
+    });
+    Session.set("SearchList", searchList);
   }
 
 });
 
-Template.Home_Page.events({});
-
-Template.Home_Page.onRendered(function() {
-  this.$('.ui.dropdown').dropdown({
-    allowAdditions: true
-  });
+Handlebars.registerHelper("SearchList", function (input) {
+  return Session.get("SearchList");
 });
+

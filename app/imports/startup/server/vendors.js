@@ -21,7 +21,7 @@ const vendorSeeds = [
       thursday: '8:00am-2:00pm',
       friday: '8:00am-2:00pm',
     },
-    foodTypes: ["French", "Coffee", "Dessert"],
+    foodTypes: [ "Coffee", "Pastry", "French", "Salad"],
     menus: [
       {
         name: 'Savory Crepes',
@@ -194,7 +194,7 @@ const vendorSeeds = [
       thursday: '10:00am-8:00pm',
       friday: '10:00am-8:00pm',
     },
-    foodTypes: ["Vietnamese", "Sandwiches", "Dessert", "Salads", "Asian"],
+    foodTypes: ["Vietnamese", "Sandwich", "Salads",],
     menus: [
       {
         name: 'Vietnamese Pho',
@@ -413,7 +413,7 @@ const vendorSeeds = [
       thursday: '12:00pm-7:30pm',
       friday: '12:00pm-8:30pm',
     },
-    foodTypes: ["Alochol", "Drinks"],
+    foodTypes: ["Alcohol"],
     menus: [
       {
         name: 'Liquor',
@@ -633,7 +633,7 @@ const vendorSeeds = [
       thursday: '7:00am-6:00pm',
       friday: '7:00am-5:00pm',
     },
-    foodTypes: ["Coffee", "Drinks", "Tea"],
+    foodTypes: ["Coffee", "Tea", "Pastry"],
     menus: [
       {
         name: 'Drinks',
@@ -734,7 +734,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:00pm',
       friday: '10:30am-4:00pm',
     },
-    foodTypes: ["Indian", "Curry", "Malaysian"],
+    foodTypes: ["Indian", "Curry"],
     menus: [
       {
         name: 'Curry Platters',
@@ -837,7 +837,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:00pm',
       friday: '10:30am-4:00pm',
     },
-    foodTypes: ["Greek", "Gyros"],
+    foodTypes: ["Greek"],
     menus: [
       {
         name: 'Super Gyros and Sandwiches',
@@ -1074,7 +1074,7 @@ const vendorSeeds = [
       thursday: '10:00am-4:00pm',
       friday: '10:00am-4:00pm',
     },
-    foodTypes: ["Pizza"],
+    foodTypes: ["Pizza", "Wings"],
     menus: [
       {
         name: 'Pizza',
@@ -1146,7 +1146,7 @@ const vendorSeeds = [
       thursday: '7:30am-6:00pm',
       friday: '7:30am-4:30pm',
     },
-    foodTypes: ["Coffee", "Sandwiches", "Tea"],
+    foodTypes: ["Coffee", "Sandwich", "Tea"],
     menus: [
       {
         name: 'Commodities',
@@ -1434,7 +1434,7 @@ const vendorSeeds = [
       thursday: '8:00am-3:00pm',
       friday: '8:00am-3:00pm',
     },
-    foodTypes: ["Sandwiches", "Pastires", "Coffee"],
+    foodTypes: ["Sandwich", "Pastry", "Coffee"],
     menus: [
       {
         name: 'Drinks',
@@ -1700,7 +1700,7 @@ const vendorSeeds = [
       thursday: '10:00am-2:00pm',
       friday: '10:00am-2:00pm',
     },
-    foodTypes: ["Musubis", "Local"],
+    foodTypes: ["Musubi", "Local"],
     menus: [
       {
         name: 'Fried Musubis',
@@ -1844,7 +1844,7 @@ const vendorSeeds = [
       thursday: '8:30am-3:00pm',
       friday: '8:30am-3:00pm',
     },
-    foodTypes: ["Smoothies", "Vegetarian"],
+    foodTypes: ["Smoothie", "Vegetarian"],
     menus: [
       {
         name: 'Smoothies',
