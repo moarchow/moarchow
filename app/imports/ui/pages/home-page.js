@@ -1,15 +1,16 @@
 import {ReactiveDict} from 'meteor/reactive-dict';
+import {Session} from 'meteor/session';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {Template} from 'meteor/templating';
 import {_} from 'meteor/underscore';
 import {Vendors} from '../../api/vendors/vendors.js';
-import {Menus} from '../../api/menus/menus.js';
 import './home-page.html';
+
+var chowSearch = '';
 
 Template.Home_Page.onCreated(function onCreated() {
   this.autorun(() => {
     this.subscribe('Vendors');
-    this.subscribe('Menus');
   })
 });
 
@@ -20,14 +21,6 @@ Template.Home_Page.helpers({
    */
   VendorsList() {
     return Vendors.find();
-  },
-  FavoriteVendors(){
-
-    return Vendors.find();
-  },
-  MenusList() {
-    /* returns all menu items */
-    return Menus.find();
   },
   isOpen(vendor){
     const day = new Date();
@@ -75,27 +68,42 @@ Template.Home_Page.helpers({
   isFavorite(vendor){
     if (_.contains(vendor['favorite'], Meteor.userId())) return true;
     else {
-      console.log(vendor['favorite']);
-      console.log(Meteor.userId());
       return false;
     }
   },
 
-});
-
-Template.Home_Page.events({
-  'click .ui.button'(event, instance) {
-
-    const vendor = Vendors.findOne(instance);
-    vendor['favorite'].pop(Meteor.userId());
-    Vendors.update(instance, { $set: vendor });
-    console.log(vendor['favorite']);
-    FlowRouter.go('Home_Page');
+  VendorsFoodTypes() {
+    var typeArray = [];
+    Vendors.find().forEach(function (vendor) {
+      typeArray.push(vendor.foodTypes);
+    });
+    return _.sortBy(_.uniq(_.flatten(typeArray)), function (name) {
+      return name;
+    });
   },
 });
+Template.Home_Page.events({
 
-Template.Home_Page.onRendered(function () {
-  this.$('.ui.dropdown').dropdown({
-    allowAdditions: true
-  });
+  'click .chow-search': function (event) {
+    event.preventDefault();
+    var value = document.getElementById("chowSelect").value;
+
+    var searchList = [];
+
+    Vendors.find().forEach(function (vendor) {
+      for (var i = 0; i < vendor.foodTypes.length; i++) {
+        if (vendor.foodTypes[i] == value) {
+          searchList.push(vendor);
+        }
+      }
+    });
+    Session.set("SearchList", searchList);
+  },
+
 });
+
+Handlebars.registerHelper("SearchList", function (input) {
+  return Session.get("SearchList");
+});
+
+

@@ -10,6 +10,8 @@
           <div><h2>My Favorite Chow Spots</h2></div>
           {{ currentUser.username}}
           <div class="ui segment">
+            <div><h2>My Favorite Chow Spots</h2></div>
+
             <table class="ui single line table">
               <thead>
               <tr>
@@ -19,7 +21,7 @@
               </tr>
               </thead>
               <tbody>
-              {{#each vendor in FavoriteVendors}}
+              {{#each vendor in VendorsList}}
               {{#if isFavorite vendor}}
               <tr>
                 <td>
@@ -51,35 +53,47 @@
 
       <div class="ui row">
         <div class="ui column">
-          <div><h2>Search For Chow</h2></div>
+
           <div class="ui segment">
+            <div><h2>Search For Chow</h2></div>
 
-            <h3>Select Chow Type</h3>
-            <select name="chow" multiple="" class="ui fluid dropdown">
-              <option value="American">American</option>
-              <option value="British">British</option>
-              <option value="Chinese">Chinese</option>
-              <option value="German">German</option>
-              <option value="Indian">Indian</option>
-              <option value="Japanese">Japanese</option>
-              <option value="Korean">Korean</option>
-              <option value="Middle-Eastern">Middle-Eastern</option>
-              <option value="Hawaiian">Hawaiian</option>
-            </select>
+            <form class="ui form">
+              <div class="field">
+                <select id="chowSelect">
+                  {{#each type in VendorsFoodTypes}}
+                  <option value="{{type}}">{{type}}</option>
+                  {{/each}}
+                </select>
+              </div>
+              <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
+            </form>
 
-            <table class="ui table" style="color: #616161;">
+            <table class="ui single line table" style="color: #616161;">
               <thead>
-              <th>Item Name</th>
-              <th>Description</th>
-              <th>Sold At</th>
+              <th class="two wide">Status</th>
+              <th class="six wide">Name</th>
+              <th class="six wide">Rating</th>
               </thead>
               <tbody>
-              {{#each menu in MenusList}}
-
+              {{#each vendor in SearchList}}
               <tr>
-                <td>{{menu.name}}</td>
-                <td> {{menu.description}}</td>
-                <td> {{menu.vendor}}</td>
+                <td>
+                  {{#if isOpen vendor }}
+                  <button class="ui green button">Open</button>
+                  {{else}}
+                  <button class="ui red button">Closed</button>
+                  {{/if}}
+                </td>
+                <td>
+                  <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
+                </td>
+                <td class="collapsing">
+                  <i class="yellow star icon"></i>
+                  <i class="yellow star icon"></i>
+                  <i class="yellow star icon"></i>
+                  <i class="yellow star icon"></i>
+                  <i class="yellow star icon"></i>
+                </td>
               </tr>
               {{/each}}
               </tbody>
