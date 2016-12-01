@@ -9,13 +9,16 @@
           {{ currentUser.username}}
           <div class="ui segment">
             <div><h2>My Favorite Chow Spots</h2></div>
-
+            {{#if noFavorites }}
+            You have no favorite Chow Spots! Find your favorites <a href="{{pathFor 'Vendor_List_Page'}}"> here.</a>
+            {{else}}
             <table class="ui single line table">
               <thead>
               <tr>
                 <th class="two wide">Status</th>
                 <th class="six wide">Name</th>
                 <th class="six wide">My Rating</th>
+                <th class="one wide"></th>
               </tr>
               </thead>
               <tbody>
@@ -32,16 +35,22 @@
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
                 <td class="collapsing">
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
+                  <div class="ui rating" data-rating="4">
+                    <i class="icon"></i>
+                    <i class="icon"></i>
+                    <i class="icon"></i>
+                    <i class="icon"></i>
+                    <i class="icon"></i>
+                  </div>
+                </td>
+                <td>
+                  <button class="ui button remove-vendor"><i class="trash icon"></i></button>
                 </td>
               </tr>
               {{/each}}
               </tbody>
             </table>
+            {{/if}}
           </div>
         </div>
       </div>

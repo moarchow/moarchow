@@ -13,9 +13,11 @@
     </div>
     <div class="ui container" style="padding-top: 20px">
       {{#if isFavorite}}
-      <button class="ui fluid button remove-favorite-button" style="margin-bottom:10px;" type="submit">Un-Favorite</button>
+      <button class="ui four wide button remove-favorite-button" style="margin-bottom:10px;" type="submit">Remove from Favorites</button>
       {{else}}
-      <button class="ui fluid green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to favorites</button>
+      <button class="ui four wide green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to
+        favorites
+      </button>
       {{/if}}
       <div class="ui two column grid">
         <div class="ui seven wide column">
@@ -29,7 +31,6 @@
             Closed
           </div>
           {{/if}}
-
           <div class="map-container" style="height: 250px; margin-top:10px;">
             {{> googleMap name="map" options=mapOptions}}
           </div>
@@ -49,6 +50,9 @@
               {{ vendorHours 'thursday' }}</p>
             <p> Friday <br/>
               {{ vendorHours 'friday' }}</p>
+          </div>
+          <div class="ui segment">
+            <h2> Leave a Review!</h2>
           </div>
         </div>
 
