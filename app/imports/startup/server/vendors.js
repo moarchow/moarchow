@@ -322,7 +322,7 @@ const vendorSeeds = [
             price: '9.15'
           },
           {
-            name: 'Hawaiian Attkins Plate',
+            name: 'Hawaiian Atkins Plate',
             description: '',
             price: 'Mini: 6.85, Regular: 10,55'
           },
