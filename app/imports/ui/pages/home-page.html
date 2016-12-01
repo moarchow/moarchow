@@ -6,8 +6,6 @@
 
       <div class="ui row">
         <div class="ui column">
-
-          <div><h2>My Favorite Chow Spots</h2></div>
           {{ currentUser.username}}
           <div class="ui segment">
             <div><h2>My Favorite Chow Spots</h2></div>
@@ -21,8 +19,7 @@
               </tr>
               </thead>
               <tbody>
-              {{#each vendor in VendorsList}}
-              {{#if isFavorite vendor}}
+              {{#each vendor in FavoritesList}}
               <tr>
                 <td>
                   {{#if isOpen vendor }}
@@ -42,8 +39,6 @@
                   <i class="yellow star icon"></i>
                 </td>
               </tr>
-              {{else}}
-              {{/if}}
               {{/each}}
               </tbody>
             </table>

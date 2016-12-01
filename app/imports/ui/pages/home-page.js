@@ -71,7 +71,15 @@ Template.Home_Page.helpers({
       return false;
     }
   },
-
+FavoritesList(){
+  const user = Meteor.userId(0);
+  var favArray =[];
+  Vendors.find().forEach(function (vendor) {
+    if(_.contains(vendor['favorite'], user))
+      favArray.push(vendor);
+  });
+  return favArray;
+},
   VendorsFoodTypes() {
     var typeArray = [];
     Vendors.find().forEach(function (vendor) {

@@ -124,9 +124,6 @@ Template.Vendor_Home_Page.helpers({
     }
   },
   isFavorite(){
-    console.log(Meteor.userId());
-
-    //returns true if this vendor is not in the user's favorites
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     console.log(vendor['favorite']);
     const userID = Meteor.userId();
@@ -143,14 +140,12 @@ Template.Vendor_Home_Page.events({
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     vendor['favorite'].push(Meteor.userId());
     Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-    console.log(vendor['favorite']);
     FlowRouter.go('Home_Page');
   },
   'click .remove-favorite-button'(event, instance) {
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
     vendor['favorite'].pop(Meteor.userId());
     Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-    console.log(vendor['favorite']);
     FlowRouter.go('Home_Page');
   },
 });
