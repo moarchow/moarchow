@@ -211,7 +211,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:00pm',
       friday: '10:30am-4:00pm',
     },
-    foodTypes: ["Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich",],
+    foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
     menus: [
       {
         name: 'Combo Plates',
@@ -255,7 +255,8 @@ const vendorSeeds = [
         ]
       },
 
-      {name: 'Breakfast',
+      {
+        name: 'Breakfast',
         description: 'Open - 10:30 am',
         items: [
           {
@@ -708,7 +709,14 @@ const vendorSeeds = [
 
       {
         name: 'Drinks',
-        description: 'Small(21 oz): 1.09, Medium(32 oz): 1.59, Large(64 oz): 2.09'
+        description: '',
+        items: [
+          {
+            name: 'Fountain Drink',
+            description: '',
+            price: '(21 oz): 1.09, (32 oz): 1.59, (64 oz): 2.09'
+          },
+        ]
       }
     ]
   },
