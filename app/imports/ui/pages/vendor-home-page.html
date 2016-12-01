@@ -6,14 +6,31 @@
 
       <!--VENDOR'S NAME-->
       <div style="padding-top: 120px; padding-bottom: 15px">
-        {{ vendorField 'name' }}
+        {{ vendorField 'name' }}<br/>
+
       </div>
       <h4>Located at {{vendorField 'location'}}</h4>
     </div>
     <div class="ui container" style="padding-top: 20px">
+      {{#if isFavorite}}
+      <button class="ui fluid button remove-favorite-button" style="margin-bottom:10px;" type="submit">Un-Favorite</button>
+      {{else}}
+      <button class="ui fluid green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to favorites</button>
+      {{/if}}
       <div class="ui two column grid">
         <div class="ui seven wide column">
-          <div class="map-container" style="height: 250px">
+
+          {{#if isOpen }}
+          <div class="ui inverted green segment">
+            Open Now
+          </div>
+          {{else}}
+          <div class="ui inverted red segment">
+            Closed
+          </div>
+          {{/if}}
+
+          <div class="map-container" style="height: 250px; margin-top:10px;">
             {{> googleMap name="map" options=mapOptions}}
           </div>
           <div class="ui segment">
