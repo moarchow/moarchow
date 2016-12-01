@@ -211,6 +211,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:00pm',
       friday: '10:30am-4:00pm',
     },
+    foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
     menus: [
       {
         name: 'Combo Plates',
