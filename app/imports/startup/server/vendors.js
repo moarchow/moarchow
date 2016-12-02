@@ -187,6 +187,114 @@ const vendorSeeds = [
 
     ]
   },
+  //Honolulu Gourmet Foods
+  {
+    name: 'Honolulu Gourmet Foods',
+    location: 'Paradise Palms',
+    latitude: 21.300976,
+    longitude: -157.815640,
+    image: 'le-crepe.jpg',
+    description: "Honolulu Gourmet Foods features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:30am-4:00pm',
+      tuesday: '10:30am-4:00pm',
+      wednesday: '10:30am-4:00pm',
+      thursday: '10:30am-4:00pm',
+      friday: '10:30am-4:00pm',
+    },
+    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Taco"],
+    menus: [
+      {
+        name: 'Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Caprese',
+            description: 'Mozz Cheese, tomato & house made Pesto',
+            price: '6.75'
+          },
+          {
+            name: 'Turky, Bacon & Avacado',
+            description: 'Turkey Breast, bacon, avacado "bomb", tomato and swiss cheese on Clabatta with Lime-Mayo Spread',
+            price: '7.25'
+          },
+          {
+            name: 'Italian',
+            description: 'Ham, bacon, salami, tomato, onion, jalapeno, pepper-jack, dijonaise',
+            price: '7.25'
+          },
+          {
+            name: 'Grilled Four Cheese & Caramelized Onions',
+            description: 'provalone, Mozzerella, Swiss and American Cheese layered with sweet caramelized onions on Sourdough bread',
+            price: '5.25'
+          },
+        ]
+      },
+
+      {
+        name: 'Taco Bar & Salad Bar',
+        description: '',
+        items: [
+          {
+            name: 'Taco Bar and Salad Bar',
+            description: '',
+            price: '0.56 per ounce'
+          },
+        ]
+      },
+
+      {
+        name: 'Fresh Smoothies & Milk Teas',
+        description: '20 oz | 0.50 cents to add boba balls',
+        items: [
+          {
+            name: 'Honeydew',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Mango',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Triple Berry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Taro',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Nutella Peanut Butter',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Strawberry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Green Tea',
+            description: '',
+            price: '4.50'
+          },
+        ]
+      },
+    ]
+  },
   //L&L
   {
     name: 'L&L Hawaiian Barbecue',
@@ -223,13 +331,18 @@ const vendorSeeds = [
             price: '10.55'
           },
           {
+            name: 'Mixed Plate',
+            description: 'Ham stk, Teri Beef, & a choice of Stew, curry, or chili',
+            price: '10.55'
+          },
+          {
             name: 'Seafood Combo',
-            description: 'fish & shrimp, with choice of meat',
+            description: 'fish, shrimp, and a choice of BBQ chx, Teri Beef, or Ribs',
             price: '10.55'
           },
           {
             name: 'Seafood Mix',
-            description: 'fish, shrimp, and scallop',
+            description: 'mahi, shrimp, and scallop',
             price: '10.95'
           },
           {
@@ -239,12 +352,12 @@ const vendorSeeds = [
           },
           {
             name: 'Mixed Combo Plate',
-            description: 'choice of 2 meat',
+            description: 'choice of 2 meats',
             price: '9.25'
           },
           {
             name: 'New York Steak Combo',
-            description: '',
+            description: '8 oz New York Steak & 3 Fried Shrimp',
             price: '11.55'
           },
           {
@@ -272,37 +385,37 @@ const vendorSeeds = [
           {
             name: 'Ham & Egg Sandwich',
             description: '',
-            price: '3.25'
+            price: '3.35'
           },
           {
             name: 'Backon & Egg Sandwich/BLT',
             description: '',
-            price: '3.25'
+            price: '3.35'
           },
           {
             name: 'French Toast(3)',
             description: '',
-            price: '3.25'
+            price: '3.35'
           },
           {
             name: 'Sam & Egg Sandwich',
             description: '',
-            price: '3.25'
+            price: '3.85'
           },
           {
             name: 'Portuguese Saussage & Egg Sandwich',
             description: '',
-            price: '3.25'
+            price: '3.85'
           },
           {
             name: 'DBL Portuguese Saussage & Egg Sandwich',
             description: '',
-            price: '4.25'
+            price: '4.55'
           },
           {
             name: 'Grilled Cheese Sandwich',
             description: '',
-            price: '2.25'
+            price: '2.05'
           },
         ]
       },
@@ -345,7 +458,7 @@ const vendorSeeds = [
           },
           {
             name: 'Chicken Cutlet',
-            description: 'with curry',
+            description: 'with gravy',
             price: 'Mini: 6.75, Regular: 8.50'
           },
           {
@@ -361,12 +474,12 @@ const vendorSeeds = [
           {
             name: 'Garlic Chicken',
             description: '',
-            price: 'Mini: 7.85, Regular: 9.15'
+            price: 'Mini: 7.05, Regular: 9.15'
           },
           {
             name: 'Fried Chicken',
             description: '',
-            price: 'Mini: 7.85, Regular: 9.15'
+            price: 'Mini: 7.05, Regular: 9.15'
           },
         ]
       },
@@ -398,12 +511,12 @@ const vendorSeeds = [
           {
             name: 'Beef Stew',
             description: '',
-            price: 'Mini: 6.75, Regular: 8.85'
+            price: 'Mini: 6.75, Regular: 8.55'
           },
           {
             name: 'Beef Curry',
             description: '',
-            price: 'Mini: 6.75, Regular: 8.85'
+            price: 'Mini: 6.75, Regular: 8.55'
           },
           {
             name: 'Breaded Veal Cutlet',
@@ -462,22 +575,22 @@ const vendorSeeds = [
           {
             name: 'BBQ Chicken',
             description: '',
-            price: '6.85'
+            price: '6.05'
           },
           {
             name: 'Chicken Katsu',
             description: '',
-            price: '6.85'
+            price: '6.05'
           },
           {
             name: 'Chicken Katsu Curry',
             description: '',
-            price: '6.85'
+            price: '6.05'
           },
           {
             name: 'Kalua Pork',
             description: 'with cabbage',
-            price: '6.85'
+            price: '6.05'
           },
           {
             name: 'Teriyaki Beef',
@@ -487,12 +600,12 @@ const vendorSeeds = [
           {
             name: 'Beef Curry',
             description: '',
-            price: '6.85'
+            price: '6.05'
           },
           {
             name: 'Beef Stew',
             description: '',
-            price: '6.85'
+            price: '6.05'
           },
         ]
       },
@@ -504,27 +617,27 @@ const vendorSeeds = [
           {
             name: 'Fried Shrimp',
             description: '',
-            price: 'Mini: 7.15, Regular: 9.45'
+            price: 'Mini: 7.15, Regular: 9.15'
           },
           {
             name: 'Fried Fish Fillet',
             description: '',
-            price: 'Mini: 7.25, Regular: 9.45'
+            price: 'Mini: 7.25, Regular: 9.35'
           },
           {
             name: 'Grilled Fish Fillet',
             description: '',
-            price: 'Mini: 7.25, Regular: 9.45'
+            price: 'Mini: 7.25, Regular: 9.35'
           },
           {
             name: 'Garlic Fish Fillet',
             description: '',
-            price: 'Mini: 7.55, Regular: 9.45'
+            price: 'Mini: 7.55, Regular: 9.55'
           },
           {
             name: 'Garlic Shrimp',
             description: '',
-            price: '9.45'
+            price: '9.95'
           },
         ]
       },
@@ -571,7 +684,7 @@ const vendorSeeds = [
           {
             name: 'Dbl BBQ cheeseburger',
             description: '',
-            price: '4.65'
+            price: '4.05'
           },
           {
             name: 'BBQ Chicken Sandwich',
@@ -677,12 +790,12 @@ const vendorSeeds = [
           {
             name: 'French Fries',
             description: '',
-            price: '3.40'
+            price: '3.15'
           },
           {
             name: 'Gravy Fries',
             description: '',
-            price: '3.40'
+            price: '3.55'
           },
           {
             name: 'Steamed White Rice',
@@ -692,7 +805,7 @@ const vendorSeeds = [
           {
             name: 'Brown Rice',
             description: '',
-            price: '1.20'
+            price: '1.10'
           },
           {
             name: 'Macaroni Salad',
@@ -714,7 +827,7 @@ const vendorSeeds = [
           {
             name: 'Fountain Drink',
             description: '',
-            price: '(21 oz): 1.09, (32 oz): 1.59, (64 oz): 2.09'
+            price: '(20 oz): 1.69, (32 oz): 1.89, (44 oz): 2.09'
           },
         ]
       }
@@ -1202,7 +1315,7 @@ const vendorSeeds = [
       thursday: '7:00am-6:00pm',
       friday: '7:00am-5:00pm',
     },
-    foodTypes: ["Coffee", "Tea", "Pastry"],
+    foodTypes: ["Coffee", "Tea", "Pastry", "Baked"],
     menus: [
       {
         name: 'Drinks',
@@ -1283,6 +1396,47 @@ const vendorSeeds = [
             description: '',
             price: 'S:1.77 L:2.24'
           }
+        ]
+      },
+      {
+        name: 'Food',
+        description: '',
+        items: [
+          {
+            name: 'Banana Bread',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Matcha Chocolate Chip Scone',
+            description: '',
+            price: '3.00'
+          },
+          {
+            name: 'Bacon Cheddar Scone',
+            description: '',
+            price: '3.00'
+          },
+          {
+            name: 'Macadamia nut white chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Snickerdoodle',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Papaya w/ lemon',
+            description: '',
+            price: '3.00'
+          },
         ]
       },
     ]
@@ -1657,7 +1811,7 @@ const vendorSeeds = [
 
   //Dominos
   {
-    name: 'Domino\s Express',
+    name: 'Dominos Express',
     location: 'Paradise Palms',
     latitude: 21.300953,
     longitude: -157.815595,
@@ -1704,6 +1858,37 @@ const vendorSeeds = [
             name: 'Pizza Slice',
             description: '',
             price: '3.25'
+          },
+        ]
+      },
+      {
+        name: 'Pizza by the slice',
+        description: '1 Slice: $3.25 | 2 Slices: $6.50',
+        items: [
+          {
+            name: '1 slice, 20 oz. soda',
+            description: 'special',
+            price: '5.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, breadsticks',
+            description: 'special',
+            price: '6.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, 4 pc Wings',
+            description: '',
+            price: '8.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda',
+            description: '',
+            price: '7.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda, breadsticks',
+            description: '',
+            price: '9.00'
           },
         ]
       },
