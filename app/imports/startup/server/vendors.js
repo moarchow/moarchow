@@ -30,7 +30,7 @@ const vendorSeeds = [
       thursday: '8:00am-2:00pm',
       friday: '8:00am-2:00pm',
     },
-    foodTypes: [ "Coffee", "Pastry", "French", "Salad"],
+    foodTypes: ["Coffee", "Pastry", "French", "Salad"],
     menus: [
       {
         name: 'Savory Crepes',
@@ -185,6 +185,652 @@ const vendorSeeds = [
         ]
       },
 
+    ]
+  },
+  //Honolulu Gourmet Foods
+  {
+    name: 'Honolulu Gourmet Foods',
+    location: 'Paradise Palms',
+    latitude: 21.300976,
+    longitude: -157.815640,
+    image: 'le-crepe.jpg',
+    description: "Honolulu Gourmet Foods features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:30am-4:00pm',
+      tuesday: '10:30am-4:00pm',
+      wednesday: '10:30am-4:00pm',
+      thursday: '10:30am-4:00pm',
+      friday: '10:30am-4:00pm',
+    },
+    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Taco"],
+    menus: [
+      {
+        name: 'Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Caprese',
+            description: 'Mozz Cheese, tomato & house made Pesto',
+            price: '6.75'
+          },
+          {
+            name: 'Turky, Bacon & Avacado',
+            description: 'Turkey Breast, bacon, avacado "bomb", tomato and swiss cheese on Clabatta with Lime-Mayo Spread',
+            price: '7.25'
+          },
+          {
+            name: 'Italian',
+            description: 'Ham, bacon, salami, tomato, onion, jalapeno, pepper-jack, dijonaise',
+            price: '7.25'
+          },
+          {
+            name: 'Grilled Four Cheese & Caramelized Onions',
+            description: 'provalone, Mozzerella, Swiss and American Cheese layered with sweet caramelized onions on Sourdough bread',
+            price: '5.25'
+          },
+        ]
+      },
+
+      {
+        name: 'Taco Bar & Salad Bar',
+        description: '',
+        items: [
+          {
+            name: 'Taco Bar and Salad Bar',
+            description: '',
+            price: '0.56 per ounce'
+          },
+        ]
+      },
+
+      {
+        name: 'Fresh Smoothies & Milk Teas',
+        description: '20 oz | 0.50 cents to add boba balls',
+        items: [
+          {
+            name: 'Honeydew',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Mango',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Triple Berry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Taro',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Nutella Peanut Butter',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Strawberry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Green Tea',
+            description: '',
+            price: '4.50'
+          },
+        ]
+      },
+    ]
+  },
+  //L&L
+  {
+    name: 'L&L Hawaiian Barbecue',
+    location: 'Paradise Palms',
+    latitude: 21.300945,
+    longitude: -157.815602,
+    image: 'le-crepe.jpg',
+    description: "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L's famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:30am-4:00pm',
+      tuesday: '10:30am-4:00pm',
+      wednesday: '10:30am-4:00pm',
+      thursday: '10:30am-4:00pm',
+      friday: '10:30am-4:00pm',
+    },
+    foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
+    menus: [
+      {
+        name: 'Combo Plates',
+        description: '',
+        items: [
+          {
+            name: 'BBQ Mix',
+            description: '',
+            price: '10.55'
+          },
+          {
+            name: 'Mixed Plate',
+            description: 'Ham stk, Teri Beef, & a choice of Stew, curry, or chili',
+            price: '10.55'
+          },
+          {
+            name: 'Seafood Combo',
+            description: 'fish, shrimp, and a choice of BBQ chx, Teri Beef, or Ribs',
+            price: '10.55'
+          },
+          {
+            name: 'Seafood Mix',
+            description: 'mahi, shrimp, and scallop',
+            price: '10.95'
+          },
+          {
+            name: 'Mixed Combo Plate',
+            description: 'choice of 1 seafood & 1 meat',
+            price: '10.55'
+          },
+          {
+            name: 'Mixed Combo Plate',
+            description: 'choice of 2 meats',
+            price: '9.25'
+          },
+          {
+            name: 'New York Steak Combo',
+            description: '8 oz New York Steak & 3 Fried Shrimp',
+            price: '11.55'
+          },
+          {
+            name: 'Bento',
+            description: 'Teri Beef, BBQ Chicken, Fish & Shrimp',
+            price: '9.95'
+          },
+        ]
+      },
+
+      {
+        name: 'Breakfast',
+        description: 'Open - 10:30 am',
+        items: [
+          {
+            name: 'Breakfast Plates',
+            description: 'Choice of Meat, 2 Eggs, Rice ',
+            price: '5.25'
+          },
+          {
+            name: 'Omelet',
+            description: 'Choice of Meat',
+            price: '5.25'
+          },
+          {
+            name: 'Ham & Egg Sandwich',
+            description: '',
+            price: '3.35'
+          },
+          {
+            name: 'Backon & Egg Sandwich/BLT',
+            description: '',
+            price: '3.35'
+          },
+          {
+            name: 'French Toast(3)',
+            description: '',
+            price: '3.35'
+          },
+          {
+            name: 'Sam & Egg Sandwich',
+            description: '',
+            price: '3.85'
+          },
+          {
+            name: 'Portuguese Saussage & Egg Sandwich',
+            description: '',
+            price: '3.85'
+          },
+          {
+            name: 'DBL Portuguese Saussage & Egg Sandwich',
+            description: '',
+            price: '4.55'
+          },
+          {
+            name: 'Grilled Cheese Sandwich',
+            description: '',
+            price: '2.05'
+          },
+        ]
+      },
+
+      {
+        name: 'Healthier Options',
+        description: '',
+        items: [
+          {
+            name: 'BBQ Chicken',
+            description: '',
+            price: '7.10'
+          },
+          {
+            name: 'Garlic Shrimp',
+            description: '',
+            price: '9.15'
+          },
+          {
+            name: 'Hawaiian Atkins Plate',
+            description: '',
+            price: 'Mini: 6.85, Regular: 10,55'
+          },
+        ]
+      },
+
+      {
+        name: 'Chicken',
+        description: '',
+        items: [
+          {
+            name: 'BBQ Chicken',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.50'
+          },
+          {
+            name: 'Chicken Katsu',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.50'
+          },
+          {
+            name: 'Chicken Cutlet',
+            description: 'with gravy',
+            price: 'Mini: 6.75, Regular: 8.50'
+          },
+          {
+            name: 'Chicken Katsu Curry',
+            description: '',
+            price: 'Mini: 6.95, Regular: 9.05'
+          },
+          {
+            name: 'Mochiko Chicken',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.50'
+          },
+          {
+            name: 'Garlic Chicken',
+            description: '',
+            price: 'Mini: 7.05, Regular: 9.15'
+          },
+          {
+            name: 'Fried Chicken',
+            description: '',
+            price: 'Mini: 7.05, Regular: 9.15'
+          },
+        ]
+      },
+
+      {
+        name: 'Beef',
+        description: '',
+        items: [
+          {
+            name: 'Hamburger Steak',
+            description: '',
+            price: 'Mini: 7.15, Regular: 9.25'
+          },
+          {
+            name: 'Teriyaki Beef',
+            description: '',
+            price: 'Mini: 7.15, Regular: 9.25'
+          },
+          {
+            name: 'BBQ Short Ribs Cutlet',
+            description: '',
+            price: 'Mini: 7.95, Regular: 10.55'
+          },
+          {
+            name: 'Loco Moco',
+            description: '',
+            price: 'Mini: 7.15, Regular: 9.25'
+          },
+          {
+            name: 'Beef Stew',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.55'
+          },
+          {
+            name: 'Beef Curry',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.55'
+          },
+          {
+            name: 'Breaded Veal Cutlet',
+            description: '',
+            price: 'Mini: 6.75, Regular: 8.85'
+          },
+          {
+            name: 'New York Steak',
+            description: '',
+            price: '10.85'
+          },
+        ]
+      },
+
+      {
+        name: 'Pork',
+        description: '',
+        items: [
+          {
+            name: 'Kalua Pork',
+            description: 'with cabbage',
+            price: 'Mini: 7.45, Regular: 9.45'
+          },
+          {
+            name: 'Teriyaki Pork Chops',
+            description: '',
+            price: 'Mini: 7.25, Regular: 9.25'
+          },
+          {
+            name: 'Breaded Pork Chops',
+            description: '',
+            price: 'Mini: 7.25, Regular: 9.25'
+          },
+          {
+            name: 'Grilled Pork Chops',
+            description: '',
+            price: 'Mini: 7.25, Regular: 9.25'
+          },
+          {
+            name: 'Garlic Pork Chops',
+            description: '',
+            price: 'Mini: 7.45, Regular: 9.45'
+          },
+          {
+            name: 'Lau Lau',
+            description: '',
+            price: 'Mini: 7.45, Regular: 9.45'
+          },
+        ]
+      },
+
+      {
+        name: 'Bowls',
+        description: '',
+        items: [
+          {
+            name: 'BBQ Chicken',
+            description: '',
+            price: '6.05'
+          },
+          {
+            name: 'Chicken Katsu',
+            description: '',
+            price: '6.05'
+          },
+          {
+            name: 'Chicken Katsu Curry',
+            description: '',
+            price: '6.05'
+          },
+          {
+            name: 'Kalua Pork',
+            description: 'with cabbage',
+            price: '6.05'
+          },
+          {
+            name: 'Teriyaki Beef',
+            description: '',
+            price: '6.25'
+          },
+          {
+            name: 'Beef Curry',
+            description: '',
+            price: '6.05'
+          },
+          {
+            name: 'Beef Stew',
+            description: '',
+            price: '6.05'
+          },
+        ]
+      },
+
+      {
+        name: 'Seafood',
+        description: '',
+        items: [
+          {
+            name: 'Fried Shrimp',
+            description: '',
+            price: 'Mini: 7.15, Regular: 9.15'
+          },
+          {
+            name: 'Fried Fish Fillet',
+            description: '',
+            price: 'Mini: 7.25, Regular: 9.35'
+          },
+          {
+            name: 'Grilled Fish Fillet',
+            description: '',
+            price: 'Mini: 7.25, Regular: 9.35'
+          },
+          {
+            name: 'Garlic Fish Fillet',
+            description: '',
+            price: 'Mini: 7.55, Regular: 9.55'
+          },
+          {
+            name: 'Garlic Shrimp',
+            description: '',
+            price: '9.95'
+          },
+        ]
+      },
+
+      {
+        name: 'Burgers & Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Hamburger',
+            description: '',
+            price: '2.45'
+          },
+          {
+            name: 'Dbl Hamburger',
+            description: '',
+            price: '3.65'
+          },
+          {
+            name: 'Cheeseburger',
+            description: '',
+            price: '2.65'
+          },
+          {
+            name: 'Dbl Cheeseburger',
+            description: '',
+            price: '3.85'
+          },
+          {
+            name: 'BBQ burger',
+            description: '',
+            price: '2.85'
+          },
+          {
+            name: 'Dbl BBQ burger',
+            description: '',
+            price: '3.85'
+          },
+          {
+            name: 'BBQ cheeseburger',
+            description: '',
+            price: '3.05'
+          },
+          {
+            name: 'Dbl BBQ cheeseburger',
+            description: '',
+            price: '4.05'
+          },
+          {
+            name: 'BBQ Chicken Sandwich',
+            description: '',
+            price: '3.35'
+          },
+          {
+            name: 'Dbl Chicken Sandwich',
+            description: '',
+            price: '4.35'
+          },
+          {
+            name: 'Teriyaki Beef Sandwich',
+            description: '',
+            price: '3.45'
+          },
+          {
+            name: 'Dbl Teriyaki Beef Sandwich',
+            description: '',
+            price: '4.45'
+          },
+          {
+            name: 'Mahi Mahi Sandwich',
+            description: '',
+            price: '3.35'
+          },
+          {
+            name: 'Dbl Mahi Mahi Sandwich',
+            description: '',
+            price: '4.55'
+          },
+          {
+            name: 'Garden Burger',
+            description: '',
+            price: '3.65'
+          },
+          {
+            name: 'Shrimp Burger',
+            description: '',
+            price: '3.65'
+          },
+          {
+            name: 'Saimin Burger',
+            description: '',
+            price: '5.95'
+          },
+          {
+            name: 'Add Deluxe',
+            description: 'lettuce, tomato, onion',
+            price: '0.95'
+          },
+        ]
+      },
+
+      {
+        name: 'Saimin',
+        description: '',
+        items: [
+          {
+            name: 'Spam Saimin',
+            description: '',
+            price: '3.95'
+          },
+          {
+            name: 'BBQ Chicken Saimin',
+            description: '',
+            price: '5.15'
+          },
+          {
+            name: 'Teriyaki Beef Saimin',
+            description: '',
+            price: '5.15'
+          },
+          {
+            name: 'Aloha Saimin',
+            description: '',
+            price: '6.15'
+          },
+        ]
+      },
+
+      {
+        name: 'Musubi',
+        description: '',
+        items: [
+          {
+            name: 'Spam Musubi',
+            description: '',
+            price: '2.40'
+          },
+          {
+            name: 'BBQ Chicken Musubi',
+            description: '',
+            price: '2.40'
+          },
+        ]
+      },
+
+      {
+        name: 'Sides',
+        description: '',
+        items: [
+          {
+            name: 'French Fries',
+            description: '',
+            price: '3.15'
+          },
+          {
+            name: 'Gravy Fries',
+            description: '',
+            price: '3.55'
+          },
+          {
+            name: 'Steamed White Rice',
+            description: '',
+            price: '0.85'
+          },
+          {
+            name: 'Brown Rice',
+            description: '',
+            price: '1.10'
+          },
+          {
+            name: 'Macaroni Salad',
+            description: '',
+            price: '0.95'
+          },
+          {
+            name: 'Tossed Greens',
+            description: '',
+            price: '0.95'
+          },
+        ]
+      },
+
+      {
+        name: 'Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Fountain Drink',
+            description: '',
+            price: '(20 oz): 1.69, (32 oz): 1.89, (44 oz): 2.09'
+          },
+        ]
+      }
     ]
   },
 
@@ -669,7 +1315,7 @@ const vendorSeeds = [
       thursday: '7:00am-6:00pm',
       friday: '7:00am-5:00pm',
     },
-    foodTypes: ["Coffee", "Tea", "Pastry"],
+    foodTypes: ["Coffee", "Tea", "Pastry", "Baked"],
     menus: [
       {
         name: 'Drinks',
@@ -750,6 +1396,47 @@ const vendorSeeds = [
             description: '',
             price: 'S:1.77 L:2.24'
           }
+        ]
+      },
+      {
+        name: 'Food',
+        description: '',
+        items: [
+          {
+            name: 'Banana Bread',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Matcha Chocolate Chip Scone',
+            description: '',
+            price: '3.00'
+          },
+          {
+            name: 'Bacon Cheddar Scone',
+            description: '',
+            price: '3.00'
+          },
+          {
+            name: 'Macadamia nut white chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Snickerdoodle',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Papaya w/ lemon',
+            description: '',
+            price: '3.00'
+          },
         ]
       },
     ]
@@ -1124,7 +1811,7 @@ const vendorSeeds = [
 
   //Dominos
   {
-    name: 'Domino\s Express',
+    name: 'Dominos Express',
     location: 'Paradise Palms',
     latitude: 21.300953,
     longitude: -157.815595,
@@ -1171,6 +1858,37 @@ const vendorSeeds = [
             name: 'Pizza Slice',
             description: '',
             price: '3.25'
+          },
+        ]
+      },
+      {
+        name: 'Pizza by the slice',
+        description: '1 Slice: $3.25 | 2 Slices: $6.50',
+        items: [
+          {
+            name: '1 slice, 20 oz. soda',
+            description: 'special',
+            price: '5.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, breadsticks',
+            description: 'special',
+            price: '6.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, 4 pc Wings',
+            description: '',
+            price: '8.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda',
+            description: '',
+            price: '7.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda, breadsticks',
+            description: '',
+            price: '9.00'
           },
         ]
       },
