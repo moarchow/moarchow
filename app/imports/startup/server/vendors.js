@@ -759,6 +759,409 @@ const vendorSeeds = [
       },
     ]
   },
+  //Jamba Juice
+  {
+    name: 'Jamba Juice',
+    location: 'Campus Center',
+    latitude: 21.298316,
+    longitude: -157.818749,
+    image: 'le-crepe.jpg',
+    description: "Jamba Juice features delicious and fresh frozen fruit smoothies. Stop by for some of our nutritious smoothies today",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '7:00am-5:00pm',
+      tuesday: '7:00am-5:00pm',
+      wednesday: '7:00am-5:00pm',
+      thursday: '7:00am-5:00pm',
+      friday: '7:30am-4:00pm',
+    },
+    foodTypes: ["Smoothie", "Sandwich", "Flatbread", "Oatmeal", "Bistro"],
+    menus: [
+      {
+        name: 'Sandwiches & Wraps',
+        description: 'Grab N Go Breakfast! Receive $1.00 off',
+        items: [
+          {
+            name: 'Spinach N Cheese Wrap',
+            description: 'scrambled egg whites | spinach | caramelized-onions | melted cheese | tortilla',
+            price: '3.50'
+          },
+          {
+            name: 'Turkey Sausage N Cheese Wrap',
+            description: 'scrambled egg whites | turkey sausage | caramelized-onions | melted cheese | tortilla',
+            price: '3.50'
+          },
+        ]
+      },
+      {
+        name: 'Flatbreads',
+        description: 'Grab N Go Breakfast! Receive $1.00 off',
+        items: [
+          {
+            name: 'Four Chese',
+            description: '',
+            price: '4.25'
+          },
+          {
+            name: 'Sweet N Spicy Chicken',
+            description: '',
+            price: '4.25'
+          },
+        ]
+      },
+      {
+        name: 'Toasted Bistro',
+        description: 'Grab N Go Breakfast! Receive $1.00 off',
+        items: [
+          {
+            name: 'Ham Jarlsberg & Dijon',
+            description: '',
+            price: '4.25'
+          },
+          {
+            name: 'Roasted Chicken Cheddar & Honey Dijon',
+            description: '',
+            price: '4.25'
+          },
+          {
+            name: 'Three CHeese Cheddar Provolone & Havarti',
+            description: '',
+            price: '4.25'
+          },
+        ]
+      },
+      {
+        name: 'Organic Oatmeal',
+        description: 'Grab N Go Breakfast! Receive $1.00 off. Choice of 2 toppings. Served till 11 AM',
+        items: [
+          {
+            name: '12 oz Oatmeal',
+            description: '',
+            price: '3.45'
+          },
+          {
+            name: '16 oz Oatmeal',
+            description: '',
+            price: '3.95'
+          },
+          {
+            name: 'Toppings',
+            description: 'Banana, Blueberry, Strawberrry, Pineapple, Sliced Almond, Dried Coconut, Clover Honey, Brown Sugar Crumble',
+            price: ''
+          },
+          {
+            name: 'Additional Toppings',
+            description: '+0.50 cents each',
+            price: '0.50'
+          },
+        ]
+      },
+      {
+        name: 'Energy Bowls',
+        description: '',
+        items: [
+          {
+            name: 'Acai Primo Bowl',
+            description: 'acai | soymilk | banana strawberry | blueberry | organic granola | banana | blueberry almonds | coconut | honey',
+            price: '7.15'
+          },
+          {
+            name: 'Chunky Strawberry Bowl',
+            description: 'strawberry | banana | peanut butter | soymilk | Greek yogurt | organic granola | banana strawberry',
+            price: '7.15'
+          },
+          {
+            name: 'Chocolate Strawberry Bowl',
+            description: `chocolate moo'd | strawberry | organic granola | banana | dark chocolate chip`,
+            price: '7.15'
+          },
+          {
+            name: 'Pitaya Primo Bowl',
+            description: 'pitaya | mango | passion fruit | pineapple | organic granola | banana | coconut',
+            price: '7.15'
+          },
+          {
+            name: 'Local Hawaiian Acai Bowl',
+            description: 'acai | guava | mango | banana | strawberry | blueberry |  coconut | pineapple | almonds | organic granola | honey',
+            price: '9.25'
+          },
+        ]
+      },
+      {
+        name: 'Freshly Squeezed Juice Blends',
+        description: '',
+        items: [
+          {
+            name: 'Orange Carrot Twist',
+            description: 'fresh orange juice | carrot',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Purely Orange',
+            description: '',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Tropical Kick-Start',
+            description: 'fresh orange juice | mango',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Purely Carrot',
+            description: '',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Orange Berry Antioxidant',
+            description: 'fresh orange juice | strawberry | blueberry',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Kale Orange Power',
+            description: 'Fresh orange juice | kale | banana',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+          {
+            name: 'Dragonberry Juice',
+            description: 'apple juice | carrot | strawberry | pitaya',
+            price: '12 oz : 6.50 | 16 oz : 7.50'
+          },
+          {
+            name: 'Triple Revitalizer',
+            description: 'fresh orange juice | fresh carrot juice | banana',
+            price: '12 oz : 4.95 | 16 oz : 5.75'
+          },
+        ]
+      },
+      {
+        name: 'Local Favorite Smoothies',
+        description: '',
+        items: [
+          {
+            name: 'Aloha Pineapple',
+            description: 'pineapple sherbet | strawberry | banana | greek yogurt',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Banana Berry',
+            description: 'apple | banana | frozen yogurt | blueberry | raspberry sherbet',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Caribbean Passion',
+            description: 'passion fruit-mango | strawberry | peach | orange sherbet',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Gotta Guava',
+            description: 'guava | pineapple sherbet | peach | strawberry',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Mango-A-Go-Go',
+            description: 'mango | pineapple sherbet | passion fruit',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Papaya Paradise',
+            description: 'papaya | frozen yogurt | peach | banana',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Razzmatazz',
+            description: 'berry | strawberry | orange sherbet | banana',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Strawberry Surfrider',
+            description: 'strawberry | peach | lemon | lime sherbet',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Strawberries Wild',
+            description: 'strawberry | frozen yogurt | banana | apple',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: 'Tropical Dragon',
+            description: 'pitaya | guava | pineapple | mango',
+            price: 'small : 5.15 | medium : 5.65 : large : 6.55'
+          },
+          {
+            name: `Peanut Butter Moo'd`,
+            description: `Nonfat Frozen Yogurt (Contains Milk) | Chocolate Moo'd Base (Contains Milk) | Soymilk | Ice | Banana | Peanut Butter`,
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: `Chocolate Moo'd`,
+            description: `Chocolate Moo'd Base (Contains Milk) | Nonfat Frozen Yogurt (Contains Milk) | Ice`,
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Matcha Green Tea Blast',
+            description: 'Soymilk | Nonfat Frozen Yogurt (Contains Milk)| Ice | Matcha Green Tea',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Orange Dream Machine',
+            description: 'Orange Juice,| Orange sherbet (Contains Milk)| Soymilk | Nonfat Frozen Yogurt (Contains Milk) | Ice',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+        ]
+      },
+      {
+        name: 'Fruit, Veggie & Specialty',
+        description: '',
+        items: [
+          {
+            name: 'Apple N Greens',
+            description: 'apple | kale | banana | mango | strawberry | peach',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Berry Upbeet',
+            description: 'strawberry | blueberry |mango | red veggie juice',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Greens N Ginger',
+            description: 'lemonade | mango | kale | peach | ginger',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Groovy Guava',
+            description: 'guava | strawberry | peach',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Mega Mango',
+            description: 'mango | strawberry | orange | pineapple',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Papaya Sunrise',
+            description: 'papaya | strawberry | peach',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Peach Perfection',
+            description: 'peach | mango | strawberry',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Orange Carrot Karma',
+            description: 'fresh carrot juice',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Strawberry Dragon',
+            description: 'pitaya | strawberry | orange | passion fruit | mango | banana',
+            price: 'small : 5.95 | medium : 6.35 : large : 6.95'
+          },
+          {
+            name: 'Strawberry Whirl',
+            description: 'strawberry | banana | apple',
+            price: 'small : 5.65 | medium : 6.15 : large : 6.75'
+          },
+          {
+            name: 'Acai Super Antioxidant',
+            description: 'acai | blueberry | strawberry | raspberry | soymilk + antioxidant Boost',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'Amazing Greens',
+            description: 'super greens | lemonade | peach juice | peach | banana | pumpkin seeds',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'Carrot Orange Fusion',
+            description: 'fresh carrots | fresh orange juice | banana | mango | soymilk | greek yogurt | chia seeds',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'Kale-Ribbean Breeze',
+            description: 'kale | mango | passion fruit | greek yogurt | chia seeds',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'Orange C-Booster',
+            description: 'orange | peach | banana + C & Zine Boost + Antioxidant Boost',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'PB Chocolate Love',
+            description: `banana | peanut butter | chocolate moo'd`,
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+          {
+            name: 'Protein Berry Workout',
+            description: 'strawberry | banana | soymilk + Protein Boost',
+            price: 'small : 5.85 | medium : 6.05 : large : 6.85'
+          },
+        ]
+      },
+      {
+        name: 'Add a Boost',
+        description: 'Unique blends for the nutrition you need',
+        items: [
+          {
+            name: '3g Energy',
+            description: '',
+            price: '0.25'
+          },
+          {
+            name: 'Zinc & Antioxidant',
+            description: '',
+            price: '0.25'
+          },
+          {
+            name: 'Soy Protein',
+            description: '',
+            price: '0.25'
+          },
+          {
+            name: 'Whey Protein',
+            description: '',
+            price: '0.25'
+          },
+        ]
+      },
+      {
+        name: 'Whole Food Boosts',
+        description: 'Real Whole Foods for Optimal Nutrition',
+        items: [
+          {
+            name: 'Pumpkin Seeds',
+            description: '',
+            price: '0.75'
+          },
+          {
+            name: 'Chia Seeds',
+            description: '',
+            price: '0.75'
+          },
+          {
+            name: 'Greek Yogurt',
+            description: '',
+            price: '0.75'
+          },
+          {
+            name: 'Kale',
+            description: '',
+            price: '0.75'
+          },
+        ]
+      },
+    ]
+  },
   //Honolulu Gourmet Foods
   {
     name: 'Honolulu Gourmet Foods',
@@ -777,11 +1180,11 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '10:30am-4:00pm',
-      tuesday: '10:30am-4:00pm',
-      wednesday: '10:30am-4:00pm',
-      thursday: '10:30am-4:00pm',
-      friday: '10:30am-4:00pm',
+      monday: '10:00am-2:30pm',
+      tuesday: '10:00am-2:30pm',
+      wednesday: '10:00am-2:30pm',
+      thursday: '10:00am-2:30pm',
+      friday: '10:00am-2:30pm',
     },
     foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Taco"],
     menus: [
@@ -885,11 +1288,11 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '10:30am-4:00pm',
-      tuesday: '10:30am-4:00pm',
-      wednesday: '10:30am-4:00pm',
-      thursday: '10:30am-4:00pm',
-      friday: '10:30am-4:00pm',
+      monday: '10:30am-4:30pm',
+      tuesday: '10:30am-4:30pm',
+      wednesday: '10:30am-4:30pm',
+      thursday: '10:30am-4:30pm',
+      friday: '10:30am-4:30pm',
     },
     foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
     menus: [
@@ -2241,11 +2644,11 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '10:30am-4:00pm',
-      tuesday: '10:30am-4:00pm',
-      wednesday: '10:30am-4:00pm',
-      thursday: '10:30am-4:00pm',
-      friday: '10:30am-4:00pm',
+      monday: '9:00am-5:00pm',
+      tuesday: '9:00am-54:00pm',
+      wednesday: '9:00am-5:00pm',
+      thursday: '9:00am-5:00pm',
+      friday: '9:00am-5:00pm',
     },
     foodTypes: ["Chinese"],
     menus: [
@@ -2399,11 +2802,11 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '10:00am-4:00pm',
-      tuesday: '10:00am-4:00pm',
-      wednesday: '10:00am-4:00pm',
-      thursday: '10:00am-4:00pm',
-      friday: '10:00am-4:00pm',
+      monday: '10:00am-2:30pm',
+      tuesday: '10:00am-2:30pm',
+      wednesday: '10:00am-2:30pm',
+      thursday: '10:00am-2:30pm',
+      friday: '10:00am-2:30pm',
     },
     foodTypes: ["Pizza", "Wings"],
     menus: [
