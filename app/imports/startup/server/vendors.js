@@ -187,6 +187,317 @@ const vendorSeeds = [
 
     ]
   },
+  //Starbucks
+  {
+    name: 'Starbucks',
+    location: 'Campus Center',
+    latitude: 21.298510,
+    longitude: -157.818887,
+    image: 'le-crepe.jpg',
+    description: "The store serves the full Starbucks food and beverage menu including coffee and espresso beverages, Frappuccino®, and blended beverages. The range of food offerings includes breakfast, lunch and snack items such as signature sandwiches, pastries and Starbucks Petites. (Currently in Holiday Menu mode, displaying Holiday Menu)",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '6:00am-10:00pm',
+      tuesday: '6:30am-10:00pm',
+      wednesday: '6:00am-10:00pm',
+      thursday: '6:00am-10:00pm',
+      friday: '6:00am-6:00pm',
+    },
+    foodTypes: ["Coffee", "Tea", "Smoothie"],
+    menus: [
+      {
+        name: 'Coffee, Expresso, and Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Frostly Brewed Coffee',
+            description: '',
+            price: 'Tall: 2.30, Grande: 2.45, Venti: 2.95'
+          },
+          {
+            name: 'Iced Coffee',
+            description: 'with Vanilla or Caramel',
+            price: 'Tall: 2.65, Grande: 3.25, Venti: 3.45'
+          },
+          {
+            name: 'Cold Brew',
+            description: 'Limited Daily Availability',
+            price: 'Tall: 3.45, Grande: 3.95, Venti: 4.25'
+          },
+          {
+            name: 'Vanilla Sweet Cream Cold Brew',
+            description: '',
+            price: 'Tall: 3.75, Grande: 4.25, Venti: 4.45'
+          },
+          {
+            name: 'Flat White',
+            description: '',
+            price: 'Tall: 4.25'
+          },
+          {
+            name: 'Cappuccino',
+            description: '',
+            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
+          },
+          {
+            name: 'Caffe Amercano',
+            description: '',
+            price: 'Tall: 2.85. Grande: 2.95, Venti: 3.25'
+          },
+          {
+            name: 'Caffe Latte',
+            description: '',
+            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
+          },
+          {
+            name: 'Caramel Macchiato',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
+          },
+          {
+            name: 'White Chocolate Mocha',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
+          },
+        ]
+      },
+      {
+        name: 'Teavana Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Mango or Peach Tea Lemonade',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45'
+          },
+          {
+            name: 'Shaken Iced Tea',
+            description: 'Green, Black, or Caffeine-Free Passion Tango',
+            price: 'Tall: 2.45. Grande: 2.95, Venti: 3.25'
+          },
+          {
+            name: 'Full-Leaf Brewed Tea',
+            description: '',
+            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
+          },
+          {
+            name: 'Chai Tea Latte',
+            description: '',
+            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
+          },
+          {
+            name: 'Cinnamon Chai Tea Latte',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.65, Venti: 5.25'
+          },
+          {
+            name: 'Green Tea Latte',
+            description: '',
+            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
+          },
+        ]
+      },
+      {
+        name: 'HOLIDAY CLASSICS - Expresso, Coffee & Teavana Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Chestnut Praline Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Caramel Brulee Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Skinny Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Hot Chocolate',
+            description: '',
+            price: 'Tall: 3.75. Grande: 4.35, Venti: 4.45'
+          },
+          {
+            name: 'Eggnog Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Gingerbread Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Pumpkin Spice Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Holiday Spice Flat White',
+            description: '',
+            price: 'Tall: 4.45'
+          },
+          {
+            name: 'Spiced Sweet Cream',
+            description: '',
+            price: 'Tall: 3.75. Grande: 4.25, Venti: 4.45'
+          },
+          {
+            name: 'Cold Brew July 2016 Brewed Tea',
+            description: 'NEW! Limited Daily Availability',
+            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
+          },
+        ]
+      },
+      {
+        name: 'HOLIDAY CLASSICS - Frappuccino',
+        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
+        items: [
+          {
+            name: 'Caramel Brulee',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Chestnut Praline',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Frappuccino',
+        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
+        items: [
+          {
+            name: 'Caramel',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Mocha',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Coffee',
+            description: '',
+            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+          },
+          {
+            name: 'Java Chip',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Vanilla Bean Creme',
+            description: '',
+            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+          },
+          {
+            name: 'Double Chocolaty Chip',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Strawberries & Creme',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Green Tea',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Smoothies',
+        description: 'Blended with a whole banana & whey protein (contains dairy)',
+        items: [
+          {
+            name: 'Strawberry',
+            description: '',
+            price: '4.65'
+          },
+          {
+            name: 'Chocolate',
+            description: '',
+            price: '4.65'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Starbucks Refreshers',
+        description: 'Iced Beverages (contain caffeine) (Tall -> 12oz | Grande -> 16oz | Venti -> 24oz | Trenta -> 30oz)',
+        items: [
+          {
+            name: 'Strawberry Acai',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+          {
+            name: 'Very Berry Hibiscus',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+          {
+            name: 'Cool Lime',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+        ]
+      },
+      {
+        name: 'Customize Any Drink',
+        description: '',
+        items: [
+          {
+            name: 'Flavor',
+            description: '',
+            price: '50 cents'
+          },
+          {
+            name: 'Expresso Shot',
+            description: '',
+            price: '80 cents'
+          },
+          {
+            name: 'Venti Iced',
+            description: '',
+            price: 'up to 30 cents'
+          },
+          {
+            name: 'Substitutions',
+            description: 'Sumatra Coconut Milk,  Organic Soymilk, or NEW Almondmilk',
+            price: '60 cents'
+          },
+        ]
+      },
+    ]
+  },
   //Honolulu Gourmet Foods
   {
     name: 'Honolulu Gourmet Foods',
