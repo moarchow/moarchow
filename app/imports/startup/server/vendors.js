@@ -491,8 +491,269 @@ const vendorSeeds = [
           },
           {
             name: 'Substitutions',
-            description: 'Sumatra Coconut Milk,  Organic Soymilk, or NEW Almondmilk',
+            description: 'Sumatra Coconut Milk,  Organic Soymilk, or (NEW) Almondmilk',
             price: '60 cents'
+          },
+        ]
+      },
+    ]
+  },
+  //Subway
+  {
+    name: 'Subway',
+    location: 'Campus Center',
+    latitude: 21.298736,
+    longitude: -157.818852,
+    image: 'le-crepe.jpg',
+    description: "Feeling hungry? Stop by Subway for some delicious sandwiches and salads made fresh. Subway also offers dessert and breakfast items such as pastries and cookies.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '7:00am-7:00pm',
+      tuesday: '7:00am-7:00pm',
+      wednesday: '7:00am-7:00pm',
+      thursday: '7:00am-7:00pm',
+      friday: '7:00am-7:00pm',
+    },
+    foodTypes: ["Sandwich", "Cookie"],
+    menus: [
+      {
+        name: 'Meal Deal',
+        description: '+$2.50 to sub price',
+        items: [
+          {
+            name: '21 oz. drink + apples or 2 Cookies or chip',
+            description: 'Swap any drink or size & pay the difference',
+            price: '2.50'
+          },
+        ]
+      },
+      {
+        name: 'Local Favorites',
+        description: '',
+        items: [
+          {
+            name: 'Big Hot Pastrami Melt',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'B.L.T',
+            description: '',
+            price: '6" : 4.50, Fottlong : 6.75'
+          },
+          {
+            name: 'Subway Melt',
+            description: '',
+            price: '6" : 5.50, Fottlong : 8.50'
+          },
+          {
+            name: 'Turkey Italiano',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Turkey Breast & Black Forest Ham',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+        ]
+      },
+      {
+        name: 'Signature Subs',
+        description: '',
+        items: [
+          {
+            name: 'Chicken & Backon Ranch Melt',
+            description: '',
+            price: '6" : 5.75, Fottlong : 9.00'
+          },
+          {
+            name: 'Steak & Cheese',
+            description: '',
+            price: '6" : 5.75, Fottlong : 9.00'
+          },
+          {
+            name: 'Sweet Onion Chicken Teriyaki',
+            description: '',
+            price: '6" : 5.50, Fottlong : 8.75'
+          },
+          {
+            name: 'Italian B.M.T',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Tuna',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Cold Cut Combo',
+            description: '',
+            price: '6" : 4.50, Fottlong : 6.75'
+          },
+          {
+            name: 'Meatball Marinara',
+            description: '',
+            price: '6" : 4.50, Fottlong : 6.75'
+          },
+          {
+            name: 'Spicy Italian',
+            description: '',
+            price: '6" : 4.50, Fottlong : 6.75'
+          },
+        ]
+      },
+      {
+        name: '6" Subway Fresh Fit Subs',
+        description: '',
+        items: [
+          {
+            name: 'Roatisserie-Style Chicken',
+            description: '',
+            price: '6" : 5.75, Fottlong : 9.00'
+          },
+          {
+            name: 'Carved Turkey',
+            description: '',
+            price: '6" : 5.75, Fottlong : 9.00'
+          },
+          {
+            name: 'Roast Beef',
+            description: '',
+            price: '6" : 5.75, Fottlong : 9.00'
+          },
+          {
+            name: 'Subway Club',
+            description: '',
+            price: '6" : 5.50, Fottlong : 8.75'
+          },
+          {
+            name: 'Oven Roasted Chicken',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Turkey Breast',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Black Forest Ham',
+            description: '',
+            price: '6" : 4.75, Fottlong : 7.75'
+          },
+          {
+            name: 'Veggie Delite',
+            description: '',
+            price: '6" : 4.50, Fottlong : 6.75'
+          },
+        ]
+      },
+      {
+        name: 'Chopped Salads',
+        description: '',
+        items: [
+          {
+            name: 'Make any 6" Sub a salad',
+            description: '',
+            price: '2.50'
+          },
+        ]
+      },
+      {
+        name: 'Make your sub DELUXE',
+        description: '',
+        items: [
+          {
+            name: 'Get 50% more Meat on your favorite Sub',
+            description: '',
+            price: '6" : 0.75, Fottlong : 1.50'
+          },
+        ]
+      },
+      {
+        name: 'Extras',
+        description: '',
+        items: [
+          {
+            name: 'Bacon',
+            description: '',
+            price: '6" : 1.00, Fottlong : 2.00'
+          },
+          {
+            name: 'Double Meat',
+            description: '',
+            price: '6" : 1.50, Fottlong : 3.00'
+          },
+          {
+            name: 'Extra Cheese',
+            description: '',
+            price: '6" : 0.30, Fottlong : 0.60'
+          },
+          {
+            name: 'Pepperoni',
+            description: '',
+            price: '6" : 0.50, Fottlong : 1.00'
+          },
+          {
+            name: 'Spicy Guacamole',
+            description: '',
+            price: '6" : 0.75, Fottlong : 1.50'
+          },
+        ]
+      },
+      {
+        name: 'Drinks & Sides',
+        description: '',
+        items: [
+          {
+            name: 'Fountain',
+            description: '',
+            price: '21 oz : 1.90, 30 oz : 2.00, 40 oz : 2.20'
+          },
+          {
+            name: 'Bottled',
+            description: '',
+            price: '2.10'
+          },
+          {
+            name: 'Milk',
+            description: '',
+            price: '1.60'
+          },
+          {
+            name: 'X2 Energy Tea',
+            description: '',
+            price: '2.75'
+          },
+          {
+            name: 'Apple Slices',
+            description: '',
+            price: '1.50'
+          },
+          {
+            name: 'Soup',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Chips',
+            description: '',
+            price: '1.20'
+          },
+          {
+            name: 'Cookies',
+            description: '',
+            price: '0.65'
           },
         ]
       },
