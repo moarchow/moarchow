@@ -1,101 +1,124 @@
 <template name="Landing_Page">
 
-  <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+  <div id="land-body-one">
+    <div class="ui three row centered grid container">
 
-  <div class="land-body-one"> <!--LAND BODY ONE DIV-->
-    <div class="ui three row centered grid container" style="padding-top: 100px; padding-bottom: 100px;"> <!--UI THREE ROW GRID DIV-->
-
-      <div class="ui medium image"> <!--FIRST ROW-->
-        <img src="/images/need-real-food.png" /> <!--LOGO IMAGE-->
-      </div> <!--FIRST /ROW-->
-
-      <div class="row"> <!--SECOND ROW-->
-        <div class="tagline">
-          <h1 style="color: #16ab39; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size: 72px;
-         font-family: 'Ravi Prakash', cursive;">Hush Hunger's Roar and More!</h1>
-        </div>
-      </div> <!-- SECOND /ROW-->
-
-      <div class="row"> <!--THIRD ROW-->
-        <form class="log-button"> <!--SUBMIT FORM-->
-            <a class="ui massive green button"> <!--SUBMIT BUTTON-->
-              {{> Cas_Login }}
-            </a> <!--SUBMIT /BUTTON-->
-        </form> <!--SUBMIT /FORM-->
-      </div> <!--THIRD /ROW-->
-
-    </div> <!--UI THREE ROW GRID /DIV-->
-  </div> <!--LAND BODY ONE /DIV-->
-
-  <div class="land-body-two"> <!--LAND BODY TWO DIV-->
-    <div class="ui equal width centered grid container" style="padding-top: 100px;padding-bottom: 100px;"> <!--UI EQUAL GRID DIV-->
-
-      <div class="row"> <!--FIRST ROW-->
-        <h2 style="color: white; font-size: 36px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">What is Moar Chow?</h2>
-      </div> <!--FIRST /ROW-->
-
-      <div class="equal width row"> <!--SECOND ROW-->
-
-        <div class="column"></div> <!--EMPTY SECOND ROW FIRST COLUMN-->
-
-        <div class="column" id="about"> <!--SECOND ROW SECOND COLUMN-->
-          There are many food choices on campus at UH Manoa and knowing what each place serves and when can be
-          confusing. Moar Chow will allow you to browse all the menus on campus, view the location of restaurants and
-          food trucks.
-        </div> <!--SECOND ROW SECOND /COLUMN-->
-
-        <div class="column"></div> <!--EMPTY SECOND ROW THIRD COLUMN-->
-
-      </div> <!--SECOND /ROW-->
-
-      <div class="row"> <!--THIRD ROW-->
-        <h3 style="color: white; font-size: 30px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Features</h3>
-      </div> <!--THIRD /ROW-->
-
-      <div class="equal width row" style="padding-bottom: 0px;"> <!--FOURTH ROW-->
-
-        <div class="column"></div> <!--EMPTY FOURTH ROW FIRST COLUMN-->
-
-        <div class="column" id="even-one"> <!--FOURTH ROW SECOND COLUMN-->
-          Allows University of Hawaii users to search by cuisine type.
-        </div> <!--FOURTH ROW SECOND /COLUMN-->
-
-        <div class="column" id="odd-one"> <!--FOURTH ROW THIRD COLUMN-->
-          University of Hawaii users can also view daily food truck locations and hours of operation.
-        </div> <!--FOURTH ROW THIRD COLUMN-->
-
-        <div class="column"></div> <!--EMPTY FOURTH ROW FOURTH COLUMN-->
-
-      </div> <!--FOURTH /ROW-->
-
-      <div class="equal width row" style="padding-top: 0px;">  <!--FIFTH ROW-->
-
-        <div class="column"></div>  <!--EMPTY FIFTH ROW FIRST COLUMN-->
-
-        <div class="column" id="odd-two">  <!--FIFTH ROW SECOND COLUMN-->
-          University of Hawaii users can rate and review dishes.
-        </div> <!--FIFTH ROW SECOND /COLUMN-->
-
-        <div class="column" id="even-two">  <!--FIFTH ROW THIRD COLUMN-->
-          University of Hawaii users can save their favorite dishes to their own personal profile.
-        </div> <!--FIFTH ROW SECOND /COLUMN-->
-
-        <div class="column"></div>  <!--EMPTY FIFTH ROW FOURTH COLUMN-->
-
-      </div>  <!--FIFTH /ROW-->
-
-    </div> <!--UI EQUAL GRID /DIV-->
-  </div> <!--LAND BODY TWO /DIV-->
-
-  <div class="land-body-three"> <!--LAND BODY THREE DIV-->
-    <div class="ui centered grid" style="padding-top: 100px;padding-bottom: 100px;"> <!--UI CENTERED GRID DIV-->
-
-      <div class="row">
-        <h2 style="color: #16ab39; font-size: 36px; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Moar Chow Team</h2>
+      <div class="ui medium image">
+        <img src="/images/need-real-food.png" />
       </div>
 
       <div class="row">
-        <div class="ui doubling cards">
+        <div class="tagline">
+          <h1 id="tagline">Hush Hunger's Roar and More!</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <form class="log-button">
+            <div class="ui massive green button">
+              <i class="sign in icon"></i>Log In
+            </div>
+          <div id="modalView" class="ui basic modal">
+            <div class="header"><h2>Terms and Conditions</h2></div>
+            <div class="content"> <!--TERMS DIV-->
+
+              <p>Last updated: December 04, 2016</p>
+
+              <p>Please read these Terms and Conditions carefully before using the http://www.moarchow.meteorapp.com website operated by Moar Chow.</p>
+
+              <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+
+              <p><strong>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</strong></p>
+
+              <p><h3>Universty of Hawaii Account</h3></p>
+
+              <p>Our Service requires all users to have a University of Hawaii account to log in.</p>
+
+              <p>Moar Chow has no control over, and assumes no responsibility for your University of Hawaii account. You further acknowledge and agree that Moar Chow shall not be responsible or liable, directly or indirectly, for any damage, loss or obtained information caused by or in connection with the use of your University of Hawaii login information once you have logged in.</p>
+
+              <p>We strongly advise you to read the terms and conditions and privacy policies of University of Hawaii.</p>
+
+            </div> <!--TERMS /DIV-->
+            <div class="actions">
+              <div class="ui button cancel"><i class="remove icon"></i>Cancel</div>
+              <a class="ui green button ok">{{> Cas_Login}}</a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="land-body-two">
+    <div class="ui equal width centered grid container">
+
+      <div class="row">
+        <h2 id="what-is-moar-chow">What is Moar Chow?</h2>
+      </div>
+
+      <div class="equal width row">
+
+        <div class="column"></div>
+
+        <div class="column" id="about">
+          There are many food choices on campus at UH Manoa and knowing what each place serves and when can be
+          confusing. Moar Chow will allow you to browse all the menus on campus, view the location of restaurants and
+          food trucks.
+        </div>
+
+        <div class="column"></div>
+
+      </div>
+
+      <div class="row">
+        <h3 id="features">Features</h3>
+      </div>
+
+      <div class="equal width row" style="padding-bottom: 0px;">
+
+        <div class="column"></div>
+
+        <div class="column" id="even-one">
+          Allows University of Hawaii users to search by cuisine type.
+        </div>
+
+        <div class="column" id="odd-one">
+          University of Hawaii users can also view daily food truck locations and hours of operation.
+        </div>
+
+        <div class="column"></div>
+
+      </div>
+
+      <div class="equal width row" style="padding-top: 0px;">
+
+        <div class="column"></div>
+
+        <div class="column" id="odd-two">
+          University of Hawaii users can rate and review dishes.
+        </div>
+
+        <div class="column" id="even-two">
+          University of Hawaii users can save their favorite dishes to their own personal profile.
+        </div>
+
+        <div class="column"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div id="land-body-three">
+    <div class="ui centered grid">
+
+      <div class="row">
+        <h2 id="the-team">Moar Chow Team</h2>
+      </div>
+
+      <div class="row">
+        <div class="ui stackable cards" id="team-cards">
 
           <div class="card">
             <div class="blurring dimmable image">
@@ -168,7 +191,7 @@
         </div>
       </div>
 
-    </div> <!--UI CENTERED GRID /DIV-->
-  </div> <!--LAND BODY THREE /DIV-->
+    </div>
+  </div>
 
 </template>
