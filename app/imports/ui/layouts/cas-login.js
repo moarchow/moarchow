@@ -41,6 +41,7 @@ Template.Cas_Login.events({
    * @returns {boolean} False.
    */
   'click .cas-login': function casLogin(event, instance) {
+    $('#modalView').modal('hide');
     FlowRouter.go('Home_Page');
     event.preventDefault();
     const callback = function loginCallback(error) {

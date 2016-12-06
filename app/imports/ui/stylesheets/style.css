@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ravi+Prakash');
+
 body {
   padding-top: 66px; /* Move body of page below navbar. */
 }
@@ -57,21 +59,38 @@ h4 {
   color: #16ab39;
 }
 
-.land-body-one {
+#land-body-one {
   height: 33%;
   overflow: hidden;
   margin: 0px;
   border-radius:0px;
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/landingbackground.jpg') no-repeat center center fixed;
   background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
-.land-body-two {
+#tagline {
+  color: #16ab39;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 72px;
+  font-family: 'Ravi Prakash', cursive;
+}
+
+#land-body-two {
   height: 33%;
   overflow: hidden;
   margin: 0px;
   border-radius:0px;
   background-color: #009320;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#what-is-moar-chow {
+  color: white;
+  font-size: 36px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #about {
@@ -80,6 +99,12 @@ h4 {
   font-size: 18px;
   border: 1px solid black;
   background-color: rgba(255, 255, 255, 0.75);
+}
+
+#features {
+  color: white;
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #even-one {
@@ -114,28 +139,26 @@ h4 {
   background-color: rgba(192, 192, 192, 0.75);
 }
 
-.land-body-three {
+#the-team {
+  color: #16ab39;
+  font-size: 52px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-family: 'Ravi Prakash', cursive;
+}
+
+#land-body-three {
   height: 33%;
   overflow: hidden;
   margin: 0px;
   border-radius:0px;
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/overlooking.jpg') no-repeat center center fixed;
   background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-
-#founder {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  padding:5px;
-  border:1px solid #021a40;
-  background-color:#fff;
-}
-
-#body-three-row {
-  padding: 15px;
-  border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.75);
+#team-cards {
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .user-body {
