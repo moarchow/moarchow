@@ -12,16 +12,26 @@
       <h4>Located at {{vendorField 'location'}}</h4>
     </div>
     <div class="ui container" style="padding-top: 20px">
-      {{#if isFavorite}}
-      <button class="ui four wide button remove-favorite-button" style="margin-bottom:10px;" type="submit">Remove from Favorites</button>
-      {{else}}
-      <button class="ui four wide green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to
-        favorites
-      </button>
-      {{/if}}
+      <!--{{#if isFavorite}}-->
+      <!--<button class="ui four wide button remove-favorite-button" style="margin-bottom:10px;" type="submit">Remove from-->
+      <!--Favorites-->
+      <!--</button>-->
+      <!--{{else}}-->
+      <!--<button class="ui four wide green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to-->
+      <!--favorites-->
+      <!--</button>-->
+      <!--{{/if}}-->
       <div class="ui two column grid">
         <div class="ui seven wide column">
-
+          <div class="ui segment">
+            {{#if isFavorite}}
+            <button class="ui toggle button update-favorite-button" >Remove from Favorites</button>
+            {{else}}
+            <button class="ui toggle green button update-favorite-button" >Add to Favorites</button>
+            {{/if}}
+            <div class="ui rating" data-rating={{averageRating}} data-max-rating="5"></div>
+            {{reviewCount}} reviews
+          </div>
           {{#if isOpen }}
           <div class="ui inverted green segment">
             Open Now
@@ -53,6 +63,14 @@
           </div>
           <div class="ui segment">
             <h2> Leave a Review!</h2>
+
+            <form class="ui form">
+              <div class="field">
+                <div class="ui rating" id="userRating" data-rating={{userRating}} data-max-rating="5"></div>
+              </div>
+              <button class="ui fluid green button submit-rating" type="submit" value="Submit">Submit</button>
+            </form>
+
           </div>
         </div>
 
@@ -77,6 +95,19 @@
     </div>
 
   </div>
+  <script>
+    $('.ui.rating')
+        .rating('enable')
+
+    ;
+    $('.ui.button.toggle').state({
+      text: {
+        inactive: 'Remove from Favorite',
+        active: 'Add to Favorite'
+      },
+
+    });
+  </script>
   {{else}}
   {{> Loading}}
   {{/if}}

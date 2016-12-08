@@ -102,6 +102,12 @@ Template.Home_Page.helpers({
     }
     else return 0;
   },
+  userRating(vendor){
+    if(vendor['reviews'].length > 1){
+      return 1;
+    }
+    else return 0;
+  },
 });
 Template.Home_Page.events({
 
@@ -132,3 +138,15 @@ Handlebars.registerHelper("SearchList", function (input) {
 });
 
 
+Template.Home_Page.onRendered(function() {
+  // Meteor.setTimeout(function() {
+  //   // Initialize rating control
+  //   $('.ui.rating')
+  //       .rating({
+  //         initialRating: 3,
+  //         maxRating: 5,
+  //         clearable: true,
+  //
+  //       });
+  // }, 0);
+});
