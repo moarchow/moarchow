@@ -29,7 +29,7 @@
             {{else}}
             <button class="ui toggle green button update-favorite-button" >Add to Favorites</button>
             {{/if}}
-            <div class="ui rating" data-rating={{averageRating}} data-max-rating="5"></div>
+            <div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>
             {{reviewCount}} reviews
           </div>
           {{#if isOpen }}
@@ -66,7 +66,7 @@
 
             <form class="ui form">
               <div class="field">
-                <div class="ui rating" id="userRating" data-rating={{userRating}} data-max-rating="5"></div>
+                <div class="ui star user rating" id="userRating" data-rating={{userRating}} data-max-rating="5"></div>
               </div>
               <button class="ui fluid green button submit-rating" type="submit" value="Submit">Submit</button>
             </form>
@@ -96,8 +96,12 @@
 
   </div>
   <script>
-    $('.ui.rating')
+    $('.ui.user.rating')
         .rating('enable')
+
+    ;
+    $('.ui.average.rating')
+        .rating('disable')
 
     ;
     $('.ui.button.toggle').state({

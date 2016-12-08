@@ -36,11 +36,13 @@
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
                 <td>
-                  <div class="ui user star rating" data-rating={{ userRating 'vendor'}} data-max-rating="5">
+                  <div class="ui star rating" data-rating={{userRating vendor}} data-max-rating="5">
                   </div>
                 </td>
                 <td>
-                  <button class="ui button remove-vendor"><i class="trash icon"></i></button>
+                  <div class="ui form">
+                    <button class="ui icon button remove-vendor" type="submit" ><i class="trash icon"></i></button>
+                  </div>
                 </td>
               </tr>
               {{/each}}
@@ -68,11 +70,11 @@
               <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
             </form>
 
-            <table class="ui single line table" style="color: #616161;">
+            <table class="ui table" style="color: #616161;">
               <thead>
               <th class="two wide">Status</th>
               <th class="six wide">Name</th>
-              <th class="six wide">Rating</th>
+              <th class="six wide">Description</th>
               </thead>
               <tbody>
               {{#each vendor in SearchList}}
@@ -88,7 +90,7 @@
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
                 <td>
-                  <div class="ui average star rating" data-rating="3" data-max-rating="5"></div>
+                  {{vendor.description}}
                 </td>
               </tr>
               {{/each}}
@@ -102,7 +104,7 @@
   </div>
 <script>
   $('.ui.rating')
-      .rating('diable')
+      .rating('disable')
   ;
 
   </script>

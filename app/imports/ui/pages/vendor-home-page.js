@@ -125,8 +125,7 @@ Template.Vendor_Home_Page.helpers({
   },
   isFavorite(){
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    console.log(vendor['favorite']);
-    console.log(vendor['reviews']);
+
     const userID = Meteor.userId();
     if( _.contains(vendor['favorite'], userID)){
       return true;
@@ -140,21 +139,16 @@ Template.Vendor_Home_Page.helpers({
     const numReviews = vendor['reviews'].length-1;
     if(numReviews <1) return 0;
     else {
-      // var totalRate = _.reduce(vendor['reviews'], function(sum,num){
-      //   return sum+ num.rating;
-      // });
       var totalRate =0;
       _.each(vendor['reviews'], function(num){
         totalRate = totalRate + num.rating;
       });
-      console.log("total ratings: " + totalRate);
 
       var avgRate = parseInt(Math.round(totalRate / numReviews));
       return avgRate;
     }
 
   },
-  //var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
   reviewCount(){
     const vendorID=FlowRouter.getParam('_id');
     const vendor = Vendors.findOne(vendorID);
@@ -169,8 +163,7 @@ Template.Vendor_Home_Page.helpers({
     const userReview =  _.find(vendor['reviews'], function(num){
       return num.user== userID;
     });
-    console.log("the user's review: ");
-    console.log(userReview);
+
     if(userReview != null) return userReview.rating;
     else return 0;
 
@@ -179,21 +172,7 @@ Template.Vendor_Home_Page.helpers({
 
 });
 Template.Vendor_Home_Page.events({
-  // 'click .add-favorite-button'(event, instance) {
-  //   const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-  //   vendor['favorite'].push(Meteor.userId());
-  //   Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-  //   window.location.reload();
-  //   // FlowRouter.go('Home_Page');
-  //
-  // },
-  // 'click .remove-favorite-button'(event, instance) {
-  //   const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-  //   vendor['favorite'].pop(Meteor.userId());
-  //   Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-  //   window.location.reload();
-  //   // FlowRouter.go('Home_Page');
-  // },
+
   'click .update-favorite-button'(event, instance) {
     const vendorID=FlowRouter.getParam('_id');
     const vendor = Vendors.findOne(vendorID);
@@ -233,10 +212,4 @@ Meteor.startup(function () {
 
 });
 
-// Template.Home_Page.onRendered(function() {
-//
-//     // Initialize rating control
-//     this.$('.ui.rating')
-//         .rating();
-//
-// });
+
