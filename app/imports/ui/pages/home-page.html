@@ -1,8 +1,9 @@
 <template name="Home_Page">
   {{#If_Logged_In}}
+  {{#if Template.subscriptionsReady}}
   <div class="ui container" style="margin-top: 40px; margin-bottom: 20px;">
     <div class="ui grid">
-      {{#if Template.subscriptionsReady}}
+
 
       <div class="ui row">
         <div class="ui column">
@@ -34,17 +35,14 @@
                 <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
-                <td class="collapsing">
-                  <div class="ui rating" data-rating="4">
-                    <i class="icon"></i>
-                    <i class="icon"></i>
-                    <i class="icon"></i>
-                    <i class="icon"></i>
-                    <i class="icon"></i>
+                <td>
+                  <div class="ui star rating" data-rating={{userRating vendor}} data-max-rating="5">
                   </div>
                 </td>
                 <td>
-                  <button class="ui button remove-vendor"><i class="trash icon"></i></button>
+                  <div class="ui form">
+                    <button class="ui icon button remove-vendor" type="submit" ><i class="trash icon"></i></button>
+                  </div>
                 </td>
               </tr>
               {{/each}}
@@ -72,11 +70,11 @@
               <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
             </form>
 
-            <table class="ui single line table" style="color: #616161;">
+            <table class="ui table" style="color: #616161;">
               <thead>
               <th class="two wide">Status</th>
               <th class="six wide">Name</th>
-              <th class="six wide">Rating</th>
+              <th class="six wide">Description</th>
               </thead>
               <tbody>
               {{#each vendor in SearchList}}
@@ -91,12 +89,8 @@
                 <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
-                <td class="collapsing">
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
+                <td>
+                  {{vendor.description}}
                 </td>
               </tr>
               {{/each}}
@@ -105,11 +99,19 @@
           </div>
         </div>
       </div>
-      {{else}}
-      {{> Loading}}
-      {{/if}}
+
     </div>
   </div>
+<script>
+  $('.ui.rating')
+      .rating('disable')
+  ;
+
+  </script>
+  {{else}}
+  {{> Loading}}
+  {{/if}}
   {{/If_Logged_In}}
+
 </template>
 

@@ -1,8 +1,9 @@
 <template name="Vendor_List_Page">
   {{#If_Logged_In}}
+  {{#if Template.subscriptionsReady}}
   <div class="ui container" style="margin-top: 20px">
     <div class="ui grid" style="padding-top: 20px; padding-bottom: 20px;">
-      {{#if Template.subscriptionsReady}}
+
       <div class="ui column">
         <div class="ui segment">
           <table class="ui celled padded table">
@@ -12,19 +13,19 @@
               <th>Location</th>
               <th>Description</th>
               <th>Rating</th>
-            </tr></thead>
+            </tr>
+            </thead>
             <tbody>
             {{#each vendor in VendorsList}}
             <tr>
-              <td class="collapsing"><h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3></td>
+              <td class="collapsing"><h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a>
+              </h3></td>
               <td>{{vendor.location}}</td>
               <td>{{vendor.description}}</td>
-              <td class="collapsing">
-                <i class="yellow star icon"></i>
-                <i class="yellow star icon"></i>
-                <i class="yellow star icon"></i>
-                <i class="yellow star icon"></i>
-                <i class="yellow star icon"></i>
+              <td>
+                <div class="ui star rating" data-rating={{averageRating vendor}} data-max-rating="5">
+                </div>
+                {{reviewCount vendor}} reviews
               </td>
             </tr>
             {{/each}}
@@ -32,11 +33,17 @@
           </table>
         </div>
       </div>
-      {{else}}
-      {{> Loading}}
-      {{/if}}
     </div>
   </div>
+  <script>
+    $('.ui.rating')
+        .rating('disable')
+    ;
+
+  </script>
+  {{else}}
+  {{> Loading}}
+  {{/if}}
   {{/If_Logged_In}}
 </template>
 
