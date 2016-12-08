@@ -1,28 +1,29 @@
 <template name="Home_Page">
   {{#If_Logged_In}}
+  {{#if Template.subscriptionsReady}}
   <div class="ui container" style="margin-top: 40px; margin-bottom: 20px;">
     <div class="ui grid">
-      {{#if Template.subscriptionsReady}}
+
 
       <div class="ui row">
         <div class="ui column">
-
-          <div><h2>My Favorite Chow Spots</h2></div>
           {{ currentUser.username}}
           <div class="ui segment">
             <div><h2>My Favorite Chow Spots</h2></div>
-
+            {{#if noFavorites }}
+            You have no favorite Chow Spots! Find your favorites <a href="{{pathFor 'Vendor_List_Page'}}"> here.</a>
+            {{else}}
             <table class="ui single line table">
               <thead>
               <tr>
                 <th class="two wide">Status</th>
                 <th class="six wide">Name</th>
                 <th class="six wide">My Rating</th>
+                <th class="one wide"></th>
               </tr>
               </thead>
               <tbody>
-              {{#each vendor in VendorsList}}
-              {{#if isFavorite vendor}}
+              {{#each vendor in FavoritesList}}
               <tr>
                 <td>
                   {{#if isOpen vendor }}
@@ -34,19 +35,20 @@
                 <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
-                <td class="collapsing">
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
+                <td>
+                  <div class="ui star rating" data-rating={{userRating vendor}} data-max-rating="5">
+                  </div>
+                </td>
+                <td>
+                  <div class="ui form">
+                    <button class="ui icon button remove-vendor" type="submit" ><i class="trash icon"></i></button>
+                  </div>
                 </td>
               </tr>
-              {{else}}
-              {{/if}}
               {{/each}}
               </tbody>
             </table>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -68,11 +70,11 @@
               <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
             </form>
 
-            <table class="ui single line table" style="color: #616161;">
+            <table class="ui table" style="color: #616161;">
               <thead>
               <th class="two wide">Status</th>
               <th class="six wide">Name</th>
-              <th class="six wide">Rating</th>
+              <th class="six wide">Description</th>
               </thead>
               <tbody>
               {{#each vendor in SearchList}}
@@ -87,12 +89,8 @@
                 <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
-                <td class="collapsing">
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
-                  <i class="yellow star icon"></i>
+                <td>
+                  {{vendor.description}}
                 </td>
               </tr>
               {{/each}}
@@ -101,11 +99,19 @@
           </div>
         </div>
       </div>
-      {{else}}
-      {{> Loading}}
-      {{/if}}
+
     </div>
   </div>
+<script>
+  $('.ui.rating')
+      .rating('disable')
+  ;
+
+  </script>
+  {{else}}
+  {{> Loading}}
+  {{/if}}
   {{/If_Logged_In}}
+
 </template>
 

@@ -65,13 +65,26 @@ Template.Home_Page.helpers({
           else return false;
     }
   },
-  isFavorite(vendor){
-    if (_.contains(vendor['favorite'], Meteor.userId())) return true;
-    else {
-      return false;
-    }
+  FavoritesList(){
+    /* returns list of vendors favorited by user */
+    const user = Meteor.userId(0);
+    var favArray = [];
+    Vendors.find().forEach(function (vendor) {
+      if (_.contains(vendor['favorite'], user))
+        favArray.push(vendor);
+    });
+    return favArray;
   },
-
+  noFavorites(){
+    /* returns true if current user has not favorited any vendors*/
+    const user = Meteor.userId(0);
+    var favArray = [];
+    Vendors.find().forEach(function (vendor) {
+      if (_.contains(vendor['favorite'], user))
+        favArray.push(vendor);
+    });
+    return favArray.length == 0;
+  },
   VendorsFoodTypes() {
     var typeArray = [];
     Vendors.find().forEach(function (vendor) {
@@ -81,7 +94,34 @@ Template.Home_Page.helpers({
       return name;
     });
   },
+  averageRating(vendor){
+    if(vendor['reviews'].length > 1){
+      var sum = _.reduce(vendor['reviews'], function(memo, num){ return memo + num; }, 0);
+      var rating = sum/(vendor['reviews'].length -1);
+      return rating;
+    }
+    else return 0;
+  },
+  userRating(vendor){
+    const userID = Meteor.userId();
+
+    const userReview =  _.find(vendor['reviews'], function(num){
+      return num.user== userID;
+    });
+
+    if(userReview != null) return userReview.rating;
+    else return 0;
+  },
+  removeVendor(vendor){
+    //removes a vendor from the user's favorites
+    // const vendorID = vendor._id;
+    // const userID = Meteor.userId();
+    // vendor['favorite'].pop(userID);
+    // Vendors.update(vendorID, { $set: vendor });
+  console.log("remove "+ vendor.name);
+  },
 });
+
 Template.Home_Page.events({
 
   'click .chow-search': function (event) {
@@ -99,6 +139,13 @@ Template.Home_Page.events({
     });
     Session.set("SearchList", searchList);
   },
+  'click .remove-vendor':function(event){
+
+// ???????????????????????? 
+
+  },
+
+
 
 });
 

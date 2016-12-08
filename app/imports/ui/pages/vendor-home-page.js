@@ -124,37 +124,92 @@ Template.Vendor_Home_Page.helpers({
     }
   },
   isFavorite(){
-    console.log(Meteor.userId());
-
-    //returns true if this vendor is not in the user's favorites
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    console.log(vendor['favorite']);
+
     const userID = Meteor.userId();
     if( _.contains(vendor['favorite'], userID)){
       return true;
     }
     else return false;
 
-  }
+  },
+  averageRating(){
+    const vendorID=FlowRouter.getParam('_id');
+    const vendor = Vendors.findOne(vendorID);
+    const numReviews = vendor['reviews'].length-1;
+    if(numReviews <1) return 0;
+    else {
+      var totalRate =0;
+      _.each(vendor['reviews'], function(num){
+        totalRate = totalRate + num.rating;
+      });
+
+      var avgRate = parseInt(Math.round(totalRate / numReviews));
+      return avgRate;
+    }
+
+  },
+  reviewCount(){
+    const vendorID=FlowRouter.getParam('_id');
+    const vendor = Vendors.findOne(vendorID);
+    const numReviews = vendor['reviews'].length-1;
+    return numReviews;
+  },
+  userRating(){
+    const vendorID=FlowRouter.getParam('_id');
+    const vendor = Vendors.findOne(vendorID);
+    const userID = Meteor.userId();
+
+    const userReview =  _.find(vendor['reviews'], function(num){
+      return num.user== userID;
+    });
+
+    if(userReview != null) return userReview.rating;
+    else return 0;
+
+  },
+
 
 });
 Template.Vendor_Home_Page.events({
-  'click .add-favorite-button'(event, instance) {
-    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    vendor['favorite'].push(Meteor.userId());
-    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-    console.log(vendor['favorite']);
-    FlowRouter.go('Home_Page');
+
+  'click .update-favorite-button'(event, instance) {
+    const vendorID=FlowRouter.getParam('_id');
+    const vendor = Vendors.findOne(vendorID);
+    const userID = Meteor.userId();
+    if( _.contains(vendor['favorite'], userID)){
+      vendor['favorite'].pop(userID);
+      console.log("removed");
+    }
+    else vendor['favorite'].push(userID);
+    Vendors.update(vendorID, { $set: vendor });
   },
-  'click .remove-favorite-button'(event, instance) {
-    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-    vendor['favorite'].pop(Meteor.userId());
-    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
-    console.log(vendor['favorite']);
-    FlowRouter.go('Home_Page');
+
+  'click .submit-rating': function (event) {
+    event.preventDefault();
+    var value = $('.ui.rating').rating('get rating');
+    const vendorID=FlowRouter.getParam('_id');
+    const vendor = Vendors.findOne(vendorID);
+    const userID = Meteor.userId();
+
+    const userReview =  _.find(vendor['reviews'], function(num){
+      return num.user== userID;
+    });
+    console.log("the user's review: ");
+    console.log(userReview);
+    if(userReview != null) vendor['reviews'].pop(userReview);
+    const newReview= {user:userID, rating: value[1]};
+    console.log("new value" + value[1]);
+    vendor['reviews'].push(newReview);
+
+    // console.log(vendor['reviews']);
+    Vendors.update(vendorID, { $set: vendor });
   },
+
 });
 Meteor.startup(function () {
   GoogleMaps.load({ key: 'AIzaSyDmoMBN4kRbUeOzHIacLxerbY50amm9EnA' });
 
 });
+
+
