@@ -180,9 +180,13 @@ Template.Vendor_Home_Page.events({
     if( _.contains(vendor['favorite'], userID)){
       vendor['favorite'].pop(userID);
       console.log("removed");
+      //return to home page
+      FlowRouter.go('Home_Page');
     }
     else vendor['favorite'].push(userID);
     Vendors.update(vendorID, { $set: vendor });
+    //return to home page
+    FlowRouter.go('Home_Page');
   },
 
   'click .submit-rating': function (event) {
@@ -204,6 +208,8 @@ Template.Vendor_Home_Page.events({
 
     // console.log(vendor['reviews']);
     Vendors.update(vendorID, { $set: vendor });
+    // return to home page
+    FlowRouter.go('Home_Page');
   },
 
 });
