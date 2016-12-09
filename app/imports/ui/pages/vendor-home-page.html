@@ -1,24 +1,89 @@
 <template name="Vendor_Home_Page">
+  {{#If_Logged_In}}
   {{#if Template.subscriptionsReady}}
-  <div class="ui center aligned fluid container">
+  <div class="ui center aligned fluid container" style="margin-bottom: 20px;">
     <div class="title-header">
 
       <!--VENDOR'S NAME-->
-      <div style="padding-top: 120px; padding-bottom: 15px">
+      <div style="padding-top: 85px; padding-bottom: 15px">
         {{ vendorField 'name' }}
       </div>
-      <h4>Located at {{vendorField 'location'}}</h4>
+
+      <br/>
+
+      <div>
+        <div class="ui massive star average rating" data-rating={{averageRating}} data-max-rating="5"></div>
+      </div>
+
+      <div>
+        {{#if isFavorite}}
+        <button class="ui toggle left-floated button update-favorite-button"
+                style="margin-bottom: 12px; margin-top: 12px;">Remove from Favorites
+        </button>
+        {{else}}
+        <button class="ui toggle left-floated green button update-favorite-button"
+                style="margin-bottom: 12px; margin-top: 12px;">Add to Favorites
+        </button>
+        {{/if}}
+
+
+      </div>
+
     </div>
+
     <div class="ui container" style="padding-top: 20px">
+
       <div class="ui two column grid">
         <div class="ui seven wide column">
-          <img src="/images/{{vendorImage}}" class="ui fluid image">
-          <div class="ui segment">
+          <!--<div class="ui segment">-->
+          <!--{{#if isFavorite}}-->
+          <!--<button class="ui toggle button update-favorite-button" >Remove from Favorites</button>-->
+          <!--{{else}}-->
+          <!--<button class="ui toggle green button update-favorite-button" >Add to Favorites</button>-->
+          <!--{{/if}}-->
+          <!--<div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>-->
+          <!--{{reviewCount}} reviews-->
+          <!--</div>-->
+          <!--{{#if isOpen }}-->
+          <!--<div class="ui inverted green segment">-->
+          <!--Open Now-->
+          <!--</div>-->
+          <!--{{else}}-->
+          <!--<div class="ui inverted red segment">-->
+          <!--Closed-->
+          <!--</div>-->
+          <!--{{/if}}-->
 
+          <div>
+            <img class="ui centered image" style="height: 100px; " src="/images/{{vendorImage vendor}}"/>
+          </div>
+
+          <div class="ui basic segment" id="menu-item">
             {{ vendorField 'description' }}
           </div>
-          <div class=" ui segment">
-            <h4>Hours of Operation</h4>
+
+          <div id="menu-item">
+            <h3>Located at {{vendorField 'location'}}</h3>
+          </div>
+          <div class="map-container" style="height: 250px; margin-top:10px;">
+            {{> googleMap name="map" options=mapOptions}}
+          </div>
+
+
+          <div class="ui basic segment">
+            {{#if isOpen }}
+            <div class="ui inverted green segment" style="margin-top: 10px; margin-bottom: 10px">
+              Open Now
+            </div>
+            {{else}}
+            <div class="ui inverted red segment">
+              Closed
+            </div>
+            {{/if}}
+          </div>
+
+          <div class="ui basic segment" id="menu-item">
+            <h3>Hours of Operation</h3>
             <p>Monday<br/>
               {{ vendorHours 'monday' }}</p>
             <p> Tuesday <br/>
@@ -30,16 +95,29 @@
             <p> Friday <br/>
               {{ vendorHours 'friday' }}</p>
           </div>
+          <div class="ui basic segment">
+            <h3> Leave a Review!</h3>
+
+            <form class="ui form">
+              <div class="field">
+                <div class="ui star user rating" id="userRating" data-rating={{userRating}} data-max-rating="5"></div>
+              </div>
+              <button class="ui fluid blue button submit-rating" type="submit" value="Submit">Submit</button>
+            </form>
+
+          </div>
         </div>
 
         <div class="ui nine wide column">
-          {{#each category in MenuCategories}}
-          <div class="ui segment" id="menu-list">
-            <div id="menu-category">{{category.name}}</div>
+          {{#each menu in vendorField 'menus'}}
+          <div class="ui basic segment" id="menu-list">
+            <div id="menu-category">{{menu.name}}</div>
+            <div id="menu-description">{{menu.description}}</div>
             <br/>
-            {{#each item in category.list}}
+            {{#each item in menu.items}}
             <div id="menu-item">{{item.name}}</div>
             <div style="color: #616161">{{item.description}}</div>
+            <div style="color: #616161">{{item.price}}</div>
             <br>
             {{/each}}
 
@@ -51,9 +129,27 @@
     </div>
 
   </div>
+  <script>
+    $('.ui.user.rating')
+        .rating('enable')
+
+    ;
+    $('.ui.average.rating')
+        .rating('disable')
+
+    ;
+    $('.ui.button.toggle').state({
+      text: {
+        inactive: 'Remove from Favorites',
+        active: 'Add to Favorites'
+      },
+
+    });
+  </script>
   {{else}}
   {{> Loading}}
   {{/if}}
+  {{/If_Logged_In}}
 </template>
 
 
