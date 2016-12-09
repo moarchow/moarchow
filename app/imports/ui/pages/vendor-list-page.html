@@ -9,22 +9,26 @@
           <table class="ui celled padded table">
             <thead>
             <tr>
-              <th>Name</th>
-              <th>Location</th>
-              <th>Description</th>
-              <th>Rating</th>
+              <th class="two wide"></th>
+              <th class="five wide">Name</th>
+              <th class="two wide">Location</th>
+              <th class="five wide">Description</th>
+              <th class="three wide">Rating</th>
             </tr>
             </thead>
             <tbody>
             {{#each vendor in VendorsList}}
             <tr>
-              <td class="collapsing"><h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a>
-              </h3></td>
+              <td>
+                <img class="ui centered image" style="object-fit: cover; max-height:100px" src="/images/{{vendorImage vendor}}"/>
+              </td>
+              <td class="collapsing"><h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
+              </td>
               <td>{{vendor.location}}</td>
               <td>{{vendor.description}}</td>
               <td>
                 <div class="ui star rating" data-rating={{averageRating vendor}} data-max-rating="5">
-                </div>
+                </div><br/>
                 {{reviewCount vendor}} reviews
               </td>
             </tr>

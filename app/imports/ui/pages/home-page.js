@@ -120,6 +120,9 @@ Template.Home_Page.helpers({
     // Vendors.update(vendorID, { $set: vendor });
   console.log("remove "+ vendor.name);
   },
+  'vendorImage': function (vendor) {
+    return vendor.image;
+  },
 });
 
 Template.Home_Page.events({
@@ -144,9 +147,6 @@ Template.Home_Page.events({
 // ???????????????????????? 
 
   },
-
-
-
 });
 
 Handlebars.registerHelper("SearchList", function (input) {
