@@ -31,7 +31,7 @@ const vendorSeeds = [
       thursday: '10:00am-8:00pm',
       friday: '10:00am-8:00pm',
     },
-    foodTypes: ["Vietnamese", "Sandwich", "Salads",],
+    foodTypes: ["Vietnamese", "Sandwich", "Salad",],
     menus: [
       {
         name: 'Vietnamese Pho',
@@ -634,7 +634,7 @@ const vendorSeeds = [
       thursday: '7:00am-6:00pm',
       friday: '7:00am-5:00pm',
     },
-    foodTypes: ["Coffee", "Tea", "Pastry", "Baked"],
+    foodTypes: ["Coffee", "Tea", "Pastry"],
     menus: [
       {
         name: 'Drinks',
@@ -1360,7 +1360,7 @@ const vendorSeeds = [
       thursday: '10:00am-2:30pm',
       friday: '10:00am-2:30pm',
     },
-    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Taco"],
+    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Mexican"],
     menus: [
       {
         name: 'Sandwiches',
@@ -1581,7 +1581,7 @@ const vendorSeeds = [
       thursday: '7:00am-5:00pm',
       friday: '7:30am-4:00pm',
     },
-    foodTypes: ["Smoothie", "Sandwich", "Flatbread", "Oatmeal", "Bistro"],
+    foodTypes: ["Smoothie", "Sandwich"],
     menus: [
       {
         name: 'Sandwiches & Wraps',
@@ -1985,7 +1985,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:30pm',
       friday: '10:30am-4:30pm',
     },
-    foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
+    foodTypes: ["Local", "Burger", "Sandwich", "Musubi"],
     menus: [
       {
         name: 'Combo Plates',
@@ -3125,7 +3125,7 @@ const vendorSeeds = [
       thursday: '6:00am-10:00pm',
       friday: '6:00am-6:00pm',
     },
-    foodTypes: ["Coffee", "Tea", "Smoothie"],
+    foodTypes: ["Coffee", "Tea", "Smoothie", "Pastry"],
     menus: [
       {
         name: 'Coffee, Expresso, and Tea',
@@ -3437,7 +3437,7 @@ const vendorSeeds = [
       thursday: '7:00am-7:00pm',
       friday: '7:00am-7:00pm',
     },
-    foodTypes: ["Sandwich", "Cookie"],
+    foodTypes: ["Sandwich"],
     menus: [
       {
         name: 'Meal Deal',
@@ -3886,7 +3886,7 @@ const vendorSeeds = [
       thursday: '10:00am-2:00pm',
       friday: '10:00am-2:00pm',
     },
-    foodTypes: ["Local", "Fish", "Curry"],
+    foodTypes: ["Local", "Curry"],
     menus: [
       {
         name: 'Salads',
