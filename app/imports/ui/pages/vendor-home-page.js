@@ -209,7 +209,7 @@ Template.Vendor_Home_Page.events({
     // console.log(vendor['reviews']);
     Vendors.update(vendorID, { $set: vendor });
     // return to home page
-    FlowRouter.go('Home_Page');
+    FlowRouter.go('Vendor_List_Page');
   },
 
 });
