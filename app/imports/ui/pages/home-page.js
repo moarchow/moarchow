@@ -95,9 +95,11 @@ Template.Home_Page.helpers({
     });
   },
   averageRating(vendor){
-    if(vendor['reviews'].length > 1){
-      var sum = _.reduce(vendor['reviews'], function(memo, num){ return memo + num; }, 0);
-      var rating = sum/(vendor['reviews'].length -1);
+    if (vendor['reviews'].length > 1) {
+      var sum = _.reduce(vendor['reviews'], function (memo, num) {
+        return memo + num;
+      }, 0);
+      var rating = sum / (vendor['reviews'].length - 1);
       return rating;
     }
     else return 0;
@@ -105,21 +107,14 @@ Template.Home_Page.helpers({
   userRating(vendor){
     const userID = Meteor.userId();
 
-    const userReview =  _.find(vendor['reviews'], function(num){
-      return num.user== userID;
+    const userReview = _.find(vendor['reviews'], function (num) {
+      return num.user == userID;
     });
 
-    if(userReview != null) return userReview.rating;
+    if (userReview != null) return userReview.rating;
     else return 0;
   },
-  removeVendor(vendor){
-    //removes a vendor from the user's favorites
-    // const vendorID = vendor._id;
-    // const userID = Meteor.userId();
-    // vendor['favorite'].pop(userID);
-    // Vendors.update(vendorID, { $set: vendor });
-  console.log("remove "+ vendor.name);
-  },
+
   'vendorImage': function (vendor) {
     return vendor.image;
   },
@@ -142,15 +137,18 @@ Template.Home_Page.events({
     });
     Session.set("SearchList", searchList);
   },
-  'click .remove-vendor':function(event){
 
-// ???????????????????????? 
-
+  'click .remove-vendor': function (event) {
+    var favorite = Vendors.findOne(event.currentTarget.id).favorite;
+    var userID = Meteor.userId();
+    var index = favorite.indexOf(userID);
+    favorite.splice(index, 1)
+    Vendors.update(event.currentTarget.id, { "$set": { "favorite": favorite } });
   },
-});
 
+})
+;
 Handlebars.registerHelper("SearchList", function (input) {
   return Session.get("SearchList");
 });
-
 
