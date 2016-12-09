@@ -3391,22 +3391,22 @@ const vendorSeeds = [
           {
             name: 'Flavor',
             description: '',
-            price: '50 cents'
+            price: '0.50 cents'
           },
           {
             name: 'Expresso Shot',
             description: '',
-            price: '80 cents'
+            price: '0.80 cents'
           },
           {
             name: 'Venti Iced',
             description: '',
-            price: 'up to 30 cents'
+            price: 'up to 0.30 cents'
           },
           {
             name: 'Substitutions',
             description: 'Sumatra Coconut Milk,  Organic Soymilk, or (NEW) Almondmilk',
-            price: '60 cents'
+            price: '0.60 cents'
           },
         ]
       },
