@@ -8,7 +8,7 @@
       <div class="ui row">
         <div class="ui column">
           {{ currentUser.username}}
-          <div class="ui segment">
+          <div class="ui basic segment">
             <div><h2>My Favorite Chow Spots</h2></div>
             {{#if noFavorites }}
             You have no favorite Chow Spots! Find your favorites <a href="{{pathFor 'Vendor_List_Page'}}"> here.</a>
@@ -17,8 +17,7 @@
               <thead>
               <tr>
                 <th class="two wide">Status</th>
-                <!--<th class="two wide"></th>-->
-                <th class="six wide">Name</th>
+                <th class="six wide"></th>
                 <th class="four wide">My Rating</th>
                 <th class="one wide"></th>
               </tr>
@@ -36,7 +35,7 @@
                 </td>
                 <td>
                   <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
-                    <img class="ui image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                    <img class="ui left image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
                   </a>
 
                 </td>
@@ -65,8 +64,9 @@
       <div class="ui row">
         <div class="ui column">
 
-          <div class="ui segment">
+          <div class="ui basic segment">
             <div><h2>Search For Chow</h2></div>
+            <br/>
 
             <form class="ui form">
               <div class="ui two column grid">
@@ -92,9 +92,8 @@
             <table class="ui single line table" style="color: #616161;">
               <thead>
               <th class="two wide">Status</th>
-              <th class="two wide"></th>
-              <th class="four wide">Name</th>
-              <th class="six wide">Location</th>
+              <th class="six wide"></th>
+              <th class="five wide">Location</th>
               </thead>
               <tbody>
               {{#each vendor in SearchList}}
@@ -107,10 +106,9 @@
                   {{/if}}
                 </td>
                 <td>
-                  <img class="ui centered image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
-                </td>
-                <td>
-                  <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
+                  <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
+                    <img class="ui left image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                  </a>
                 </td>
                 <td>
                   {{vendor.location}}
