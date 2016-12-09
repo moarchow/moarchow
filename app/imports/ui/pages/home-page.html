@@ -17,8 +17,9 @@
               <thead>
               <tr>
                 <th class="two wide">Status</th>
+                <!--<th class="two wide"></th>-->
                 <th class="six wide">Name</th>
-                <th class="six wide">My Rating</th>
+                <th class="four wide">My Rating</th>
                 <th class="one wide"></th>
               </tr>
               </thead>
@@ -30,18 +31,26 @@
                   <button class="ui green button">Open</button>
                   {{else}}
                   <button class="ui red button">Closed</button>
+
                   {{/if}}
                 </td>
                 <td>
-                  <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
+                  <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
+                    <img class="ui image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                  </a>
+
                 </td>
+                <!--<td>-->
+                  <!--&lt;!&ndash;<h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>&ndash;&gt;-->
+                <!--</td>-->
                 <td>
                   <div class="ui star rating" data-rating={{userRating vendor}} data-max-rating="5">
                   </div>
                 </td>
                 <td>
                   <div class="ui form">
-                    <button class="ui icon button remove-vendor" type="submit" ><i class="trash icon"></i></button>
+                    <!--<button class="ui icon button remove-vendor" type="submit" ><i class="remove circle icon"></i></button>-->
+                    <i class="remove circle icon"></i>
                   </div>
                 </td>
               </tr>
@@ -60,21 +69,32 @@
             <div><h2>Search For Chow</h2></div>
 
             <form class="ui form">
-              <div class="field">
-                <select id="chowSelect">
-                  {{#each type in VendorsFoodTypes}}
-                  <option value="{{type}}">{{type}}</option>
-                  {{/each}}
-                </select>
+              <div class="ui two column grid">
+                <div class="ui twelve wide column">
+                  <div class="field">
+                    <select id="chowSelect">
+                      {{#each type in VendorsFoodTypes}}
+                      <option value="{{type}}">{{type}}</option>
+                      {{/each}}
+                    </select>
+                  </div>
+                </div>
+
+                <div class="four wide column">
+                  <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
+
+                </div>
               </div>
-              <button class="ui fluid green button chow-search" type="submit" value="Submit">Search</button>
+
+
             </form>
 
-            <table class="ui table" style="color: #616161;">
+            <table class="ui single line table" style="color: #616161;">
               <thead>
               <th class="two wide">Status</th>
-              <th class="six wide">Name</th>
-              <th class="six wide">Description</th>
+              <th class="two wide"></th>
+              <th class="four wide">Name</th>
+              <th class="six wide">Location</th>
               </thead>
               <tbody>
               {{#each vendor in SearchList}}
@@ -87,10 +107,13 @@
                   {{/if}}
                 </td>
                 <td>
+                  <img class="ui centered image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                </td>
+                <td>
                   <h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>
                 </td>
                 <td>
-                  {{vendor.description}}
+                  {{vendor.location}}
                 </td>
               </tr>
               {{/each}}
