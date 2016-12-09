@@ -5,25 +5,72 @@
     <div class="title-header">
 
       <!--VENDOR'S NAME-->
-      <div style="padding-top: 120px; padding-bottom: 15px">
-        {{ vendorField 'name' }}<br/>
+      <div style="padding-top: 85px; padding-bottom: 15px">
+        {{ vendorField 'name' }}
+      </div>
+
+      <br/>
+
+      <div>
+        <div class="ui massive star average rating" data-rating={{averageRating}} data-max-rating="5"></div>
+      </div>
+
+      <div>
+        {{#if isFavorite}}
+        <button class="ui toggle left-floated button update-favorite-button"
+                style="margin-bottom: 12px; margin-top: 12px;">Remove from Favorites
+        </button>
+        {{else}}
+        <button class="ui toggle left-floated green button update-favorite-button"
+                style="margin-bottom: 12px; margin-top: 12px;">Add to Favorites
+        </button>
+        {{/if}}
+
 
       </div>
-      <h4>Located at {{vendorField 'location'}}</h4>
+
     </div>
+
     <div class="ui container" style="padding-top: 20px">
-      <!--<div class="ui segment">-->
-        <div class="ui grid">
-          <div class="ui three wide column">
 
-            <img class="ui right floated image" style="height: 75px; " src="/images/{{vendorImage}}"/>
+      <div class="ui two column grid">
+        <div class="ui seven wide column">
+          <!--<div class="ui segment">-->
+          <!--{{#if isFavorite}}-->
+          <!--<button class="ui toggle button update-favorite-button" >Remove from Favorites</button>-->
+          <!--{{else}}-->
+          <!--<button class="ui toggle green button update-favorite-button" >Add to Favorites</button>-->
+          <!--{{/if}}-->
+          <!--<div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>-->
+          <!--{{reviewCount}} reviews-->
+          <!--</div>-->
+          <!--{{#if isOpen }}-->
+          <!--<div class="ui inverted green segment">-->
+          <!--Open Now-->
+          <!--</div>-->
+          <!--{{else}}-->
+          <!--<div class="ui inverted red segment">-->
+          <!--Closed-->
+          <!--</div>-->
+          <!--{{/if}}-->
 
+          <div>
+            <img class="ui centered image" style="height: 100px; " src="/images/{{vendorImage vendor}}"/>
           </div>
-          <div class="ui three  wide column" >
-            <div class="ui massive star average rating" data-rating={{averageRating}} data-max-rating="5"></div> <hr/>
-            {{reviewCount}} reviews
+
+          <div class="ui basic segment" id="menu-item">
+            {{ vendorField 'description' }}
           </div>
-          <div class="ui six wide column">
+
+          <div id="menu-item">
+            <h3>Located at {{vendorField 'location'}}</h3>
+          </div>
+          <div class="map-container" style="height: 250px; margin-top:10px;">
+            {{> googleMap name="map" options=mapOptions}}
+          </div>
+
+
+          <div class="ui basic segment">
             {{#if isOpen }}
             <div class="ui inverted green segment" style="margin-top: 10px; margin-bottom: 10px">
               Open Now
@@ -33,48 +80,10 @@
               Closed
             </div>
             {{/if}}
-
-          </div>
-          <div class="ui four wide column">
-            {{#if isFavorite}}
-            <button class="ui toggle left-floated button update-favorite-button" style="margin-bottom: 12px; margin-top: 12px;">Remove from Favorites</button>
-            {{else}}
-            <button class="ui toggle left-floated green button update-favorite-button" style="margin-bottom: 12px; margin-top: 12px;">Add to Favorites</button>
-            {{/if}}
-
           </div>
 
-        <!--</div>-->
-      </div>
-      <div class="ui two column grid">
-        <div class="ui seven wide column">
-          <!--<div class="ui segment">-->
-            <!--{{#if isFavorite}}-->
-            <!--<button class="ui toggle button update-favorite-button" >Remove from Favorites</button>-->
-            <!--{{else}}-->
-            <!--<button class="ui toggle green button update-favorite-button" >Add to Favorites</button>-->
-            <!--{{/if}}-->
-            <!--<div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>-->
-            <!--{{reviewCount}} reviews-->
-          <!--</div>-->
-          <!--{{#if isOpen }}-->
-          <!--<div class="ui inverted green segment">-->
-            <!--Open Now-->
-          <!--</div>-->
-          <!--{{else}}-->
-          <!--<div class="ui inverted red segment">-->
-            <!--Closed-->
-          <!--</div>-->
-          <!--{{/if}}-->
-          <div class="map-container" style="height: 250px; margin-top:10px;">
-            {{> googleMap name="map" options=mapOptions}}
-          </div>
-          <div class="ui segment">
-
-            {{ vendorField 'description' }}
-          </div>
-          <div class=" ui segment">
-            <h4>Hours of Operation</h4>
+          <div class="ui basic segment" id="menu-item">
+            <h3>Hours of Operation</h3>
             <p>Monday<br/>
               {{ vendorHours 'monday' }}</p>
             <p> Tuesday <br/>
@@ -86,14 +95,14 @@
             <p> Friday <br/>
               {{ vendorHours 'friday' }}</p>
           </div>
-          <div class="ui segment">
-            <h2> Leave a Review!</h2>
+          <div class="ui basic segment">
+            <h3> Leave a Review!</h3>
 
             <form class="ui form">
               <div class="field">
                 <div class="ui star user rating" id="userRating" data-rating={{userRating}} data-max-rating="5"></div>
               </div>
-              <button class="ui fluid green button submit-rating" type="submit" value="Submit">Submit</button>
+              <button class="ui fluid blue button submit-rating" type="submit" value="Submit">Submit</button>
             </form>
 
           </div>
@@ -101,7 +110,7 @@
 
         <div class="ui nine wide column">
           {{#each menu in vendorField 'menus'}}
-          <div class="ui segment" id="menu-list">
+          <div class="ui basic segment" id="menu-list">
             <div id="menu-category">{{menu.name}}</div>
             <div id="menu-description">{{menu.description}}</div>
             <br/>
