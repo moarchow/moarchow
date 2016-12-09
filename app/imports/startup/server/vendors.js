@@ -193,7 +193,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298510,
     longitude: -157.818887,
-    image: 'le-crepe.jpg',
+    image: 'starbucks.png',
     description: "The store serves the full Starbucks food and beverage menu including coffee and espresso beverages, Frappuccino®, and blended beverages. The range of food offerings includes breakfast, lunch and snack items such as signature sandwiches, pastries and Starbucks Petites. (Currently in Holiday Menu mode, displaying Holiday Menu)",
     reviews: [
       {
@@ -504,7 +504,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298736,
     longitude: -157.818852,
-    image: 'le-crepe.jpg',
+    image: 'subway.jpg',
     description: "Feeling hungry? Stop by Subway for some delicious sandwiches and salads made fresh. Subway also offers dessert and breakfast items such as pastries and cookies.",
     reviews: [
       {
@@ -765,7 +765,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298316,
     longitude: -157.818749,
-    image: 'le-crepe.jpg',
+    image: 'jamba.jpg',
     description: "Jamba Juice features delicious and fresh frozen fruit smoothies. Stop by for some of our nutritious smoothies today",
     reviews: [
       {
@@ -1168,7 +1168,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300976,
     longitude: -157.815640,
-    image: 'le-crepe.jpg',
+    image: 'honolulu-gourmet.png',
     description: "Honolulu Gourmet Foods features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
     reviews: [
       {
@@ -1276,7 +1276,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300945,
     longitude: -157.815602,
-    image: 'le-crepe.jpg',
+    image: 'll.png',
     description: "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L's famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.",
     reviews: [
       {
@@ -1815,7 +1815,7 @@ const vendorSeeds = [
     location: 'Hemenway Hall',
     latitude: 21.298850,
     longitude: -157.819614,
-    image: 'le-crepe.jpg',
+    image: 'ba-le.jpg',
     description: "Deliciously healthy Vietnamese cuisine, local favorites, fresh baked French rolls and huge, flaky croissants at affordable prices that everyone can enjoy!",
     reviews: [
       {
@@ -2043,7 +2043,7 @@ const vendorSeeds = [
     location: 'Hemenway Hall',
     latitude: 21.298816,
     longitude: -157.819757,
-    image: 'le-crepe.jpg',
+    image: 'manoa-garden.jpg',
     description: "The university's only watering hole!",
     reviews: [
       {
@@ -2272,7 +2272,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300953,
     longitude: -157.815766,
-    image: 'le-crepe.jpg',
+    image: 'the-curb.png',
     description: "The Curb seeks to inspire, to caffeinate, and to expand the coffee horizons of the campus population! Popular as a food truck and now a regular in the Paradise Palms food court, The Curb is known for their coffees sourced from farms throughout the state and roasted at Honolulu’s Downtown Coffee. Each week, they also offer a special microlot or single origin coffee from around the world roasted by Dillanos Coffee Roasters, 2011 Roast Magazine Roaster of the Year.  A daily variety of fresh pastries, vegetarian sandwiches, teas and other beverages, plus shave ice, round out the menu of this quirky favorite.",
     reviews: [
       {
@@ -2423,7 +2423,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300992,
     longitude: -157.815684,
-    image: 'le-crepe.jpg',
+    image: 'india.png',
     description: "India Café offers something for everyone with their signature exotic South Indian and Malaysian cuisine. Daily specials include chicken curry, lamb masala, garlic shrimp, seafood curry, spinach tofu, spicy eggplant, curried potatoes, coconut cabbage & over 10 different vegetarian entrees to choose from. Spiciness ranges from mild to very hot.",
     reviews: [
       {
@@ -2535,7 +2535,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300999,
     longitude: -157.815644,
-    image: 'le-crepe.jpg',
+    image: 'super-gyros.png',
     description: "Greek-style meat or vegetarian pita sandwiches, salads, smoothies, and more are quick, fresh, and healthy. The perfectly seasoned lamb and beef are cooked on a traditional vertical broiler, locking in flavor and rendering out fats.",
     reviews: [
       {
@@ -2632,7 +2632,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300996,
     longitude: -157.815618,
-    image: 'le-crepe.jpg',
+    image: 'panda.png',
     description: "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp.",
     reviews: [
       {
@@ -2790,7 +2790,7 @@ const vendorSeeds = [
     location: 'Paradise Palms',
     latitude: 21.300953,
     longitude: -157.815595,
-    image: 'le-crepe.jpg',
+    image: 'dominos.png',
     description: "Domino's Express brings you their well-known, tasty pizzas at a quick and convenient counter in the Paradise Palms food court. They’re dedicated to providing quality products and professional customer service to make your UH experience even more enjoyable. From a single slice to a hundred pizzas for the team, Domino’s has got you covered!",
     reviews: [
       {
@@ -2902,7 +2902,7 @@ const vendorSeeds = [
     location: 'Shidler College of Business',
     latitude: 21.300912,
     longitude: -157.820191,
-    image: 'le-crepe.jpg',
+    image: 'bean-counter.png',
     description: "The Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
     reviews: [
       {
@@ -3095,7 +3095,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298246,
     longitude: -157.818495,
-    image: 'le-crepe.jpg',
+    image: 'pizza-hut.png',
     description: "Pizza is always a go-to option when you can't decide what to have for lunch. Our Pizza Hut Express location has daily pan Pizza Hut Photo pizza specials, breadsticks, and the popular Wingstreet items! Six different sauces for the wings are offered, and you can even mix and match your favorites. Who knows, you might just create a combo so great, we'll add it to our menu!",
     reviews: [
       {
@@ -3208,7 +3208,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298471,
     longitude: -157.818942,
-    image: 'le-crepe.jpg',
+    image: 'simply.png',
     description: "Simply To Go is just as the name says... simple items purchased to go! Skips the lines and come here to grab sandwiches, pastries, bottled beverages, and desserts while you're on the go. Simply To Go STG carries a variety of health food brands, such as Kashi, Kopali Organics and Bare Fruit Snacks. Local brands are also in stock, like manapua from Golden Coin and gelato made by La Gelateria -- both very popular with students! If you are early enough, be sure to grab some Andagi (Okinawan Doughnut) because we run out... FAST! ",
     reviews: [
       {
@@ -3309,7 +3309,7 @@ const vendorSeeds = [
     location: 'Kennedy Center',
     latitude: 21.299578,
     longitude: -157.814660,
-    image: 'le-crepe.jpg',
+    image: 'uahi.jpg',
     description: "Contemporary Cuisine, Vintage Aloha: Uahi Island Grill is a locally owned and operated contemporary local style plate lunch restaurant with a new twist on local cultures and favorites using high quality ingredients. They strive for local first for all their ingredients. All their fish is fresh and locally caught; all their beef is Hawai'i Island grass fed. Scratch-made sauces and dressing are sure winners.",
     reviews: [
       {
@@ -3492,7 +3492,7 @@ const vendorSeeds = [
     location: 'Holmes Hall (Monday, Wednesday, Friday) Krauss Hall (Tuesday, Thursday)',
     latitude: 21.297296,
     longitude: -157.816007,
-    image: 'le-crepe.jpg',
+    image: 'musubi.jpg',
     description: "Making quality food has always been Hawai'i's Fried Musubis' passion from the beginning. They transform island staples with a twist so they would become local favorites. Aside from their must try menu items such as their fried musubis, tempura mushrooms, and furikake sweet potato fries, they bring to you their mouth breaking open-faced panini's, ahi poke wraps & farmers salads. These menu items are healthier but still full-flavored. Hawai'i's Fried Musubis' open-faced paninis are flattened to a light crispy delicate perfection and their lettuce wraps are a fresh alternative to their fried musubi.",
     reviews: [
       {
@@ -3645,7 +3645,7 @@ const vendorSeeds = [
     location: 'Sustainability Courtyard',
     latitude: 21.298426,
     longitude: -157.817042,
-    image: 'le-crepe.jpg',
+    image: 'da-spot.png',
     description: "Da Spot serves an all vegetarian menu of fresh health foods from around the globe, including Hawaiian, Egyptian, Mediterranean, European, & Asian gourmet foods.",
     reviews: [
       {

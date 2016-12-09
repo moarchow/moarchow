@@ -38,5 +38,8 @@ Template.Vendor_List_Page.helpers({
     const numReviews = vendor['reviews'].length-1;
     return numReviews;
   },
+  'vendorImage': function (vendor) {
+    return vendor.image;
+  },
 
 });

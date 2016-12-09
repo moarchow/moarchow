@@ -12,35 +12,60 @@
       <h4>Located at {{vendorField 'location'}}</h4>
     </div>
     <div class="ui container" style="padding-top: 20px">
-      <!--{{#if isFavorite}}-->
-      <!--<button class="ui four wide button remove-favorite-button" style="margin-bottom:10px;" type="submit">Remove from-->
-      <!--Favorites-->
-      <!--</button>-->
-      <!--{{else}}-->
-      <!--<button class="ui four wide green button add-favorite-button" style="margin-bottom:10px;" type="submit">Add to-->
-      <!--favorites-->
-      <!--</button>-->
-      <!--{{/if}}-->
-      <div class="ui two column grid">
-        <div class="ui seven wide column">
-          <div class="ui segment">
-            {{#if isFavorite}}
-            <button class="ui toggle button update-favorite-button" >Remove from Favorites</button>
-            {{else}}
-            <button class="ui toggle green button update-favorite-button" >Add to Favorites</button>
-            {{/if}}
-            <div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>
+      <!--<div class="ui segment">-->
+        <div class="ui grid">
+          <div class="ui three wide column">
+
+            <img class="ui right floated image" style="height: 75px; " src="/images/{{vendorImage}}"/>
+
+          </div>
+          <div class="ui three  wide column" >
+            <div class="ui massive star average rating" data-rating={{averageRating}} data-max-rating="5"></div> <hr/>
             {{reviewCount}} reviews
           </div>
-          {{#if isOpen }}
-          <div class="ui inverted green segment">
-            Open Now
+          <div class="ui six wide column">
+            {{#if isOpen }}
+            <div class="ui inverted green segment" style="margin-top: 10px; margin-bottom: 10px">
+              Open Now
+            </div>
+            {{else}}
+            <div class="ui inverted red segment">
+              Closed
+            </div>
+            {{/if}}
+
           </div>
-          {{else}}
-          <div class="ui inverted red segment">
-            Closed
+          <div class="ui four wide column">
+            {{#if isFavorite}}
+            <button class="ui toggle left-floated button update-favorite-button" style="margin-bottom: 12px; margin-top: 12px;">Remove from Favorites</button>
+            {{else}}
+            <button class="ui toggle left-floated green button update-favorite-button" style="margin-bottom: 12px; margin-top: 12px;">Add to Favorites</button>
+            {{/if}}
+
           </div>
-          {{/if}}
+
+        <!--</div>-->
+      </div>
+      <div class="ui two column grid">
+        <div class="ui seven wide column">
+          <!--<div class="ui segment">-->
+            <!--{{#if isFavorite}}-->
+            <!--<button class="ui toggle button update-favorite-button" >Remove from Favorites</button>-->
+            <!--{{else}}-->
+            <!--<button class="ui toggle green button update-favorite-button" >Add to Favorites</button>-->
+            <!--{{/if}}-->
+            <!--<div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>-->
+            <!--{{reviewCount}} reviews-->
+          <!--</div>-->
+          <!--{{#if isOpen }}-->
+          <!--<div class="ui inverted green segment">-->
+            <!--Open Now-->
+          <!--</div>-->
+          <!--{{else}}-->
+          <!--<div class="ui inverted red segment">-->
+            <!--Closed-->
+          <!--</div>-->
+          <!--{{/if}}-->
           <div class="map-container" style="height: 250px; margin-top:10px;">
             {{> googleMap name="map" options=mapOptions}}
           </div>
