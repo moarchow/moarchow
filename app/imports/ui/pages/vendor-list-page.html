@@ -6,11 +6,12 @@
 
       <div class="ui column">
         <div class="ui basic segment">
-          <table class="ui celled padded table">
+          <table class="ui celled padded center aligned table">
             <thead>
             <tr>
+              <th class="one wide">Open</th>
               <th class="two wide">Vendor</th>
-              <th class="three wide">Location</th>
+              <th class="two wide">Location</th>
               <th class="five wide">Description</th>
               <th class="two wide">Rating</th>
             </tr>
@@ -18,6 +19,13 @@
             <tbody>
             {{#each vendor in VendorsList}}
             <tr>
+              <td>
+                {{#if isOpen vendor }}
+                <i class="ui green circle icon"></i>
+                {{else}}
+                <i class="ui red circle icon"></i>
+                {{/if}}
+              </td>
               <td>
                 <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
                   <img class="ui centered image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>

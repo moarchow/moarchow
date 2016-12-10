@@ -41,10 +41,16 @@ Template.Home_Page.helpers({
       let closeTime = [close[0], close[1].substring(0, 2)];
       /* changes times to 24hours */
       if (open[1].substring(2, 4) == 'pm') {
-        openTime[0] = parseInt(open[0]) + 12;
+        if(open[0]==12)
+          openTime[0] = 12;
+        else
+          openTime[0] = parseInt(open[0]) + 12;
       }
       if (close[1].substring(2, 4) == 'pm') {
-        closeTime[0] = parseInt(close[0]) + 12;
+        if(close[0]==12)
+          closeTime[0] = 12;
+        else
+          closeTime[0] = parseInt(close[0]) + 12;
       }
 
       if (currHour == openTime[0]) {

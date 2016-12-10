@@ -11,13 +11,13 @@
           <div class="ui basic segment">
             <div><h2>My Favorite Chow Spots</h2></div>
             {{#if noFavorites }}
-            You have no favorite Chow Spots! Find your favorites <a href="{{pathFor 'Vendor_List_Page'}}"> here.</a>
+            You have no favorite Chow Spots! Search for your favorite Chow Spots below!
             {{else}}
-            <table class="ui single line table">
+            <table class="ui single line center aligned table">
               <thead>
               <tr>
-                <th class="two wide">Status</th>
-                <th class="six wide"></th>
+                <th class="two wide">Open Now</th>
+                <th class="six wide">Vendor</th>
                 <th class="four wide">My Rating</th>
                 <th class="one wide"></th>
               </tr>
@@ -27,28 +27,24 @@
               <tr>
                 <td>
                   {{#if isOpen vendor }}
-                  <button class="ui green button">Open</button>
+                  <i class="ui green circle icon"></i>
                   {{else}}
-                  <button class="ui red button">Closed</button>
-
+                  <i class="ui red circle icon"></i>
                   {{/if}}
                 </td>
                 <td>
                   <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
-                    <img class="ui left image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                    <img class="ui centered image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
                   </a>
 
                 </td>
-                <!--<td>-->
-                  <!--&lt;!&ndash;<h3><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></h3>&ndash;&gt;-->
-                <!--</td>-->
                 <td>
                   <div class="ui star rating" data-rating={{userRating vendor}} data-max-rating="5">
                   </div>
                 </td>
                 <td>
                   <div class="ui form">
-                    <button id="{{vendor._id}}" class="ui red icon button remove-vendor" type="submit">Unfavorite</button>
+                    <button id="{{vendor._id}}" class="ui button remove-vendor" type="submit">Unfavorite</button>
                   </div>
                 </td>
               </tr>
@@ -88,10 +84,10 @@
 
             </form>
 
-            <table class="ui single line table" style="color: #616161;">
+            <table class="ui single line center aligned table" style="color: #616161;">
               <thead>
-              <th class="two wide">Status</th>
-              <th class="six wide"></th>
+              <th class="two wide">Open Now</th>
+              <th class="six wide">Vendor</th>
               <th class="five wide">Location</th>
               </thead>
               <tbody>
@@ -99,14 +95,14 @@
               <tr>
                 <td>
                   {{#if isOpen vendor }}
-                  <button class="ui green button">Open</button>
+                  <i class="ui green circle icon"></i>
                   {{else}}
-                  <button class="ui red button">Closed</button>
+                  <i class="ui red circle icon"></i>
                   {{/if}}
                 </td>
                 <td>
                   <a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">
-                    <img class="ui left image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
+                    <img class="ui centered image" style="height: 50px; " src="/images/{{vendorImage vendor}}"/>
                   </a>
                 </td>
                 <td>
