@@ -17,11 +17,11 @@
 
       <div>
         {{#if isFavorite}}
-        <button class="ui toggle left-floated button update-favorite-button"
+        <button class="ui button update-favorite-button"
                 style="margin-bottom: 12px; margin-top: 12px;">Remove from Favorites
         </button>
         {{else}}
-        <button class="ui toggle left-floated green button update-favorite-button"
+        <button class="ui green button update-favorite-button"
                 style="margin-bottom: 12px; margin-top: 12px;">Add to Favorites
         </button>
         {{/if}}
@@ -35,24 +35,6 @@
 
       <div class="ui two column grid">
         <div class="ui seven wide column">
-          <!--<div class="ui segment">-->
-          <!--{{#if isFavorite}}-->
-          <!--<button class="ui toggle button update-favorite-button" >Remove from Favorites</button>-->
-          <!--{{else}}-->
-          <!--<button class="ui toggle green button update-favorite-button" >Add to Favorites</button>-->
-          <!--{{/if}}-->
-          <!--<div class="ui star average rating" data-rating={{averageRating}} data-max-rating="5"></div>-->
-          <!--{{reviewCount}} reviews-->
-          <!--</div>-->
-          <!--{{#if isOpen }}-->
-          <!--<div class="ui inverted green segment">-->
-          <!--Open Now-->
-          <!--</div>-->
-          <!--{{else}}-->
-          <!--<div class="ui inverted red segment">-->
-          <!--Closed-->
-          <!--</div>-->
-          <!--{{/if}}-->
 
           <div>
             <img class="ui centered image" style="height: 100px; " src="/images/{{vendorImage vendor}}"/>
@@ -138,13 +120,13 @@
         .rating('disable')
 
     ;
-    $('.ui.button.toggle').state({
-      text: {
-        inactive: 'Remove from Favorites',
-        active: 'Add to Favorites'
-      },
+//    $('.ui.button.toggle').state({
+//      text: {
+//        inactive: 'Remove from Favorites',
+//        active: 'Add to Favorites'
+//      },
 
-    });
+//    });
   </script>
   {{else}}
   {{> Loading}}
