@@ -99,12 +99,19 @@ Template.Vendor_Home_Page.helpers({
       let closeTime = [close[0], close[1].substring(0, 2)];
       /* changes times to 24hours */
       if (open[1].substring(2, 4) == 'pm') {
-        openTime[0] = parseInt(open[0]) + 12;
+        if(open[0]==12)
+          openTime[0] = 12;
+        else
+          openTime[0] = parseInt(open[0]) + 12;
       }
       if (close[1].substring(2, 4) == 'pm') {
+        if(close[0]==12)
+          closeTime[0] = 12;
+        else
         closeTime[0] = parseInt(close[0]) + 12;
       }
-
+  console.log(closeTime);
+      console.log(openTime);
       if (currHour == openTime[0]) {
         if (currMin >= openTime[1])
           return true;
@@ -180,8 +187,6 @@ Template.Vendor_Home_Page.events({
     if( _.contains(vendor['favorite'], userID)){
       vendor['favorite'].pop(userID);
       console.log("removed");
-      //return to home page
-      FlowRouter.go('Home_Page');
     }
     else vendor['favorite'].push(userID);
     Vendors.update(vendorID, { $set: vendor });
@@ -209,7 +214,7 @@ Template.Vendor_Home_Page.events({
     // console.log(vendor['reviews']);
     Vendors.update(vendorID, { $set: vendor });
     // return to home page
-    FlowRouter.go('Vendor_List_Page');
+    FlowRouter.go('Home_Page');
   },
 
 });
