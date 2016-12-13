@@ -452,7 +452,7 @@ const vendorSeeds = [
       thursday: '8:00am-2:00pm',
       friday: '8:00am-2:00pm',
     },
-    foodTypes: ["Coffee", "Pastry", "French", "Salad"],
+    foodTypes: ["Crepe", "Coffee", "French", "Salad"],
     menus: [
       {
         name: 'Savory Crepes',
