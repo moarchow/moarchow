@@ -99,19 +99,12 @@ Template.Vendor_Home_Page.helpers({
       let closeTime = [close[0], close[1].substring(0, 2)];
       /* changes times to 24hours */
       if (open[1].substring(2, 4) == 'pm') {
-        if(open[0]==12)
-          openTime[0] = 12;
-        else
-          openTime[0] = parseInt(open[0]) + 12;
+        openTime[0] = parseInt(open[0]) + 12;
       }
       if (close[1].substring(2, 4) == 'pm') {
-        if(close[0]==12)
-          closeTime[0] = 12;
-        else
         closeTime[0] = parseInt(close[0]) + 12;
       }
-  console.log(closeTime);
-      console.log(openTime);
+
       if (currHour == openTime[0]) {
         if (currMin >= openTime[1])
           return true;
@@ -132,95 +125,31 @@ Template.Vendor_Home_Page.helpers({
   },
   isFavorite(){
     const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
-
+    console.log(vendor['favorite']);
     const userID = Meteor.userId();
     if( _.contains(vendor['favorite'], userID)){
       return true;
     }
     else return false;
 
-  },
-  averageRating(){
-    const vendorID=FlowRouter.getParam('_id');
-    const vendor = Vendors.findOne(vendorID);
-    const numReviews = vendor['reviews'].length-1;
-    if(numReviews <1) return 0;
-    else {
-      var totalRate =0;
-      _.each(vendor['reviews'], function(num){
-        totalRate = totalRate + num.rating;
-      });
-
-      var avgRate = parseInt(Math.round(totalRate / numReviews));
-      return avgRate;
-    }
-
-  },
-  reviewCount(){
-    const vendorID=FlowRouter.getParam('_id');
-    const vendor = Vendors.findOne(vendorID);
-    const numReviews = vendor['reviews'].length-1;
-    return numReviews;
-  },
-  userRating(){
-    const vendorID=FlowRouter.getParam('_id');
-    const vendor = Vendors.findOne(vendorID);
-    const userID = Meteor.userId();
-
-    const userReview =  _.find(vendor['reviews'], function(num){
-      return num.user== userID;
-    });
-
-    if(userReview != null) return userReview.rating;
-    else return 0;
-
-  },
-
+  }
 
 });
 Template.Vendor_Home_Page.events({
-
-  'click .update-favorite-button'(event, instance) {
-    const vendorID=FlowRouter.getParam('_id');
-    const vendor = Vendors.findOne(vendorID);
-    const userID = Meteor.userId();
-    if( _.contains(vendor['favorite'], userID)){
-      vendor['favorite'].pop(userID);
-      console.log("removed");
-    }
-    else vendor['favorite'].push(userID);
-    Vendors.update(vendorID, { $set: vendor });
-    //return to home page
+  'click .add-favorite-button'(event, instance) {
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    vendor['favorite'].push(Meteor.userId());
+    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
     FlowRouter.go('Home_Page');
   },
-
-  'click .submit-rating': function (event) {
-    event.preventDefault();
-    var value = $('.ui.rating').rating('get rating');
-    const vendorID=FlowRouter.getParam('_id');
-    const vendor = Vendors.findOne(vendorID);
-    const userID = Meteor.userId();
-
-    const userReview =  _.find(vendor['reviews'], function(num){
-      return num.user== userID;
-    });
-    console.log("the user's review: ");
-    console.log(userReview);
-    if(userReview != null) vendor['reviews'].pop(userReview);
-    const newReview= {user:userID, rating: value[1]};
-    console.log("new value" + value[1]);
-    vendor['reviews'].push(newReview);
-
-    // console.log(vendor['reviews']);
-    Vendors.update(vendorID, { $set: vendor });
-    // return to home page
+  'click .remove-favorite-button'(event, instance) {
+    const vendor = Vendors.findOne(FlowRouter.getParam('_id'));
+    vendor['favorite'].pop(Meteor.userId());
+    Vendors.update(FlowRouter.getParam('_id'), { $set: vendor });
     FlowRouter.go('Home_Page');
   },
-
 });
 Meteor.startup(function () {
   GoogleMaps.load({ key: 'AIzaSyDmoMBN4kRbUeOzHIacLxerbY50amm9EnA' });
 
 });
-
-

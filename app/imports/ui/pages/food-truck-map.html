@@ -15,7 +15,7 @@
 
       <div class="ui four wide column">
 
-        <div class="ui basic segment">
+        <div class="ui segment">
           <table class="ui table">
             <thead>
             <tr>
@@ -24,8 +24,8 @@
             </thead>
             <tbody>
             {{#each vendor in VendorsList}}
-            <tr >
-              <td class="collapsing" style="font-size: 10pt"><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></td>
+            <tr>
+              <td class="collapsing"><a href="{{pathFor 'Vendor_Home_Page' _id=vendor._id}}">{{vendor.name}}</a></td>
             </tr>
             {{/each}}
             </tbody>

@@ -1,0 +1,47 @@
+﻿Revert "Merge branch 'vendor-list' of https://github.com/moarchow/moarchow into vendor-list"
+
+This reverts commit 4d106a9f87d7443ddf3b80e8070d9bf27d09bd43, reversing
+changes made to 7a2c1211243d9d5f26680c463dd6490950f43366.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch vendor-list
+# Your branch is up-to-date with 'origin/vendor-list'.
+#
+# Changes to be committed:
+#	modified:   app/.meteor/packages
+#	modified:   app/.meteor/release
+#	modified:   app/.meteor/versions
+#	modified:   app/imports/startup/server/vendors.js
+#	modified:   app/imports/ui/layouts/header.html
+#	modified:   app/imports/ui/pages/food-truck-map.html
+#	modified:   app/imports/ui/pages/home-page.html
+#	modified:   app/imports/ui/pages/home-page.js
+#	modified:   app/imports/ui/pages/landing-page.html
+#	modified:   app/imports/ui/pages/vendor-home-page.html
+#	modified:   app/imports/ui/pages/vendor-home-page.js
+#	modified:   app/imports/ui/pages/vendor-list-page.html
+#	modified:   app/imports/ui/pages/vendor-list-page.js
+#	modified:   app/imports/ui/stylesheets/style.css
+#	deleted:    app/public/images/ba-le.jpg
+#	deleted:    app/public/images/bean-counter.png
+#	deleted:    app/public/images/da-spot-1.png
+#	modified:   app/public/images/da-spot.png
+#	deleted:    app/public/images/dominos.png
+#	deleted:    app/public/images/green-garden.png
+#	deleted:    app/public/images/honolulu-gourmet.png
+#	deleted:    app/public/images/india.png
+#	deleted:    app/public/images/jamba.jpg
+#	deleted:    app/public/images/ll.png
+#	deleted:    app/public/images/manoa-garden.jpg
+#	deleted:    app/public/images/musubi.jpg
+#	deleted:    app/public/images/panda.png
+#	deleted:    app/public/images/pizza-hut.png
+#	deleted:    app/public/images/simply.png
+#	deleted:    app/public/images/starbucks.png
+#	deleted:    app/public/images/subway.jpg
+#	deleted:    app/public/images/super-gyros.png
+#	deleted:    app/public/images/the-curb.png
+#	deleted:    app/public/images/uahi.jpg
+#
+
