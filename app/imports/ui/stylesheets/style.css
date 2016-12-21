@@ -12,8 +12,10 @@ body {
   text-align: center;
   background-color: white;
   background-size: cover;
+  margin-bottom: 25px;
 
 }
+
 #menu-list {
   box-shadow: none;
   border-radius: 0;
@@ -186,6 +188,12 @@ h4 {
 .map-container {
   width: 100%;
   max-width: 100%;
-  height: 800px;
+  height: 917px;
 }
 
+.closed-hours{
+  background-color:#EF5350;
+  /*padding:0px;*/
+  /*margin:0;*/
+  /*text-align: center  ;*/
+}

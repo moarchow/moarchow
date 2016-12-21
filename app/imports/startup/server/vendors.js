@@ -6,6 +6,428 @@ import {_} from 'meteor/underscore';
  * @type {*[]}
  */
 const vendorSeeds = [
+
+  //Bale
+  {
+    name: 'Bale',
+    location: 'Hemenway Hall',
+    latitude: 21.298850,
+    longitude: -157.819614,
+    image: 'ba-le.jpg',
+    description: "Deliciously healthy Vietnamese cuisine, local favorites, fresh baked French rolls and huge, flaky croissants at affordable prices that everyone can enjoy!",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-8:00pm',
+      tuesday: '10:00am-8:00pm',
+      wednesday: '10:00am-8:00pm',
+      thursday: '10:00am-8:00pm',
+      friday: '10:00am-8:00pm',
+    },
+    foodTypes: ["Vietnamese", "Sandwich", "Salad",],
+    menus: [
+      {
+        name: 'Vietnamese Pho',
+        description: 'Served with rice noodles, fresh bean sprouts, basil & lemon. Add: Onion, green onion, cilantro, & jalepeno. "Vegetarian broth avaiable upon request.',
+        items: [
+          {
+            name: 'Rare Beef, Meatball & Brisket',
+            description: '',
+            price: '7.50'
+          },
+          {
+            name: 'Shreeded Chicken',
+            description: '',
+            price: '7.50'
+          },
+          {
+            name: 'Tofu & Vegetable',
+            description: 'with carrots, broccoli, and celery',
+            price: '7.50'
+          },
+        ]
+      },
+
+      {
+        name: 'Pupus',
+        description: '',
+        items: [
+          {
+            name: 'Chicken Spring Roll',
+            description: '',
+            price: '1.50'
+          },
+          {
+            name: 'Pommes Frites',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: 'Garlic Pommes Frites',
+            description: '',
+            price: '6.00'
+          },
+          {
+            name: 'Onion Rings',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: 'Chicken Tenders & Frites',
+            description: '',
+            price: '8.75'
+          },
+          {
+            name: 'Fish & Frites',
+            description: '',
+            price: '8.75'
+          },
+          {
+            name: 'Crab & Cheese Won Tons',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Mac & Cheese',
+            description: '',
+            price: '4.75'
+          },
+          {
+            name: 'Asian Spicy Buffalo Wings',
+            description: '',
+            price: '6.75'
+          },
+          {
+            name: 'Mozzarella Sticks',
+            description: '',
+            price: '6.00'
+          }
+        ]
+      },
+
+      {
+        name: 'Ba-Le Banh Mi',
+        description: 'Served vietnamese style on french bread with house-made mayo, pickled daikon and carrots, cucumber, and cilantro.',
+        items: [
+          {
+            name: 'Turkey',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Ham',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Tofu',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Tuna',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Chicken',
+            description: '',
+            price: '5.00'
+          },
+          {
+            name: 'Pastrami',
+            description: '',
+            price: '5.25'
+          },
+          {
+            name: 'Ham & Pate',
+            description: '',
+            price: '5.25'
+          },
+          {
+            name: 'Lemongrass Chicken',
+            description: '',
+            price: '5.25'
+          },
+          {
+            name: 'Roast Beef',
+            description: '',
+            price: '5.50'
+          },
+          {
+            name: 'Chicken Meatball',
+            description: '',
+            price: '5.50'
+          },
+          {
+            name: 'Kalua Pork',
+            description: '',
+            price: '5.50'
+          },
+          {
+            name: 'Vegetarian',
+            description: '',
+            price: '4.50'
+          }
+        ]
+      },
+
+      {
+        name: 'La Tour Cafe Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Chicken Pesto Panini',
+            description: 'Baked chicken, spinach, swiss cheese, and pesto on sourdough.',
+            price: '7.00'
+          },
+          {
+            name: 'Turkey Sundried Tomato Panini',
+            description: 'Turkey, sprinach, provolone and sundried tomator spread on sourdough.',
+            price: '7.00'
+          },
+          {
+            name: 'Grilled Vegetable Panini',
+            description: 'Grilled peppers, zucchini, eggplat, spinach, provolone, and pesto on sourdough ',
+            price: '7.00'
+          },
+          {
+            name: 'Italian Sandwich',
+            description: 'Salami, prosciutoo, soppressata, capicola, arugula, and havarti on french egg roll',
+            price: '7.00'
+          },
+          {
+            name: 'Pastrami Deli Sandwich',
+            description: 'Pastrami Navel, corned beef, sauerkraut, and dijon on organic sprouted multigrain',
+            price: '7.75'
+          }
+        ]
+      },
+
+      {
+        name: 'Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Black or Taro Milk Tea',
+            description: '',
+            price: '3.75'
+          },
+          {
+            name: 'Thai Tea',
+            description: '',
+            price: '4.25'
+          },
+          {
+            name: 'Boba Tea',
+            description: '',
+            price: '4.25'
+          }
+        ]
+      }
+    ]
+  },
+    
+  //The Bean Counter
+  {
+    name: 'The Bean Counter',
+    location: 'Shidler College of Business',
+    latitude: 21.300912,
+    longitude: -157.820191,
+    image: 'bean-counter.png',
+    description: "The Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '7:30am-6:00pm',
+      tuesday: '7:30am-6:00pm',
+      wednesday: '7:30am-6:00pm',
+      thursday: '7:30am-6:00pm',
+      friday: '7:30am-4:30pm',
+    },
+    foodTypes: ["Coffee", "Sandwich", "Tea"],
+    menus: [
+      {
+        name: 'Commodities',
+        description: '',
+        items: [
+          {
+            name: 'Club Wrap',
+            description: '',
+            price: '6.25'
+          },
+          {
+            name: 'Veggie Wrap',
+            description: '',
+            price: '5.25'
+          },
+          {
+            name: 'Cheese Melt',
+            description: '',
+            price: '3.65'
+          },
+          {
+            name: 'Ham Melt',
+            description: '',
+            price: '4.65'
+          },
+          {
+            name: 'Veggie Melt',
+            description: '',
+            price: '4.65'
+          },
+          {
+            name: 'PB&J or PB&Nutella',
+            description: '',
+            price: '3.95'
+          },
+          {
+            name: 'Turkey Bacon Club',
+            description: '',
+            price: '6.50'
+          },
+          {
+            name: 'Roast Beef Original',
+            description: '',
+            price: '6.75'
+          },
+          {
+            name: 'Southwest Chicken Wrap',
+            description: '',
+            price: '6.75'
+          },
+          {
+            name: 'Tuna Sammy',
+            description: '',
+            price: '5.50'
+          },
+        ]
+      },
+      {
+        name: 'Small Investments',
+        description: '',
+        items: [
+          {
+            name: 'Parfaits',
+            description: '',
+            price: '3.99'
+          },
+          {
+            name: 'Cookies',
+            description: '',
+            price: '1.80'
+          },
+          {
+            name: 'Scones',
+            description: '',
+            price: '2.95'
+          },
+          {
+            name: 'Brownies',
+            description: '',
+            price: '2.95'
+          },
+          {
+            name: 'Cereal',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Oatmeal',
+            description: '',
+            price: '3.95'
+          },
+          {
+            name: 'Croissant',
+            description: '',
+            price: '2.75'
+          },
+          {
+            name: 'Chocolate Croissant',
+            description: '',
+            price: '2.95'
+          },
+        ]
+      },
+      {
+        name: 'The Business of Bagels',
+        description: '',
+        items: [
+          {
+            name: 'Flavored Cream Cheese',
+            description: '',
+            price: '3.50'
+          },
+          {
+            name: 'Plain Cream Cheese',
+            description: '',
+            price: '3.00'
+          },
+          {
+            name: 'Dry',
+            description: '',
+            price: '2.00'
+          },
+          {
+            name: 'Nutella',
+            description: '',
+            price: '3.90'
+          },
+        ]
+      },
+      {
+        name: 'Liquid Assets',
+        description: '',
+        items: [
+          {
+            name: 'Drop Coffee',
+            description: '',
+            price: 'S:1.30 M:1.59'
+          },
+          {
+            name: 'Iced Coffee',
+            description: '',
+            price: 'S:1.50 M:1:80'
+          },
+          {
+            name: 'Americano',
+            description: '',
+            price: 'S:2.90 M:3.45'
+          },
+          {
+            name: 'Machiato',
+            description: '',
+            price: 'S:3.15 M:4.00'
+          },
+          {
+            name: 'Caramel Mochiato',
+            description: '',
+            price: 'S:3.95 M:4.50'
+          },
+          {
+            name: 'Cafe au Lait',
+            description: '',
+            price: 'S:2.10 M:3.50'
+          },
+        ]
+      },
+    ]
+  },
+    
   //Le Crepe Cafe
   {
     name: 'Le Crepe Cafe',
@@ -30,7 +452,7 @@ const vendorSeeds = [
       thursday: '8:00am-2:00pm',
       friday: '8:00am-2:00pm',
     },
-    foodTypes: ["Coffee", "Pastry", "French", "Salad"],
+    foodTypes: ["Crepe", "Coffee", "French", "Salad"],
     menus: [
       {
         name: 'Savory Crepes',
@@ -187,14 +609,15 @@ const vendorSeeds = [
 
     ]
   },
-  //Starbucks
+
+  //The Curb
   {
-    name: 'Starbucks',
-    location: 'Campus Center',
-    latitude: 21.298510,
-    longitude: -157.818887,
-    image: 'le-crepe.jpg',
-    description: "The store serves the full Starbucks food and beverage menu including coffee and espresso beverages, Frappuccino®, and blended beverages. The range of food offerings includes breakfast, lunch and snack items such as signature sandwiches, pastries and Starbucks Petites. (Currently in Holiday Menu mode, displaying Holiday Menu)",
+    name: 'The Curb',
+    location: 'Paradise Palms',
+    latitude: 21.300953,
+    longitude: -157.815766,
+    image: 'the-curb.png',
+    description: "The Curb seeks to inspire, to caffeinate, and to expand the coffee horizons of the campus population! Popular as a food truck and now a regular in the Paradise Palms food court, The Curb is known for their coffees sourced from farms throughout the state and roasted at Honolulu’s Downtown Coffee. Each week, they also offer a special microlot or single origin coffee from around the world roasted by Dillanos Coffee Roasters, 2011 Roast Magazine Roaster of the Year.  A daily variety of fresh pastries, vegetarian sandwiches, teas and other beverages, plus shave ice, round out the menu of this quirky favorite.",
     reviews: [
       {
         user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
@@ -205,307 +628,147 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '6:00am-10:00pm',
-      tuesday: '6:30am-10:00pm',
-      wednesday: '6:00am-10:00pm',
-      thursday: '6:00am-10:00pm',
-      friday: '6:00am-6:00pm',
+      monday: '7:00am-6:00pm',
+      tuesday: '7:00am-6:00pm',
+      wednesday: '7:00am-6:00pm',
+      thursday: '7:00am-6:00pm',
+      friday: '7:00am-5:00pm',
     },
-    foodTypes: ["Coffee", "Tea", "Smoothie"],
+    foodTypes: ["Coffee", "Tea", "Pastry"],
     menus: [
       {
-        name: 'Coffee, Expresso, and Tea',
-        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        name: 'Drinks',
+        description: '',
         items: [
           {
-            name: 'Frostly Brewed Coffee',
+            name: 'Drip Coffee',
             description: '',
-            price: 'Tall: 2.30, Grande: 2.45, Venti: 2.95'
+            price: 'S:2.15 M:2.39 L:2.87'
           },
           {
-            name: 'Iced Coffee',
-            description: 'with Vanilla or Caramel',
-            price: 'Tall: 2.65, Grande: 3.25, Venti: 3.45'
-          },
-          {
-            name: 'Cold Brew',
-            description: 'Limited Daily Availability',
-            price: 'Tall: 3.45, Grande: 3.95, Venti: 4.25'
-          },
-          {
-            name: 'Vanilla Sweet Cream Cold Brew',
+            name: 'Latte',
             description: '',
-            price: 'Tall: 3.75, Grande: 4.25, Venti: 4.45'
+            price: 'S:3.82 M:4.06 L:4.54'
           },
           {
-            name: 'Flat White',
+            name: 'Americano',
             description: '',
-            price: 'Tall: 4.25'
+            price: 'S:2.87 L:3.82'
+          },
+          {
+            name: 'Espresso',
+            description: '',
+            price: 'S:2.87'
+          },
+          {
+            name: 'Hot Chocolate',
+            description: '',
+            price: 'S:3.34 M:3.82 L:4.30'
+          },
+          {
+            name: 'Cortado',
+            description: '',
+            price: 'S:3.34'
+          },
+          {
+            name: 'Macchiato',
+            description: '',
+            price: 'S:3.34'
           },
           {
             name: 'Cappuccino',
             description: '',
-            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
-          },
-          {
-            name: 'Caffe Amercano',
-            description: '',
-            price: 'Tall: 2.85. Grande: 2.95, Venti: 3.25'
-          },
-          {
-            name: 'Caffe Latte',
-            description: '',
-            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
-          },
-          {
-            name: 'Caramel Macchiato',
-            description: '',
-            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
-          },
-          {
-            name: 'White Chocolate Mocha',
-            description: '',
-            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
-          },
-        ]
-      },
-      {
-        name: 'Teavana Tea',
-        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
-        items: [
-          {
-            name: 'Mango or Peach Tea Lemonade',
-            description: '',
-            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45'
-          },
-          {
-            name: 'Shaken Iced Tea',
-            description: 'Green, Black, or Caffeine-Free Passion Tango',
-            price: 'Tall: 2.45. Grande: 2.95, Venti: 3.25'
-          },
-          {
-            name: 'Full-Leaf Brewed Tea',
-            description: '',
-            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
-          },
-          {
-            name: 'Chai Tea Latte',
-            description: '',
-            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
-          },
-          {
-            name: 'Cinnamon Chai Tea Latte',
-            description: '',
-            price: 'Tall: 4.25. Grande: 4.65, Venti: 5.25'
-          },
-          {
-            name: 'Green Tea Latte',
-            description: '',
-            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
-          },
-        ]
-      },
-      {
-        name: 'HOLIDAY CLASSICS - Expresso, Coffee & Teavana Tea',
-        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
-        items: [
-          {
-            name: 'Chestnut Praline Latte',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Caramel Brulee Latte',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Peppermint Mocha',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Skinny Peppermint Mocha',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Peppermint Hot Chocolate',
-            description: '',
-            price: 'Tall: 3.75. Grande: 4.35, Venti: 4.45'
-          },
-          {
-            name: 'Eggnog Latte',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Gingerbread Latte',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Pumpkin Spice Latte',
-            description: '',
-            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Holiday Spice Flat White',
-            description: '',
-            price: 'Tall: 4.45'
-          },
-          {
-            name: 'Spiced Sweet Cream',
-            description: '',
-            price: 'Tall: 3.75. Grande: 4.25, Venti: 4.45'
-          },
-          {
-            name: 'Cold Brew July 2016 Brewed Tea',
-            description: 'NEW! Limited Daily Availability',
-            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
-          },
-        ]
-      },
-      {
-        name: 'HOLIDAY CLASSICS - Frappuccino',
-        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
-        items: [
-          {
-            name: 'Caramel Brulee',
-            description: '',
-            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Peppermint Mocha',
-            description: '',
-            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
-          },
-          {
-            name: 'Chestnut Praline',
-            description: '',
-            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
-          },
-        ]
-      },
-      {
-        name: 'Blended & Refreshment - Frappuccino',
-        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
-        items: [
-          {
-            name: 'Caramel',
-            description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+            price: 'S:3.58'
           },
           {
             name: 'Mocha',
             description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+            price: 'S:4.15 M:4.54 L:5.25'
           },
           {
-            name: 'Coffee',
+            name: 'White Mocha',
             description: '',
-            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+            price: 'S:4.15 M:4.54 L:5.25'
           },
           {
-            name: 'Java Chip',
+            name: 'Cold Brew',
             description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+            price: 'S:2.87 L:3.34'
           },
           {
-            name: 'Vanilla Bean Creme',
+            name: 'Iced Tea',
             description: '',
-            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+            price: 'S:2.63 L:2.87'
           },
           {
-            name: 'Double Chocolaty Chip',
+            name: 'Chai Latte',
             description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+            price: 'S:4.30 L:4.54'
           },
           {
-            name: 'Strawberries & Creme',
+            name: 'Matcha Latte Brew',
             description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+            price: 'S:4.30 L:4.54'
           },
           {
-            name: 'Green Tea',
+            name: 'Republic Tea',
             description: '',
-            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
-          },
+            price: 'S:1.77 L:2.24'
+          }
         ]
       },
       {
-        name: 'Blended & Refreshment - Smoothies',
-        description: 'Blended with a whole banana & whey protein (contains dairy)',
-        items: [
-          {
-            name: 'Strawberry',
-            description: '',
-            price: '4.65'
-          },
-          {
-            name: 'Chocolate',
-            description: '',
-            price: '4.65'
-          },
-        ]
-      },
-      {
-        name: 'Blended & Refreshment - Starbucks Refreshers',
-        description: 'Iced Beverages (contain caffeine) (Tall -> 12oz | Grande -> 16oz | Venti -> 24oz | Trenta -> 30oz)',
-        items: [
-          {
-            name: 'Strawberry Acai',
-            description: '',
-            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
-          },
-          {
-            name: 'Very Berry Hibiscus',
-            description: '',
-            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
-          },
-          {
-            name: 'Cool Lime',
-            description: '',
-            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
-          },
-        ]
-      },
-      {
-        name: 'Customize Any Drink',
+        name: 'Food',
         description: '',
         items: [
           {
-            name: 'Flavor',
+            name: 'Banana Bread',
             description: '',
-            price: '50 cents'
+            price: '5.00'
           },
           {
-            name: 'Expresso Shot',
+            name: 'Matcha Chocolate Chip Scone',
             description: '',
-            price: '80 cents'
+            price: '3.00'
           },
           {
-            name: 'Venti Iced',
+            name: 'Bacon Cheddar Scone',
             description: '',
-            price: 'up to 30 cents'
+            price: '3.00'
           },
           {
-            name: 'Substitutions',
-            description: 'Sumatra Coconut Milk,  Organic Soymilk, or (NEW) Almondmilk',
-            price: '60 cents'
+            name: 'Macadamia nut white chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Snickerdoodle',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Chocolate chip cookie',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Papaya w/ lemon',
+            description: '',
+            price: '3.00'
           },
         ]
       },
     ]
   },
-  //Subway
+
+  //DA Spot
   {
-    name: 'Subway',
-    location: 'Campus Center',
-    latitude: 21.298736,
-    longitude: -157.818852,
-    image: 'le-crepe.jpg',
-    description: "Feeling hungry? Stop by Subway for some delicious sandwiches and salads made fresh. Subway also offers dessert and breakfast items such as pastries and cookies.",
+    name: 'Da Spot',
+    location: 'Sustainability Courtyard',
+    latitude: 21.298426,
+    longitude: -157.817042,
+    image: 'da-spot.png',
+    description: "Da Spot serves an all vegetarian menu of fresh health foods from around the globe, including Hawaiian, Egyptian, Mediterranean, European, & Asian gourmet foods.",
     reviews: [
       {
         user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
@@ -516,256 +779,791 @@ const vendorSeeds = [
 
     ],
     hours: {
-      monday: '7:00am-7:00pm',
-      tuesday: '7:00am-7:00pm',
-      wednesday: '7:00am-7:00pm',
-      thursday: '7:00am-7:00pm',
-      friday: '7:00am-7:00pm',
+      monday: '8:30am-3:00pm',
+      tuesday: '8:30am-3:00pm',
+      wednesday: '8:30am-3:00pm',
+      thursday: '8:30am-3:00pm',
+      friday: '8:30am-3:00pm',
     },
-    foodTypes: ["Sandwich", "Cookie"],
+    foodTypes: ["Smoothie", "Vegetarian"],
     menus: [
       {
-        name: 'Meal Deal',
-        description: '+$2.50 to sub price',
+        name: 'Smoothies',
+        description: 'Small(16oz) 3.00  Medium(20oz) 3.50  Large(32oz) 4.00',
         items: [
           {
-            name: '21 oz. drink + apples or 2 Cookies or chip',
-            description: 'Swap any drink or size & pay the difference',
-            price: '2.50'
+            name: 'Sweet Dream',
+            description: 'Strawberries, Haupia, Sorbet, Soymilk',
+            price: ''
+          },
+          {
+            name: 'DaKine',
+            description: 'Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice',
+            price: ''
+          },
+          {
+            name: 'StarBerry',
+            description: 'Strawberries, Lychee Sorbet, Guava Juice',
+            price: ''
+          },
+          {
+            name: 'StrawberryPotion',
+            description: 'Strawberries, Bananas, Soymilk',
+            price: ''
+          },
+          {
+            name: 'VeryBerryGood',
+            description: 'Strawberries, Mixberries, Bananas, Grape Juice',
+            price: ''
+          },
+          {
+            name: 'HomeGrown',
+            description: 'Strawberries, Mixberries, Guava Sorbet, Guava Juice',
+            price: ''
+          },
+          {
+            name: 'Grenade',
+            description: 'Strawberries, Pomegranate Sorbet, Grape Juice',
+            price: ''
+          },
+          {
+            name: 'SouthBerry',
+            description: 'Strawberries, Mixberries, Acai & Haupia Sorbet, Guava Juice, Soymilk',
+            price: ''
+          },
+          {
+            name: 'AlohaBerry',
+            description: 'Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk',
+            price: ''
+          },
+          {
+            name: 'Kalakauan',
+            description: 'Mixberries, Bananas, Pomegranate Sorbet, Apple Juice',
+            price: ''
+          },
+          {
+            name: 'CocoOno',
+            description: 'Bananas, Haupia Sorbet, Soymilk',
+            price: ''
+          },
+          {
+            name: 'LocoStyle',
+            description: 'Bananas, Acai Sorbet, Soymilk',
+            price: ''
+          },
+          {
+            name: 'MangoTango',
+            description: 'Mangoes, Bananas, Lilikoi Sorbet, Passion Orange & Lemon Juice',
+            price: ''
+          },
+          {
+            name: 'Mangolicious',
+            description: 'Mangoes, Lychee Sorbet, Passion Orange Juice',
+            price: ''
+          },
+          {
+            name: 'DaMango',
+            description: 'Mangoes, Haupia Sorbet, Orange Juice',
+            price: ''
+          },
+          {
+            name: 'Pinaco',
+            description: 'Pineapples, Haupia Sorbet, Passion Orange Juice',
+            price: ''
+          },
+          {
+            name: 'PineParadise',
+            description: 'Pineapples, Strawberries, Bananas, Apple Juice',
+            price: ''
+          },
+          {
+            name: 'OrangeSunset',
+            description: 'Peaches, Lychee Sorbet, Passion Orange Juice',
+            price: ''
+          },
+          {
+            name: 'LiquidSunshine',
+            description: 'Peaches, Pears, Acai Sorbet, Apple Juice',
+            price: ''
+          },
+          {
+            name: 'SunnySunrise',
+            description: 'Pears, Pineapples, Lilikoi Sorbet, Orange Juice',
+            price: ''
+          },
+          {
+            name: 'LocoCoco',
+            description: 'Pears, Haupia Sorbet, Soymilk',
+            price: ''
+          },
+          {
+            name: 'DaKeez',
+            description: 'Kiwis, Strawberries, Bananas, Apple Juice',
+            price: ''
+          },
+          {
+            name: 'WaikiKiwi',
+            description: 'Kiwi, Mango, Guava Sorbet, Guava Juice',
+            price: ''
+          },
+          {
+            name: 'MochaJava',
+            description: 'Mocha, Haupia Sorbet, Brewed Coffee, Soymilk',
+            price: ''
+          },
+          {
+            name: 'Chocolatta',
+            description: 'Chocolate, Bananas, Soymilk',
+            price: ''
+          },
+          {
+            name: 'PeanutButta',
+            description: 'Peanut Butter, Haupia Sorbet, Soymilk',
+            price: ''
+          },
+          {
+            name: 'Queens',
+            description: 'Peanut Butter, Bananas, Acai Sorbet, Soymilk',
+            price: ''
           },
         ]
       },
       {
-        name: 'Local Favorites',
-        description: '',
+        name: 'Plates',
+        description: 'Mini: 6.00 Regular: 8.00 Combo: 10.00.  All plates come with rice and salad.',
         items: [
           {
-            name: 'Big Hot Pastrami Melt',
+            name: 'Roasted Veggies',
             description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
+            price: ''
           },
           {
-            name: 'B.L.T',
+            name: 'Veggie Chili',
             description: '',
-            price: '6" : 4.50, Fottlong : 6.75'
+            price: ''
           },
           {
-            name: 'Subway Melt',
+            name: 'Malaysian',
             description: '',
-            price: '6" : 5.50, Fottlong : 8.50'
+            price: ''
           },
           {
-            name: 'Turkey Italiano',
+            name: 'Thai Veggie Curry',
             description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
+            price: ''
           },
           {
-            name: 'Turkey Breast & Black Forest Ham',
+            name: 'Eggplant Parmesan',
             description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-        ]
-      },
-      {
-        name: 'Signature Subs',
-        description: '',
-        items: [
-          {
-            name: 'Chicken & Backon Ranch Melt',
-            description: '',
-            price: '6" : 5.75, Fottlong : 9.00'
-          },
-          {
-            name: 'Steak & Cheese',
-            description: '',
-            price: '6" : 5.75, Fottlong : 9.00'
-          },
-          {
-            name: 'Sweet Onion Chicken Teriyaki',
-            description: '',
-            price: '6" : 5.50, Fottlong : 8.75'
-          },
-          {
-            name: 'Italian B.M.T',
-            description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-          {
-            name: 'Tuna',
-            description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-          {
-            name: 'Cold Cut Combo',
-            description: '',
-            price: '6" : 4.50, Fottlong : 6.75'
-          },
-          {
-            name: 'Meatball Marinara',
-            description: '',
-            price: '6" : 4.50, Fottlong : 6.75'
-          },
-          {
-            name: 'Spicy Italian',
-            description: '',
-            price: '6" : 4.50, Fottlong : 6.75'
-          },
-        ]
-      },
-      {
-        name: '6" Subway Fresh Fit Subs',
-        description: '',
-        items: [
-          {
-            name: 'Roatisserie-Style Chicken',
-            description: '',
-            price: '6" : 5.75, Fottlong : 9.00'
-          },
-          {
-            name: 'Carved Turkey',
-            description: '',
-            price: '6" : 5.75, Fottlong : 9.00'
-          },
-          {
-            name: 'Roast Beef',
-            description: '',
-            price: '6" : 5.75, Fottlong : 9.00'
-          },
-          {
-            name: 'Subway Club',
-            description: '',
-            price: '6" : 5.50, Fottlong : 8.75'
-          },
-          {
-            name: 'Oven Roasted Chicken',
-            description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-          {
-            name: 'Turkey Breast',
-            description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-          {
-            name: 'Black Forest Ham',
-            description: '',
-            price: '6" : 4.75, Fottlong : 7.75'
-          },
-          {
-            name: 'Veggie Delite',
-            description: '',
-            price: '6" : 4.50, Fottlong : 6.75'
-          },
-        ]
-      },
-      {
-        name: 'Chopped Salads',
-        description: '',
-        items: [
-          {
-            name: 'Make any 6" Sub a salad',
-            description: '',
-            price: '2.50'
-          },
-        ]
-      },
-      {
-        name: 'Make your sub DELUXE',
-        description: '',
-        items: [
-          {
-            name: 'Get 50% more Meat on your favorite Sub',
-            description: '',
-            price: '6" : 0.75, Fottlong : 1.50'
-          },
-        ]
-      },
-      {
-        name: 'Extras',
-        description: '',
-        items: [
-          {
-            name: 'Bacon',
-            description: '',
-            price: '6" : 1.00, Fottlong : 2.00'
-          },
-          {
-            name: 'Double Meat',
-            description: '',
-            price: '6" : 1.50, Fottlong : 3.00'
-          },
-          {
-            name: 'Extra Cheese',
-            description: '',
-            price: '6" : 0.30, Fottlong : 0.60'
-          },
-          {
-            name: 'Pepperoni',
-            description: '',
-            price: '6" : 0.50, Fottlong : 1.00'
-          },
-          {
-            name: 'Spicy Guacamole',
-            description: '',
-            price: '6" : 0.75, Fottlong : 1.50'
-          },
-        ]
-      },
-      {
-        name: 'Drinks & Sides',
-        description: '',
-        items: [
-          {
-            name: 'Fountain',
-            description: '',
-            price: '21 oz : 1.90, 30 oz : 2.00, 40 oz : 2.20'
-          },
-          {
-            name: 'Bottled',
-            description: '',
-            price: '2.10'
-          },
-          {
-            name: 'Milk',
-            description: '',
-            price: '1.60'
-          },
-          {
-            name: 'X2 Energy Tea',
-            description: '',
-            price: '2.75'
-          },
-          {
-            name: 'Apple Slices',
-            description: '',
-            price: '1.50'
-          },
-          {
-            name: 'Soup',
-            description: '',
-            price: '2.50'
-          },
-          {
-            name: 'Chips',
-            description: '',
-            price: '1.20'
-          },
-          {
-            name: 'Cookies',
-            description: '',
-            price: '0.65'
+            price: ''
           },
         ]
       },
     ]
   },
+
+  //Dominos
+  {
+    name: 'Dominos Express',
+    location: 'Paradise Palms',
+    latitude: 21.300953,
+    longitude: -157.815595,
+    image: 'dominos.png',
+    description: "Domino's Express brings you their well-known, tasty pizzas at a quick and convenient counter in the Paradise Palms food court. They’re dedicated to providing quality products and professional customer service to make your UH experience even more enjoyable. From a single slice to a hundred pizzas for the team, Domino’s has got you covered!",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-2:30pm',
+      tuesday: '10:00am-2:30pm',
+      wednesday: '10:00am-2:30pm',
+      thursday: '10:00am-2:30pm',
+      friday: '10:00am-2:30pm',
+    },
+    foodTypes: ["Pizza", "Wings"],
+    menus: [
+      {
+        name: 'Pizza',
+        description: '',
+        items: [
+          {
+            name: '1 Pizza 1 Topping',
+            description: '',
+            price: '17.00'
+          },
+          {
+            name: '1 Pizza 5 Toppings',
+            description: '',
+            price: '19.00'
+          },
+          {
+            name: '2 Pizzas 5 Toppings',
+            description: '',
+            price: '35.00'
+          },
+          {
+            name: 'Pizza Slice',
+            description: '',
+            price: '3.25'
+          },
+        ]
+      },
+      {
+        name: 'Pizza by the slice',
+        description: '1 Slice: $3.25 | 2 Slices: $6.50',
+        items: [
+          {
+            name: '1 slice, 20 oz. soda',
+            description: 'special',
+            price: '5.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, breadsticks',
+            description: 'special',
+            price: '6.00'
+          },
+          {
+            name: '1 slice, 20 oz. soda, 4 pc Wings',
+            description: '',
+            price: '8.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda',
+            description: '',
+            price: '7.50'
+          },
+          {
+            name: '2 slices, 20 oz. soda, breadsticks',
+            description: '',
+            price: '9.00'
+          },
+        ]
+      },
+      {
+        name: 'Specials',
+        description: '',
+        items: [
+          {
+            name: '1 Slice, 20oz Drink and breadsticks',
+            description: '',
+            price: '6.00'
+          },
+          {
+            name: '1 Personal, 20oz Drink and breadsticks',
+            description: '',
+            price: '8.00'
+          },
+          {
+            name: '2 Slices, 20oz drink and breadsticks',
+            description: '',
+            price: '9.00'
+          },
+          {
+            name: 'Chicken Alfredo, 20oz drink and breadsticks',
+            description: '',
+            price: '9.00'
+          },
+        ]
+      },
+    ]
+  },
+
+  //Green Garden
+  {
+    name: 'Green Garden',
+    location: 'Sustainability Courtyard',
+    latitude: 21.298170,
+    longitude: -157.817055,
+    image: 'green-garden.png',
+    description: "All of their homestyle recipes, including their Green Garden Burger patties and sauces, are original. Green Garden's food concept is to offer plant-based, all-vegan, organic, natural, non-GMO, and healthy meals with no onion, garlic or other additives, therefore to preserve the original, clean and pure flavors of their food. They have gluten-free offerings daily and their 100% plant-based organic food is fresh, wholesome and delicious.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-2:00pm',
+      tuesday: '10:00am-2:00pm',
+      wednesday: '10:00am-2:00pm',
+      thursday: '10:00am-2:00pm',
+      friday: '10:00am-2:00pm',
+    },
+    foodTypes: ["Vegan", "Burger"],
+    menus: [
+      {
+        name: 'Garden Burgers',
+        description: 'Make it a combo for +$2.15. Choose Side: Chili Beans, Green Salad, Home Style Potatoes. Gluten-Free option: Rice instead of bread',
+        items: [
+          {
+            name: 'Classic Burger',
+            description: 'American Style: Tasty Original Garden Patty, with pickles, original ketchup, creamy mustard sauce, coconut mayo',
+            price: '5.75'
+          },
+          {
+            name: 'Ginger Teriyaki Burger',
+            description: 'Asian-Style: Tasty Original Garden Patty, with sautŽed ginger, teriyaki sauce, coconut mayo',
+            price: '6.25'
+          },
+          {
+            name: 'Spicy Chili Burger',
+            description: 'Mexican-Style: Tasty Original Garden Patty, with spicy chili beans, cilantro, coconut mayo',
+            price: '6.45'
+          },
+        ]
+      },
+
+      {
+        name: 'Plates',
+        description: 'Our specialty dishes served with eco brown rice',
+        items: [
+          {
+            name: 'Gaia',
+            description: 'Super healthy and lite brown rice, scramble tofu, hijiki seawee, avocado, marinated beet & carrot, organic romaine, kale, coconuts chips with dressing',
+            price: '6.20 | 7.50'
+          },
+          {
+            name: 'Ginger Teriyaki',
+            description: 'Original garden patty, teriyaki sauce, marinated beet & carrot, organic romaine, kale, coconut chips with dressing',
+            price: '5.95 | 7.35'
+          },
+          {
+            name: 'Chili',
+            description: 'Brown rice, spicy mexican chili beans, marinated beet & carrot, organic romaine, kale, coconut chips with dressing',
+            price: '5.15 | 6.45'
+          },
+        ]
+      },
+      {
+        name: 'Sides',
+        description: '',
+        items: [
+          {
+            name: 'Home Style Potato',
+            description: '',
+            price: '2.45 | 4.50'
+          },
+          {
+            name: 'Chili Beans',
+            description: '',
+            price: '2.45 | 4.85'
+          },
+          {
+            name: 'Green Salad',
+            description: '',
+            price: '2.45 | 5.75'
+          },
+          {
+            name: 'Soup of the Day',
+            description: '',
+            price: '2.45 | 4.85'
+          },
+        ]
+      },
+      {
+        name: 'Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Green Haven',
+            description: 'Refreshing organic green tea & apple juice with natural yuzu citrus flavor',
+            price: '2.65'
+          },
+        ]
+      },
+    ]
+  },
+
+  //Hawaii's Fried Musubi
+  {
+    name: 'Hawaii\'s Fried Musubi',
+    location: 'Holmes Hall',
+    latitude: 21.297296,
+    longitude: -157.816007,
+    image: 'musubi.jpg',
+    description: "Making quality food has always been Hawai'i's Fried Musubis' passion from the beginning. They transform island staples with a twist so they would become local favorites. Aside from their must try menu items such as their fried musubis, tempura mushrooms, and furikake sweet potato fries, they bring to you their mouth breaking open-faced panini's, ahi poke wraps & farmers salads. These menu items are healthier but still full-flavored. Hawai'i's Fried Musubis' open-faced paninis are flattened to a light crispy delicate perfection and their lettuce wraps are a fresh alternative to their fried musubi.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-2:00pm',
+      tuesday: '10:00am-2:00pm',
+      wednesday: '10:00am-2:00pm',
+      thursday: '10:00am-2:00pm',
+      friday: '10:00am-2:00pm',
+    },
+    foodTypes: ["Musubi", "Local"],
+    menus: [
+      {
+        name: 'Fried Musubis',
+        description: '',
+        items: [
+          {
+            name: 'Fried Spicy Bomb',
+            description: '',
+            price: '12.00'
+          },
+          {
+            name: 'Fried Hawaiian Style Ahi',
+            description: '',
+            price: '12.00'
+          },
+          {
+            name: 'Fried Classic Spam',
+            description: '',
+            price: '7.00'
+          },
+          {
+            name: 'Daily/Weekly Specialty',
+            description: '',
+            price: '7.00-12.00'
+          },
+        ]
+      },
+      {
+        name: 'Open Faced Paninis',
+        description: '',
+        items: [
+          {
+            name: 'Pesto Chicken Salad',
+            description: 'with avocado',
+            price: '8.50'
+          },
+          {
+            name: 'Jalapeno Tuna Melt',
+            description: '',
+            price: '8.50'
+          },
+          {
+            name: 'Three Cheese',
+            description: 'with garlic',
+            price: '7.00'
+          },
+          {
+            name: 'Nutella and Bananas',
+            description: 'with raw honey',
+            price: '7.00'
+          },
+          {
+            name: 'Daily/Weekly Specialty',
+            description: '',
+            price: '7.00-10.00'
+          },
+        ]
+      },
+      {
+        name: 'Salads',
+        description: '',
+        items: [
+          {
+            name: 'Farmer Greens with Tuna',
+            description: '',
+            price: '8.50'
+          },
+          {
+            name: 'Chicken Avocado with Pesto',
+            description: '',
+            price: '9.50'
+          },
+          {
+            name: 'Ahi Poke Lettuce Wraps',
+            description: 'with garlic rice',
+            price: '10.50'
+          },
+        ]
+      },
+      {
+        name: 'Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Fuzzy Peach Gingerale',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: 'Traditional Gingerale',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: 'Island Favorite Gingerale',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: 'Sunset Gingerale',
+            description: '',
+            price: '4.00'
+          },
+          {
+            name: '100% Cold-Brewed Kona Coffee',
+            description: 'Cold brewed for 16 hours',
+            price: '4.00'
+          },
+          {
+            name: 'House Special Creamy',
+            description: 'Cold brew with house cream',
+            price: '4.50'
+          },
+          {
+            name: 'Kona Lava',
+            description: 'Choco-black lava sea salt caramel and cream',
+            price: '5.00'
+          },
+          {
+            name: 'Iced Mojito Kona',
+            description: 'Refreshing mix of local mints and cream',
+            price: '5.00'
+          },
+        ]
+      },
+    ]
+  },
+
+  //Honolulu Gourmet Foods
+  {
+    name: 'Honolulu Gourmet Foods',
+    location: 'Paradise Palms',
+    latitude: 21.300976,
+    longitude: -157.815640,
+    image: 'honolulu-gourmet.png',
+    description: "Honolulu Gourmet Foods features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-2:30pm',
+      tuesday: '10:00am-2:30pm',
+      wednesday: '10:00am-2:30pm',
+      thursday: '10:00am-2:30pm',
+      friday: '10:00am-2:30pm',
+    },
+    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Mexican"],
+    menus: [
+      {
+        name: 'Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Caprese',
+            description: 'Mozz Cheese, tomato & house made Pesto',
+            price: '6.75'
+          },
+          {
+            name: 'Turky, Bacon & Avacado',
+            description: 'Turkey Breast, bacon, avacado "bomb", tomato and swiss cheese on Clabatta with Lime-Mayo Spread',
+            price: '7.25'
+          },
+          {
+            name: 'Italian',
+            description: 'Ham, bacon, salami, tomato, onion, jalapeno, pepper-jack, dijonaise',
+            price: '7.25'
+          },
+          {
+            name: 'Grilled Four Cheese & Caramelized Onions',
+            description: 'provalone, Mozzerella, Swiss and American Cheese layered with sweet caramelized onions on Sourdough bread',
+            price: '5.25'
+          },
+        ]
+      },
+
+      {
+        name: 'Taco Bar & Salad Bar',
+        description: '',
+        items: [
+          {
+            name: 'Taco Bar and Salad Bar',
+            description: '',
+            price: '0.56 per ounce'
+          },
+        ]
+      },
+
+      {
+        name: 'Fresh Smoothies & Milk Teas',
+        description: '20 oz | 0.50 cents to add boba balls',
+        items: [
+          {
+            name: 'Honeydew',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Mango',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Triple Berry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Taro',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Nutella Peanut Butter',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Strawberry',
+            description: '',
+            price: '4.50'
+          },
+          {
+            name: 'Green Tea',
+            description: '',
+            price: '4.50'
+          },
+        ]
+      },
+    ]
+  },
+
+  //India Cafe
+  {
+    name: 'India Cafe',
+    location: 'Paradise Palms',
+    latitude: 21.300992,
+    longitude: -157.815684,
+    image: 'india.png',
+    description: "India Café offers something for everyone with their signature exotic South Indian and Malaysian cuisine. Daily specials include chicken curry, lamb masala, garlic shrimp, seafood curry, spinach tofu, spicy eggplant, curried potatoes, coconut cabbage & over 10 different vegetarian entrees to choose from. Spiciness ranges from mild to very hot.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:30am-4:00pm',
+      tuesday: '10:30am-4:00pm',
+      wednesday: '10:30am-4:00pm',
+      thursday: '10:30am-4:00pm',
+      friday: '10:30am-4:00pm',
+    },
+    foodTypes: ["Indian", "Curry"],
+    menus: [
+      {
+        name: 'Curry Platters',
+        description: 'All platters include rice',
+        items: [
+          {
+            name: 'Regular Meat Plate',
+            description: 'Choose 1 tasty meat and 2 sides',
+            price: '7.89'
+          },
+          {
+            name: 'Mini Meat Plate',
+            description: 'Choose 1 tasty meat and 1 side',
+            price: '6.31'
+          },
+          {
+            name: 'Regular Vegetarian',
+            description: 'Choose any 3 vegetarian/vegan entrees',
+            price: '7.49'
+          },
+          {
+            name: 'Mini Vegetarian',
+            description: 'Choose any 2 vegetarian/vegan entrees',
+            price: '5.97'
+          },
+          {
+            name: 'Raja\'s Combo',
+            description: 'Choose 2 meats and 2 sides',
+            price: '8.12'
+          },
+        ]
+      },
+      {
+        name: 'Breads/Apps',
+        description: '',
+        items: [
+          {
+            name: 'Curry Puff Samosa',
+            description: '',
+            price: '2.39'
+          },
+          {
+            name: 'Roti Parastha',
+            description: '',
+            price: '1.91'
+          },
+        ]
+      },
+      {
+        name: 'Exotic Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Hot Chai Tea',
+            description: '',
+            price: '2.39'
+          },
+          {
+            name: 'Watermelon Juice',
+            description: '',
+            price: '2.39'
+          },
+          {
+            name: 'Mango Lasai',
+            description: '',
+            price: '2.39'
+          },
+          {
+            name: 'Coconut Juice',
+            description: '',
+            price: '1.91'
+          },
+          {
+            name: 'Lychee Juice',
+            description: '',
+            price: '1.43'
+          },
+          {
+            name: 'Thai Ice Tea',
+            description: '',
+            price: '1.91'
+          },
+        ]
+      },
+    ]
+  },
+    
   //Jamba Juice
   {
     name: 'Jamba Juice',
     location: 'Campus Center',
     latitude: 21.298316,
     longitude: -157.818749,
-    image: 'le-crepe.jpg',
+    image: 'jamba.jpg',
     description: "Jamba Juice features delicious and fresh frozen fruit smoothies. Stop by for some of our nutritious smoothies today",
     reviews: [
       {
@@ -783,7 +1581,7 @@ const vendorSeeds = [
       thursday: '7:00am-5:00pm',
       friday: '7:30am-4:00pm',
     },
-    foodTypes: ["Smoothie", "Sandwich", "Flatbread", "Oatmeal", "Bistro"],
+    foodTypes: ["Smoothie", "Sandwich"],
     menus: [
       {
         name: 'Sandwiches & Wraps',
@@ -1162,121 +1960,14 @@ const vendorSeeds = [
       },
     ]
   },
-  //Honolulu Gourmet Foods
-  {
-    name: 'Honolulu Gourmet Foods',
-    location: 'Paradise Palms',
-    latitude: 21.300976,
-    longitude: -157.815640,
-    image: 'le-crepe.jpg',
-    description: "Honolulu Gourmet Foods features healthy, locally grown salads, sandwiches, and grab-and-go items at affordable prices. They are committed to using the freshest island-grown ingredients sourced directly from farmers and fishermen. Grab-and-go, breakfast items, or catering for any sized group are also available!",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
 
-    ],
-    hours: {
-      monday: '10:00am-2:30pm',
-      tuesday: '10:00am-2:30pm',
-      wednesday: '10:00am-2:30pm',
-      thursday: '10:00am-2:30pm',
-      friday: '10:00am-2:30pm',
-    },
-    foodTypes: ["Salad", "Sandwich", "Tea", "Smoothie", "Taco"],
-    menus: [
-      {
-        name: 'Sandwiches',
-        description: '',
-        items: [
-          {
-            name: 'Caprese',
-            description: 'Mozz Cheese, tomato & house made Pesto',
-            price: '6.75'
-          },
-          {
-            name: 'Turky, Bacon & Avacado',
-            description: 'Turkey Breast, bacon, avacado "bomb", tomato and swiss cheese on Clabatta with Lime-Mayo Spread',
-            price: '7.25'
-          },
-          {
-            name: 'Italian',
-            description: 'Ham, bacon, salami, tomato, onion, jalapeno, pepper-jack, dijonaise',
-            price: '7.25'
-          },
-          {
-            name: 'Grilled Four Cheese & Caramelized Onions',
-            description: 'provalone, Mozzerella, Swiss and American Cheese layered with sweet caramelized onions on Sourdough bread',
-            price: '5.25'
-          },
-        ]
-      },
-
-      {
-        name: 'Taco Bar & Salad Bar',
-        description: '',
-        items: [
-          {
-            name: 'Taco Bar and Salad Bar',
-            description: '',
-            price: '0.56 per ounce'
-          },
-        ]
-      },
-
-      {
-        name: 'Fresh Smoothies & Milk Teas',
-        description: '20 oz | 0.50 cents to add boba balls',
-        items: [
-          {
-            name: 'Honeydew',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Mango',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Triple Berry',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Taro',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Nutella Peanut Butter',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Strawberry',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Green Tea',
-            description: '',
-            price: '4.50'
-          },
-        ]
-      },
-    ]
-  },
   //L&L
   {
     name: 'L&L Hawaiian Barbecue',
     location: 'Paradise Palms',
     latitude: 21.300945,
     longitude: -157.815602,
-    image: 'le-crepe.jpg',
+    image: 'll.png',
     description: "Delicious local and Asian-American fusion cuisine served in big portions at reasonable prices! Try delicious L&L favorites like the Hawaiian Barbecue beef, chicken, or short ribs! Enjoy L&L's famous fried chicken katsu, the best in town! Grab-and-go, breakfast items and party packs for groups also available.",
     reviews: [
       {
@@ -1294,7 +1985,7 @@ const vendorSeeds = [
       thursday: '10:30am-4:30pm',
       friday: '10:30am-4:30pm',
     },
-    foodTypes: ["Local", "Chicken", "Beef", "Pork", "Seafood", "Burger", "Sandwich", "Musubi", "Saimin"],
+    foodTypes: ["Local", "Burger", "Sandwich", "Musubi"],
     menus: [
       {
         name: 'Combo Plates',
@@ -1809,242 +2500,14 @@ const vendorSeeds = [
     ]
   },
 
-  //Bale
-  {
-    name: 'Bale',
-    location: 'Hemenway Hall',
-    latitude: 21.298850,
-    longitude: -157.819614,
-    image: 'le-crepe.jpg',
-    description: "Deliciously healthy Vietnamese cuisine, local favorites, fresh baked French rolls and huge, flaky croissants at affordable prices that everyone can enjoy!",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '10:00am-8:00pm',
-      tuesday: '10:00am-8:00pm',
-      wednesday: '10:00am-8:00pm',
-      thursday: '10:00am-8:00pm',
-      friday: '10:00am-8:00pm',
-    },
-    foodTypes: ["Vietnamese", "Sandwich", "Salads",],
-    menus: [
-      {
-        name: 'Vietnamese Pho',
-        description: 'Served with rice noodles, fresh bean sprouts, basil & lemon. Add: Onion, green onion, cilantro, & jalepeno. "Vegetarian broth avaiable upon request.',
-        items: [
-          {
-            name: 'Rare Beef, Meatball & Brisket',
-            description: '',
-            price: '7.50'
-          },
-          {
-            name: 'Shreeded Chicken',
-            description: '',
-            price: '7.50'
-          },
-          {
-            name: 'Tofu & Vegetable',
-            description: 'with carrots, broccoli, and celery',
-            price: '7.50'
-          },
-        ]
-      },
-
-      {
-        name: 'Pupus',
-        description: '',
-        items: [
-          {
-            name: 'Chicken Spring Roll',
-            description: '',
-            price: '1.50'
-          },
-          {
-            name: 'Pommes Frites',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: 'Garlic Pommes Frites',
-            description: '',
-            price: '6.00'
-          },
-          {
-            name: 'Onion Rings',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: 'Chicken Tenders & Frites',
-            description: '',
-            price: '8.75'
-          },
-          {
-            name: 'Fish & Frites',
-            description: '',
-            price: '8.75'
-          },
-          {
-            name: 'Crab & Cheese Won Tons',
-            description: '',
-            price: '4.50'
-          },
-          {
-            name: 'Mac & Cheese',
-            description: '',
-            price: '4.75'
-          },
-          {
-            name: 'Asian Spicy Buffalo Wings',
-            description: '',
-            price: '6.75'
-          },
-          {
-            name: 'Mozzarella Sticks',
-            description: '',
-            price: '6.00'
-          }
-        ]
-      },
-
-      {
-        name: 'Ba-Le Banh Mi',
-        description: 'Served vietnamese style on french bread with house-made mayo, pickled daikon and carrots, cucumber, and cilantro.',
-        items: [
-          {
-            name: 'Turkey',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Ham',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Tofu',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Tuna',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Chicken',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Pastrami',
-            description: '',
-            price: '5.25'
-          },
-          {
-            name: 'Ham & Pate',
-            description: '',
-            price: '5.25'
-          },
-          {
-            name: 'Lemongrass Chicken',
-            description: '',
-            price: '5.25'
-          },
-          {
-            name: 'Roast Beef',
-            description: '',
-            price: '5.50'
-          },
-          {
-            name: 'Chicken Meatball',
-            description: '',
-            price: '5.50'
-          },
-          {
-            name: 'Kalua Pork',
-            description: '',
-            price: '5.50'
-          },
-          {
-            name: 'Vegetarian',
-            description: '',
-            price: '4.50'
-          }
-        ]
-      },
-
-      {
-        name: 'La Tour Cafe Sandwiches',
-        description: '',
-        items: [
-          {
-            name: 'Chicken Pesto Panini',
-            description: 'Baked chicken, spinach, swiss cheese, and pesto on sourdough.',
-            price: '7.00'
-          },
-          {
-            name: 'Turkey Sundried Tomato Panini',
-            description: 'Turkey, sprinach, provolone and sundried tomator spread on sourdough.',
-            price: '7.00'
-          },
-          {
-            name: 'Grilled Vegetable Panini',
-            description: 'Grilled peppers, zucchini, eggplat, spinach, provolone, and pesto on sourdough ',
-            price: '7.00'
-          },
-          {
-            name: 'Italian Sandwich',
-            description: 'Salami, prosciutoo, soppressata, capicola, arugula, and havarti on french egg roll',
-            price: '7.00'
-          },
-          {
-            name: 'Pastrami Deli Sandwich',
-            description: 'Pastrami Navel, corned beef, sauerkraut, and dijon on organic sprouted multigrain',
-            price: '7.75'
-          }
-        ]
-      },
-
-      {
-        name: 'Drinks',
-        description: '',
-        items: [
-          {
-            name: 'Black or Taro Milk Tea',
-            description: '',
-            price: '3.75'
-          },
-          {
-            name: 'Thai Tea',
-            description: '',
-            price: '4.25'
-          },
-          {
-            name: 'Boba Tea',
-            description: '',
-            price: '4.25'
-          }
-        ]
-      }
-    ]
-  },
-
   //Manoa Garden
   {
     name: 'Manoa Garden',
     location: 'Hemenway Hall',
     latitude: 21.298816,
     longitude: -157.819757,
-    image: 'le-crepe.jpg',
-    description: "The university's only watering hole!",
+    image: 'manoa-garden.jpg',
+    description: "The University's only watering hole!",
     reviews: [
       {
         user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
@@ -2266,373 +2729,13 @@ const vendorSeeds = [
     ]
   },
 
-  //The Curb
-  {
-    name: 'The Curb',
-    location: 'Paradise Palms',
-    latitude: 21.300953,
-    longitude: -157.815766,
-    image: 'le-crepe.jpg',
-    description: "The Curb seeks to inspire, to caffeinate, and to expand the coffee horizons of the campus population! Popular as a food truck and now a regular in the Paradise Palms food court, The Curb is known for their coffees sourced from farms throughout the state and roasted at Honolulu’s Downtown Coffee. Each week, they also offer a special microlot or single origin coffee from around the world roasted by Dillanos Coffee Roasters, 2011 Roast Magazine Roaster of the Year.  A daily variety of fresh pastries, vegetarian sandwiches, teas and other beverages, plus shave ice, round out the menu of this quirky favorite.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '7:00am-6:00pm',
-      tuesday: '7:00am-6:00pm',
-      wednesday: '7:00am-6:00pm',
-      thursday: '7:00am-6:00pm',
-      friday: '7:00am-5:00pm',
-    },
-    foodTypes: ["Coffee", "Tea", "Pastry", "Baked"],
-    menus: [
-      {
-        name: 'Drinks',
-        description: '',
-        items: [
-          {
-            name: 'Drip Coffee',
-            description: '',
-            price: 'S:2.15 M:2.39 L:2.87'
-          },
-          {
-            name: 'Latte',
-            description: '',
-            price: 'S:3.82 M:4.06 L:4.54'
-          },
-          {
-            name: 'Americano',
-            description: '',
-            price: 'S:2.87 L:3.82'
-          },
-          {
-            name: 'Espresso',
-            description: '',
-            price: 'S:2.87'
-          },
-          {
-            name: 'Hot Chocolate',
-            description: '',
-            price: 'S:3.34 M:3.82 L:4.30'
-          },
-          {
-            name: 'Cortado',
-            description: '',
-            price: 'S:3.34'
-          },
-          {
-            name: 'Macchiato',
-            description: '',
-            price: 'S:3.34'
-          },
-          {
-            name: 'Cappuccino',
-            description: '',
-            price: 'S:3.58'
-          },
-          {
-            name: 'Mocha',
-            description: '',
-            price: 'S:4.15 M:4.54 L:5.25'
-          },
-          {
-            name: 'White Mocha',
-            description: '',
-            price: 'S:4.15 M:4.54 L:5.25'
-          },
-          {
-            name: 'Cold Brew',
-            description: '',
-            price: 'S:2.87 L:3.34'
-          },
-          {
-            name: 'Iced Tea',
-            description: '',
-            price: 'S:2.63 L:2.87'
-          },
-          {
-            name: 'Chai Latte',
-            description: '',
-            price: 'S:4.30 L:4.54'
-          },
-          {
-            name: 'Matcha Latte Brew',
-            description: '',
-            price: 'S:4.30 L:4.54'
-          },
-          {
-            name: 'Republic Tea',
-            description: '',
-            price: 'S:1.77 L:2.24'
-          }
-        ]
-      },
-      {
-        name: 'Food',
-        description: '',
-        items: [
-          {
-            name: 'Banana Bread',
-            description: '',
-            price: '5.00'
-          },
-          {
-            name: 'Matcha Chocolate Chip Scone',
-            description: '',
-            price: '3.00'
-          },
-          {
-            name: 'Bacon Cheddar Scone',
-            description: '',
-            price: '3.00'
-          },
-          {
-            name: 'Macadamia nut white chocolate chip cookie',
-            description: '',
-            price: '2.50'
-          },
-          {
-            name: 'Snickerdoodle',
-            description: '',
-            price: '2.50'
-          },
-          {
-            name: 'Chocolate chip cookie',
-            description: '',
-            price: '2.50'
-          },
-          {
-            name: 'Papaya w/ lemon',
-            description: '',
-            price: '3.00'
-          },
-        ]
-      },
-    ]
-  },
-
-  //India Cafe
-  {
-    name: 'India Cafe',
-    location: 'Paradise Palms',
-    latitude: 21.300992,
-    longitude: -157.815684,
-    image: 'le-crepe.jpg',
-    description: "India Café offers something for everyone with their signature exotic South Indian and Malaysian cuisine. Daily specials include chicken curry, lamb masala, garlic shrimp, seafood curry, spinach tofu, spicy eggplant, curried potatoes, coconut cabbage & over 10 different vegetarian entrees to choose from. Spiciness ranges from mild to very hot.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '10:30am-4:00pm',
-      tuesday: '10:30am-4:00pm',
-      wednesday: '10:30am-4:00pm',
-      thursday: '10:30am-4:00pm',
-      friday: '10:30am-4:00pm',
-    },
-    foodTypes: ["Indian", "Curry"],
-    menus: [
-      {
-        name: 'Curry Platters',
-        description: 'All platters include rice',
-        items: [
-          {
-            name: 'Regular Meat Plate',
-            description: 'Choose 1 tasty meat and 2 sides',
-            price: '7.89'
-          },
-          {
-            name: 'Mini Meat Plate',
-            description: 'Choose 1 tasty meat and 1 side',
-            price: '6.31'
-          },
-          {
-            name: 'Regular Vegetarian',
-            description: 'Choose any 3 vegetarian/vegan entrees',
-            price: '7.49'
-          },
-          {
-            name: 'Mini Vegetarian',
-            description: 'Choose any 2 vegetarian/vegan entrees',
-            price: '5.97'
-          },
-          {
-            name: 'Raja\'s Combo',
-            description: 'Choose 2 meats and 2 sides',
-            price: '8.12'
-          },
-        ]
-      },
-      {
-        name: 'Breads/Apps',
-        description: '',
-        items: [
-          {
-            name: 'Curry Puff Samosa',
-            description: '',
-            price: '2.39'
-          },
-          {
-            name: 'Roti Parastha',
-            description: '',
-            price: '1.91'
-          },
-        ]
-      },
-      {
-        name: 'Exotic Drinks',
-        description: '',
-        items: [
-          {
-            name: 'Hot Chai Tea',
-            description: '',
-            price: '2.39'
-          },
-          {
-            name: 'Watermelon Juice',
-            description: '',
-            price: '2.39'
-          },
-          {
-            name: 'Mango Lasai',
-            description: '',
-            price: '2.39'
-          },
-          {
-            name: 'Coconut Juice',
-            description: '',
-            price: '1.91'
-          },
-          {
-            name: 'Lychee Juice',
-            description: '',
-            price: '1.43'
-          },
-          {
-            name: 'Thai Ice Tea',
-            description: '',
-            price: '1.91'
-          },
-        ]
-      },
-    ]
-  },
-
-  //Super Gyros
-  {
-    name: 'Super Gyros',
-    location: 'Paradise Palms',
-    latitude: 21.300999,
-    longitude: -157.815644,
-    image: 'le-crepe.jpg',
-    description: "Greek-style meat or vegetarian pita sandwiches, salads, smoothies, and more are quick, fresh, and healthy. The perfectly seasoned lamb and beef are cooked on a traditional vertical broiler, locking in flavor and rendering out fats.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '10:30am-4:00pm',
-      tuesday: '10:30am-4:00pm',
-      wednesday: '10:30am-4:00pm',
-      thursday: '10:30am-4:00pm',
-      friday: '10:30am-4:00pm',
-    },
-    foodTypes: ["Greek"],
-    menus: [
-      {
-        name: 'Super Gyros and Sandwiches',
-        description: '',
-        items: [
-          {
-            name: 'Gyros Sandwich',
-            description: 'Beef and lamb wrapped in pita, topped with tomatoes, onions, and tzatziki sauce',
-            price: '6.21'
-          },
-          {
-            name: 'Gyros Salad',
-            description: 'With meat and pita',
-            price: '7.88'
-          },
-          {
-            name: 'Chicken Pita Sandwich',
-            description: '',
-            price: '6.21'
-          },
-          {
-            name: 'Super Greek Salad',
-            description: 'Served with healthy portions of local romaine, tomatoes, red onions, cucumbers, warm pita slices, hummus and tzatziki sauce.',
-            price: '7.64'
-          },
-        ]
-      },
-      {
-        name: 'Super Drinks',
-        description: '',
-        items: [
-          {
-            name: 'Thai Iced Tea',
-            description: '',
-            price: '1.95'
-          },
-          {
-            name: 'Coconut Juice',
-            description: '',
-            price: '1.95'
-          },
-        ]
-      },
-      {
-        name: 'Super Sides',
-        description: '',
-        items: [
-          {
-            name: 'Bakalava',
-            description: 'A rich, sweet pastry made of layers of filo dough filled with chopped nuts and sweetened with syrup and cinnamon',
-            price: '1.43'
-          },
-          {
-            name: 'Feta Cheese',
-            description: '',
-            price: '0.72'
-          },
-          {
-            name: 'Hummus',
-            description: 'House made chic pea, garlic and herb spiced dip.',
-            price: '0.72'
-          },
-          {
-            name: 'Pita',
-            description: '',
-            price: '1.43'
-          },
-        ]
-      },
-    ]
-  },
-
   //Panda Express
   {
     name: 'Panda Express',
     location: 'Paradise Palms',
     latitude: 21.300996,
     longitude: -157.815618,
-    image: 'le-crepe.jpg',
+    image: 'panda.png',
     description: "Panda Express serves gourmet Chinese food made with only the freshest ingredients. Famous for its Orange Chicken, they also offer a number of Wok Smart entrées that contain less than 250 calories per serving, such as Shanghai Angus Steak, Kung Pao Chicken, and Broccoli Beef. Other favorites include Beijing Beef, Sweetfire Chicken Breast, and Honey Walnut Shrimp.",
     reviews: [
       {
@@ -2784,318 +2887,13 @@ const vendorSeeds = [
     ]
   },
 
-  //Dominos
-  {
-    name: 'Dominos Express',
-    location: 'Paradise Palms',
-    latitude: 21.300953,
-    longitude: -157.815595,
-    image: 'le-crepe.jpg',
-    description: "Domino's Express brings you their well-known, tasty pizzas at a quick and convenient counter in the Paradise Palms food court. They’re dedicated to providing quality products and professional customer service to make your UH experience even more enjoyable. From a single slice to a hundred pizzas for the team, Domino’s has got you covered!",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '10:00am-2:30pm',
-      tuesday: '10:00am-2:30pm',
-      wednesday: '10:00am-2:30pm',
-      thursday: '10:00am-2:30pm',
-      friday: '10:00am-2:30pm',
-    },
-    foodTypes: ["Pizza", "Wings"],
-    menus: [
-      {
-        name: 'Pizza',
-        description: '',
-        items: [
-          {
-            name: '1 Pizza 1 Topping',
-            description: '',
-            price: '17.00'
-          },
-          {
-            name: '1 Pizza 5 Toppings',
-            description: '',
-            price: '19.00'
-          },
-          {
-            name: '2 Pizzas 5 Toppings',
-            description: '',
-            price: '35.00'
-          },
-          {
-            name: 'Pizza Slice',
-            description: '',
-            price: '3.25'
-          },
-        ]
-      },
-      {
-        name: 'Pizza by the slice',
-        description: '1 Slice: $3.25 | 2 Slices: $6.50',
-        items: [
-          {
-            name: '1 slice, 20 oz. soda',
-            description: 'special',
-            price: '5.00'
-          },
-          {
-            name: '1 slice, 20 oz. soda, breadsticks',
-            description: 'special',
-            price: '6.00'
-          },
-          {
-            name: '1 slice, 20 oz. soda, 4 pc Wings',
-            description: '',
-            price: '8.50'
-          },
-          {
-            name: '2 slices, 20 oz. soda',
-            description: '',
-            price: '7.50'
-          },
-          {
-            name: '2 slices, 20 oz. soda, breadsticks',
-            description: '',
-            price: '9.00'
-          },
-        ]
-      },
-      {
-        name: 'Specials',
-        description: '',
-        items: [
-          {
-            name: '1 Slice, 20oz Drink and breadsticks',
-            description: '',
-            price: '6.00'
-          },
-          {
-            name: '1 Personal, 20oz Drink and breadsticks',
-            description: '',
-            price: '8.00'
-          },
-          {
-            name: '2 Slices, 20oz drink and breadsticks',
-            description: '',
-            price: '9.00'
-          },
-          {
-            name: 'Chicken Alfredo, 20oz drink and breadsticks',
-            description: '',
-            price: '9.00'
-          },
-        ]
-      },
-    ]
-  },
-
-  //The Bean Counter
-  {
-    name: 'The Bean Counter',
-    location: 'Shidler College of Business',
-    latitude: 21.300912,
-    longitude: -157.820191,
-    image: 'le-crepe.jpg',
-    description: "The Bean Counter serves up brewed coffee from the Hawaiian Islands and fulfills your caffeinated desires with a full service espresso bar. Feed your growling stomach with a dizzying array of bagels with homemade spreads, or chow down with our savory wraps, healthy salads and sweet treats.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '7:30am-6:00pm',
-      tuesday: '7:30am-6:00pm',
-      wednesday: '7:30am-6:00pm',
-      thursday: '7:30am-6:00pm',
-      friday: '7:30am-4:30pm',
-    },
-    foodTypes: ["Coffee", "Sandwich", "Tea"],
-    menus: [
-      {
-        name: 'Commodities',
-        description: '',
-        items: [
-          {
-            name: 'Club Wrap',
-            description: '',
-            price: '6.25'
-          },
-          {
-            name: 'Veggie Wrap',
-            description: '',
-            price: '5.25'
-          },
-          {
-            name: 'Cheese Melt',
-            description: '',
-            price: '3.65'
-          },
-          {
-            name: 'Ham Melt',
-            description: '',
-            price: '4.65'
-          },
-          {
-            name: 'Veggie Melt',
-            description: '',
-            price: '4.65'
-          },
-          {
-            name: 'PB&J or PB&Nutella',
-            description: '',
-            price: '3.95'
-          },
-          {
-            name: 'Turkey Bacon Club',
-            description: '',
-            price: '6.50'
-          },
-          {
-            name: 'Roast Beef Original',
-            description: '',
-            price: '6.75'
-          },
-          {
-            name: 'Southwest Chicken Wrap',
-            description: '',
-            price: '6.75'
-          },
-          {
-            name: 'Tuna Sammy',
-            description: '',
-            price: '5.50'
-          },
-        ]
-      },
-      {
-        name: 'Small Investments',
-        description: '',
-        items: [
-          {
-            name: 'Parfaits',
-            description: '',
-            price: '3.99'
-          },
-          {
-            name: 'Cookies',
-            description: '',
-            price: '1.80'
-          },
-          {
-            name: 'Scones',
-            description: '',
-            price: '2.95'
-          },
-          {
-            name: 'Brownies',
-            description: '',
-            price: '2.95'
-          },
-          {
-            name: 'Cereal',
-            description: '',
-            price: '2.50'
-          },
-          {
-            name: 'Oatmeal',
-            description: '',
-            price: '3.95'
-          },
-          {
-            name: 'Croissant',
-            description: '',
-            price: '2.75'
-          },
-          {
-            name: 'Chocolate Croissant',
-            description: '',
-            price: '2.95'
-          },
-        ]
-      },
-      {
-        name: 'The Business of Bagels',
-        description: '',
-        items: [
-          {
-            name: 'Flavored Cream Cheese',
-            description: '',
-            price: '3.50'
-          },
-          {
-            name: 'Plain Cream Cheese',
-            description: '',
-            price: '3.00'
-          },
-          {
-            name: 'Dry',
-            description: '',
-            price: '2.00'
-          },
-          {
-            name: 'Nutella',
-            description: '',
-            price: '3.90'
-          },
-        ]
-      },
-      {
-        name: 'Liquid Assets',
-        description: '',
-        items: [
-          {
-            name: 'Drop Coffee',
-            description: '',
-            price: 'S:1.30 M:1.59'
-          },
-          {
-            name: 'Iced Coffee',
-            description: '',
-            price: 'S:1.50 M:1:80'
-          },
-          {
-            name: 'Americano',
-            description: '',
-            price: 'S:2.90 M:3.45'
-          },
-          {
-            name: 'Machiato',
-            description: '',
-            price: 'S:3.15 M:4.00'
-          },
-          {
-            name: 'Caramel Mochiato',
-            description: '',
-            price: 'S:3.95 M:4.50'
-          },
-          {
-            name: 'Cafe au Lait',
-            description: '',
-            price: 'S:2.10 M:3.50'
-          },
-        ]
-      },
-    ]
-  },
-
   //Pizza Hut
   {
     name: 'Pizza Hut',
     location: 'Campus Center',
     latitude: 21.298246,
     longitude: -157.818495,
-    image: 'le-crepe.jpg',
+    image: 'pizza-hut.png',
     description: "Pizza is always a go-to option when you can't decide what to have for lunch. Our Pizza Hut Express location has daily pan Pizza Hut Photo pizza specials, breadsticks, and the popular Wingstreet items! Six different sauces for the wings are offered, and you can even mix and match your favorites. Who knows, you might just create a combo so great, we'll add it to our menu!",
     reviews: [
       {
@@ -3208,7 +3006,7 @@ const vendorSeeds = [
     location: 'Campus Center',
     latitude: 21.298471,
     longitude: -157.818942,
-    image: 'le-crepe.jpg',
+    image: 'simply.png',
     description: "Simply To Go is just as the name says... simple items purchased to go! Skips the lines and come here to grab sandwiches, pastries, bottled beverages, and desserts while you're on the go. Simply To Go STG carries a variety of health food brands, such as Kashi, Kopali Organics and Bare Fruit Snacks. Local brands are also in stock, like manapua from Golden Coin and gelato made by La Gelateria -- both very popular with students! If you are early enough, be sure to grab some Andagi (Okinawan Doughnut) because we run out... FAST! ",
     reviews: [
       {
@@ -3302,14 +3100,775 @@ const vendorSeeds = [
       },
     ]
   },
+    
+  //Starbucks
+  {
+    name: 'Starbucks',
+    location: 'Campus Center',
+    latitude: 21.298510,
+    longitude: -157.818887,
+    image: 'starbucks.png',
+    description: "The store serves the full Starbucks food and beverage menu including coffee and espresso beverages, Frappuccino®, and blended beverages. The range of food offerings includes breakfast, lunch and snack items such as signature sandwiches, pastries and Starbucks Petites. (Currently in Holiday Menu mode, displaying Holiday Menu)",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
 
+    ],
+    hours: {
+      monday: '6:00am-10:00pm',
+      tuesday: '6:30am-10:00pm',
+      wednesday: '6:00am-10:00pm',
+      thursday: '6:00am-10:00pm',
+      friday: '6:00am-6:00pm',
+    },
+    foodTypes: ["Coffee", "Tea", "Smoothie", "Pastry"],
+    menus: [
+      {
+        name: 'Coffee, Expresso, and Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Frostly Brewed Coffee',
+            description: '',
+            price: 'Tall: 2.30, Grande: 2.45, Venti: 2.95'
+          },
+          {
+            name: 'Iced Coffee',
+            description: 'with Vanilla or Caramel',
+            price: 'Tall: 2.65, Grande: 3.25, Venti: 3.45'
+          },
+          {
+            name: 'Cold Brew',
+            description: 'Limited Daily Availability',
+            price: 'Tall: 3.45, Grande: 3.95, Venti: 4.25'
+          },
+          {
+            name: 'Vanilla Sweet Cream Cold Brew',
+            description: '',
+            price: 'Tall: 3.75, Grande: 4.25, Venti: 4.45'
+          },
+          {
+            name: 'Flat White',
+            description: '',
+            price: 'Tall: 4.25'
+          },
+          {
+            name: 'Cappuccino',
+            description: '',
+            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
+          },
+          {
+            name: 'Caffe Amercano',
+            description: '',
+            price: 'Tall: 2.85. Grande: 2.95, Venti: 3.25'
+          },
+          {
+            name: 'Caffe Latte',
+            description: '',
+            price: 'Tall: 3.45. Grande: 4.25, Venti: 4.75'
+          },
+          {
+            name: 'Caramel Macchiato',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
+          },
+          {
+            name: 'White Chocolate Mocha',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.95, Venti: 5.25'
+          },
+        ]
+      },
+      {
+        name: 'Teavana Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Mango or Peach Tea Lemonade',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45'
+          },
+          {
+            name: 'Shaken Iced Tea',
+            description: 'Green, Black, or Caffeine-Free Passion Tango',
+            price: 'Tall: 2.45. Grande: 2.95, Venti: 3.25'
+          },
+          {
+            name: 'Full-Leaf Brewed Tea',
+            description: '',
+            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
+          },
+          {
+            name: 'Chai Tea Latte',
+            description: '',
+            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
+          },
+          {
+            name: 'Cinnamon Chai Tea Latte',
+            description: '',
+            price: 'Tall: 4.25. Grande: 4.65, Venti: 5.25'
+          },
+          {
+            name: 'Green Tea Latte',
+            description: '',
+            price: 'Tall: 3.95. Grande: 4.45, Venti: 4.95'
+          },
+        ]
+      },
+      {
+        name: 'HOLIDAY CLASSICS - Expresso, Coffee & Teavana Tea',
+        description: 'Tall -> 12oz | Grande -> 16oz | Venti -> 20oz',
+        items: [
+          {
+            name: 'Chestnut Praline Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Caramel Brulee Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Skinny Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Hot Chocolate',
+            description: '',
+            price: 'Tall: 3.75. Grande: 4.35, Venti: 4.45'
+          },
+          {
+            name: 'Eggnog Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Gingerbread Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Pumpkin Spice Latte',
+            description: '',
+            price: 'Tall: 4.45. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Holiday Spice Flat White',
+            description: '',
+            price: 'Tall: 4.45'
+          },
+          {
+            name: 'Spiced Sweet Cream',
+            description: '',
+            price: 'Tall: 3.75. Grande: 4.25, Venti: 4.45'
+          },
+          {
+            name: 'Cold Brew July 2016 Brewed Tea',
+            description: 'NEW! Limited Daily Availability',
+            price: 'Tall: 2.45. Grande: 2.75, Venti: 2.95'
+          },
+        ]
+      },
+      {
+        name: 'HOLIDAY CLASSICS - Frappuccino',
+        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
+        items: [
+          {
+            name: 'Caramel Brulee',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Peppermint Mocha',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+          {
+            name: 'Chestnut Praline',
+            description: '',
+            price: 'Tall: 4.65. Grande: 5.25, Venti: 5.65'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Frappuccino',
+        description: 'Blended Beverages (Tall -> 12oz | Grande -> 16oz | Venti -> 20oz)',
+        items: [
+          {
+            name: 'Caramel',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Mocha',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Coffee',
+            description: '',
+            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+          },
+          {
+            name: 'Java Chip',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Vanilla Bean Creme',
+            description: '',
+            price: 'Tall: 4.45. Grande: 4.95, Venti: 5.45'
+          },
+          {
+            name: 'Double Chocolaty Chip',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Strawberries & Creme',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+          {
+            name: 'Green Tea',
+            description: '',
+            price: 'Tall: 4.75. Grande: 5.25, Venti: 5.75'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Smoothies',
+        description: 'Blended with a whole banana & whey protein (contains dairy)',
+        items: [
+          {
+            name: 'Strawberry',
+            description: '',
+            price: '4.65'
+          },
+          {
+            name: 'Chocolate',
+            description: '',
+            price: '4.65'
+          },
+        ]
+      },
+      {
+        name: 'Blended & Refreshment - Starbucks Refreshers',
+        description: 'Iced Beverages (contain caffeine) (Tall -> 12oz | Grande -> 16oz | Venti -> 24oz | Trenta -> 30oz)',
+        items: [
+          {
+            name: 'Strawberry Acai',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+          {
+            name: 'Very Berry Hibiscus',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+          {
+            name: 'Cool Lime',
+            description: '',
+            price: 'Tall: 3.45. Grande: 3.95, Venti: 4.45, Trenta: 4.95'
+          },
+        ]
+      },
+      {
+        name: 'Customize Any Drink',
+        description: '',
+        items: [
+          {
+            name: 'Flavor',
+            description: '',
+            price: '0.50 cents'
+          },
+          {
+            name: 'Expresso Shot',
+            description: '',
+            price: '0.80 cents'
+          },
+          {
+            name: 'Venti Iced',
+            description: '',
+            price: 'up to 0.30 cents'
+          },
+          {
+            name: 'Substitutions',
+            description: 'Sumatra Coconut Milk,  Organic Soymilk, or (NEW) Almondmilk',
+            price: '0.60 cents'
+          },
+        ]
+      },
+    ]
+  },
+
+  //Subway
+  {
+    name: 'Subway',
+    location: 'Campus Center',
+    latitude: 21.298736,
+    longitude: -157.818852,
+    image: 'subway.jpg',
+    description: "Feeling hungry? Stop by Subway for some delicious sandwiches and salads made fresh. Subway also offers dessert and breakfast items such as pastries and cookies.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '7:00am-7:00pm',
+      tuesday: '7:00am-7:00pm',
+      wednesday: '7:00am-7:00pm',
+      thursday: '7:00am-7:00pm',
+      friday: '7:00am-7:00pm',
+    },
+    foodTypes: ["Sandwich"],
+    menus: [
+      {
+        name: 'Meal Deal',
+        description: '+$2.50 to sub price',
+        items: [
+          {
+            name: '21 oz. drink + apples or 2 Cookies or chip',
+            description: 'Swap any drink or size & pay the difference',
+            price: '2.50'
+          },
+        ]
+      },
+      {
+        name: 'Local Favorites',
+        description: '',
+        items: [
+          {
+            name: 'Big Hot Pastrami Melt',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'B.L.T',
+            description: '',
+            price: '6" : 4.50, Footlong : 6.75'
+          },
+          {
+            name: 'Subway Melt',
+            description: '',
+            price: '6" : 5.50, Footlong : 8.50'
+          },
+          {
+            name: 'Turkey Italiano',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Turkey Breast & Black Forest Ham',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+        ]
+      },
+      {
+        name: 'Signature Subs',
+        description: '',
+        items: [
+          {
+            name: 'Chicken & Backon Ranch Melt',
+            description: '',
+            price: '6" : 5.75, Footlong : 9.00'
+          },
+          {
+            name: 'Steak & Cheese',
+            description: '',
+            price: '6" : 5.75, Footlong : 9.00'
+          },
+          {
+            name: 'Sweet Onion Chicken Teriyaki',
+            description: '',
+            price: '6" : 5.50, Footlong : 8.75'
+          },
+          {
+            name: 'Italian B.M.T',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Tuna',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Cold Cut Combo',
+            description: '',
+            price: '6" : 4.50, Footlong : 6.75'
+          },
+          {
+            name: 'Meatball Marinara',
+            description: '',
+            price: '6" : 4.50, Footlong : 6.75'
+          },
+          {
+            name: 'Spicy Italian',
+            description: '',
+            price: '6" : 4.50, Footlong : 6.75'
+          },
+        ]
+      },
+      {
+        name: '6" Subway Fresh Fit Subs',
+        description: '',
+        items: [
+          {
+            name: 'Roatisserie-Style Chicken',
+            description: '',
+            price: '6" : 5.75, Footlong : 9.00'
+          },
+          {
+            name: 'Carved Turkey',
+            description: '',
+            price: '6" : 5.75, Footlong : 9.00'
+          },
+          {
+            name: 'Roast Beef',
+            description: '',
+            price: '6" : 5.75, Footlong : 9.00'
+          },
+          {
+            name: 'Subway Club',
+            description: '',
+            price: '6" : 5.50, Footlong : 8.75'
+          },
+          {
+            name: 'Oven Roasted Chicken',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Turkey Breast',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Black Forest Ham',
+            description: '',
+            price: '6" : 4.75, Footlong : 7.75'
+          },
+          {
+            name: 'Veggie Delite',
+            description: '',
+            price: '6" : 4.50, Footlong : 6.75'
+          },
+        ]
+      },
+      {
+        name: 'Chopped Salads',
+        description: '',
+        items: [
+          {
+            name: 'Make any 6" Sub a salad',
+            description: '',
+            price: '2.50'
+          },
+        ]
+      },
+      {
+        name: 'Make your sub DELUXE',
+        description: '',
+        items: [
+          {
+            name: 'Get 50% more Meat on your favorite Sub',
+            description: '',
+            price: '6" : 0.75, Footlong : 1.50'
+          },
+        ]
+      },
+      {
+        name: 'Extras',
+        description: '',
+        items: [
+          {
+            name: 'Bacon',
+            description: '',
+            price: '6" : 1.00, Footlong : 2.00'
+          },
+          {
+            name: 'Double Meat',
+            description: '',
+            price: '6" : 1.50, Footlong : 3.00'
+          },
+          {
+            name: 'Extra Cheese',
+            description: '',
+            price: '6" : 0.30, Footlong : 0.60'
+          },
+          {
+            name: 'Pepperoni',
+            description: '',
+            price: '6" : 0.50, Footlong : 1.00'
+          },
+          {
+            name: 'Spicy Guacamole',
+            description: '',
+            price: '6" : 0.75, Footlong : 1.50'
+          },
+        ]
+      },
+      {
+        name: 'Drinks & Sides',
+        description: '',
+        items: [
+          {
+            name: 'Fountain',
+            description: '',
+            price: '21 oz : 1.90, 30 oz : 2.00, 40 oz : 2.20'
+          },
+          {
+            name: 'Bottled',
+            description: '',
+            price: '2.10'
+          },
+          {
+            name: 'Milk',
+            description: '',
+            price: '1.60'
+          },
+          {
+            name: 'X2 Energy Tea',
+            description: '',
+            price: '2.75'
+          },
+          {
+            name: 'Apple Slices',
+            description: '',
+            price: '1.50'
+          },
+          {
+            name: 'Soup',
+            description: '',
+            price: '2.50'
+          },
+          {
+            name: 'Chips',
+            description: '',
+            price: '1.20'
+          },
+          {
+            name: 'Cookies',
+            description: '',
+            price: '0.65'
+          },
+        ]
+      },
+    ]
+  },
+    
+  //Super Gyros
+  {
+    name: 'Super Gyros',
+    location: 'Paradise Palms',
+    latitude: 21.300999,
+    longitude: -157.815644,
+    image: 'super-gyros.png',
+    description: "Greek-style meat or vegetarian pita sandwiches, salads, smoothies, and more are quick, fresh, and healthy. The perfectly seasoned lamb and beef are cooked on a traditional vertical broiler, locking in flavor and rendering out fats.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:30am-4:00pm',
+      tuesday: '10:30am-4:00pm',
+      wednesday: '10:30am-4:00pm',
+      thursday: '10:30am-4:00pm',
+      friday: '10:30am-4:00pm',
+    },
+    foodTypes: ["Greek"],
+    menus: [
+      {
+        name: 'Super Gyros and Sandwiches',
+        description: '',
+        items: [
+          {
+            name: 'Gyros Sandwich',
+            description: 'Beef and lamb wrapped in pita, topped with tomatoes, onions, and tzatziki sauce',
+            price: '6.21'
+          },
+          {
+            name: 'Gyros Salad',
+            description: 'With meat and pita',
+            price: '7.88'
+          },
+          {
+            name: 'Chicken Pita Sandwich',
+            description: '',
+            price: '6.21'
+          },
+          {
+            name: 'Super Greek Salad',
+            description: 'Served with healthy portions of local romaine, tomatoes, red onions, cucumbers, warm pita slices, hummus and tzatziki sauce.',
+            price: '7.64'
+          },
+        ]
+      },
+      {
+        name: 'Super Drinks',
+        description: '',
+        items: [
+          {
+            name: 'Thai Iced Tea',
+            description: '',
+            price: '1.95'
+          },
+          {
+            name: 'Coconut Juice',
+            description: '',
+            price: '1.95'
+          },
+        ]
+      },
+      {
+        name: 'Super Sides',
+        description: '',
+        items: [
+          {
+            name: 'Bakalava',
+            description: 'A rich, sweet pastry made of layers of filo dough filled with chopped nuts and sweetened with syrup and cinnamon',
+            price: '1.43'
+          },
+          {
+            name: 'Feta Cheese',
+            description: '',
+            price: '0.72'
+          },
+          {
+            name: 'Hummus',
+            description: 'House made chic pea, garlic and herb spiced dip.',
+            price: '0.72'
+          },
+          {
+            name: 'Pita',
+            description: '',
+            price: '1.43'
+          },
+        ]
+      },
+    ]
+  },
+
+  //Serg
+  {
+    name: 'Serg\'s Mexican Kitchen',
+    location: 'Krauss Hall',
+    latitude: 21.298103,
+    longitude:  -157.818195,
+    image: 'serg.jpg',
+    description: "Serg's Mexican Kitchen, \"Home of the Famous Flautas\" sells everything from nachos, quesadillas, to their mouthwatering flautas and enchiladas. Serg's placed Bronze in the 2013 Hale Aina Awards, Silver in the 2014 Hale Aina Awards and \"Best Mexican Food\" in Ka Leo, which was voted on by UH students.",
+    reviews: [
+      {
+        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+        rating: 0,
+      },
+    ],
+    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
+
+    ],
+    hours: {
+      monday: '10:00am-2:00pm',
+      tuesday: '10:00am-2:00pm',
+      wednesday: '10:00am-2:00pm',
+      thursday: '10:00am-2:00pm',
+      friday: '10:00am-2:00pm',
+    },
+    foodTypes: ["Mexican"],
+    menus: [
+      {
+        name: 'Plates',
+        description: 'All plates served with rice and beans. Meat options: Grilled Steak, Grilled Chikcne, Pork Carnitas, Al Pastor, Choirzo, Veggies, or Grilled Fish.',
+        items: [
+          {
+            name: 'Famous Flauta Plate',
+            description: '10\" Flour tortilla stuffed with meat, lightly fried, topped with avocado salsa, sour cream, quezo fresco, onions, and cilantro.',
+            price: '9.37'
+          },
+          {
+            name: 'Burrito Plate',
+            description: 'Flour tortilla filled with meat, pico de gallo, and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Quesadilla',
+            description: 'Traditional Mexican quesadilla served with meat, a side of sour cream, pico de gallo and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Carne Asada Fried',
+            description: 'French fried topped with cheese, grilled streak, pico de gallo, sour cream, queso fresco, and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Super Burrito',
+            description: 'HUGE! Flour tortilla filled with your choice of meat, rice, cheese, beans, sour cream, pico de gallo, and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Grilled Fish Burrito Plate',
+            description: 'Grilled fish, Serg\'s slaw(Lettuce, pico de gallo, cilantro, and a splash of mayo) and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Two-Taco Plate',
+            description: 'Two 6\" corn tortilla filled with meat and topped with onions and cilantro.',
+            price: '9.37'
+          },
+          {
+            name: 'Chimichanga',
+            description: 'Flour tortilla filled with rice, beans and meat, fried golden brown and topped with sour cream. Served with a side of pico de gallo and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Taco Salad',
+            description: 'Crispy tortilla bowl filled with a scoop of beans, shredded lettuce, meat, pico de gallo, sour cream, queso fresco and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Cali Burrito',
+            description: '12\" Flour tortilla filled with fries, grilled streak, cheese, sour cream, pico de gallo and guacamole.',
+            price: '9.37'
+          },
+          {
+            name: 'Sopes',
+            description: 'Two thick tortilla black bean spread, meat, sour cream, queso fresco, onions, and cilantro.',
+            price: '9.37'
+          },
+        ]
+      },
+    ]
+  },
+    
   //Uahi Island grill
   {
     name: 'Uahi Island Grill',
     location: 'Kennedy Center',
     latitude: 21.299578,
     longitude: -157.814660,
-    image: 'le-crepe.jpg',
+    image: 'uahi.jpg',
     description: "Contemporary Cuisine, Vintage Aloha: Uahi Island Grill is a locally owned and operated contemporary local style plate lunch restaurant with a new twist on local cultures and favorites using high quality ingredients. They strive for local first for all their ingredients. All their fish is fresh and locally caught; all their beef is Hawai'i Island grass fed. Scratch-made sauces and dressing are sure winners.",
     reviews: [
       {
@@ -3327,7 +3886,7 @@ const vendorSeeds = [
       thursday: '10:00am-2:00pm',
       friday: '10:00am-2:00pm',
     },
-    foodTypes: ["Local", "Fish", "Curry"],
+    foodTypes: ["Local", "Curry"],
     menus: [
       {
         name: 'Salads',
@@ -3480,360 +4039,6 @@ const vendorSeeds = [
             name: 'Lilikoi Tea',
             description: '',
             price: '3'
-          },
-        ]
-      },
-    ]
-  },
-
-  //Hawaii's Fried Musubi
-  {
-    name: 'Hawaii\'s Fried Musubi',
-    location: 'Holmes Hall (Monday, Wednesday, Friday) Krauss Hall (Tuesday, Thursday)',
-    latitude: 21.297296,
-    longitude: -157.816007,
-    image: 'le-crepe.jpg',
-    description: "Making quality food has always been Hawai'i's Fried Musubis' passion from the beginning. They transform island staples with a twist so they would become local favorites. Aside from their must try menu items such as their fried musubis, tempura mushrooms, and furikake sweet potato fries, they bring to you their mouth breaking open-faced panini's, ahi poke wraps & farmers salads. These menu items are healthier but still full-flavored. Hawai'i's Fried Musubis' open-faced paninis are flattened to a light crispy delicate perfection and their lettuce wraps are a fresh alternative to their fried musubi.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '10:00am-2:00pm',
-      tuesday: '10:00am-2:00pm',
-      wednesday: '10:00am-2:00pm',
-      thursday: '10:00am-2:00pm',
-      friday: '10:00am-2:00pm',
-    },
-    foodTypes: ["Musubi", "Local"],
-    menus: [
-      {
-        name: 'Fried Musubis',
-        description: '',
-        items: [
-          {
-            name: 'Fried Spicy Bomb',
-            description: '',
-            price: '12.00'
-          },
-          {
-            name: 'Fried Hawaiian Style Ahi',
-            description: '',
-            price: '12.00'
-          },
-          {
-            name: 'Fried Classic Spam',
-            description: '',
-            price: '7.00'
-          },
-          {
-            name: 'Daily/Weekly Specialty',
-            description: '',
-            price: '7.00-12.00'
-          },
-        ]
-      },
-      {
-        name: 'Open Faced Paninis',
-        description: '',
-        items: [
-          {
-            name: 'Pesto Chicken Salad',
-            description: 'with avocado',
-            price: '8.50'
-          },
-          {
-            name: 'Jalapeno Tuna Melt',
-            description: '',
-            price: '8.50'
-          },
-          {
-            name: 'Three Cheese',
-            description: 'with garlic',
-            price: '7.00'
-          },
-          {
-            name: 'Nutella and Bananas',
-            description: 'with raw honey',
-            price: '7.00'
-          },
-          {
-            name: 'Daily/Weekly Specialty',
-            description: '',
-            price: '7.00-10.00'
-          },
-        ]
-      },
-      {
-        name: 'Salads',
-        description: '',
-        items: [
-          {
-            name: 'Farmer Greens with Tuna',
-            description: '',
-            price: '8.50'
-          },
-          {
-            name: 'Chicken Avocado with Pesto',
-            description: '',
-            price: '9.50'
-          },
-          {
-            name: 'Ahi Poke Lettuce Wraps',
-            description: 'with garlic rice',
-            price: '10.50'
-          },
-        ]
-      },
-      {
-        name: 'Drinks',
-        description: '',
-        items: [
-          {
-            name: 'Fuzzy Peach Gingerale',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: 'Traditional Gingerale',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: 'Island Favorite Gingerale',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: 'Sunset Gingerale',
-            description: '',
-            price: '4.00'
-          },
-          {
-            name: '100% Cold-Brewed Kona Coffee',
-            description: 'Cold brewed for 16 hours',
-            price: '4.00'
-          },
-          {
-            name: 'House Special Creamy',
-            description: 'Cold brew with house cream',
-            price: '4.50'
-          },
-          {
-            name: 'Kona Lava',
-            description: 'Choco-black lava sea salt caramel and cream',
-            price: '5.00'
-          },
-          {
-            name: 'Iced Mojito Kona',
-            description: 'Refreshing mix of local mints and cream',
-            price: '5.00'
-          },
-        ]
-      },
-    ]
-  },
-
-  //DA Spot
-  {
-    name: 'Da Spot',
-    location: 'Sustainability Courtyard',
-    latitude: 21.298426,
-    longitude: -157.817042,
-    image: 'le-crepe.jpg',
-    description: "Da Spot serves an all vegetarian menu of fresh health foods from around the globe, including Hawaiian, Egyptian, Mediterranean, European, & Asian gourmet foods.",
-    reviews: [
-      {
-        user: Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-        rating: 0,
-      },
-    ],
-    favorite: [Meteor.users.findOne({ username: Meteor.settings.defaultAccount.username })._id,
-
-    ],
-    hours: {
-      monday: '8:30am-3:00pm',
-      tuesday: '8:30am-3:00pm',
-      wednesday: '8:30am-3:00pm',
-      thursday: '8:30am-3:00pm',
-      friday: '8:30am-3:00pm',
-    },
-    foodTypes: ["Smoothie", "Vegetarian"],
-    menus: [
-      {
-        name: 'Smoothies',
-        description: 'Small(16oz) 3.00  Medium(20oz) 3.50  Large(32oz) 4.00',
-        items: [
-          {
-            name: 'Sweet Dream',
-            description: 'Strawberries, Haupia, Sorbet, Soymilk',
-            price: ''
-          },
-          {
-            name: 'DaKine',
-            description: 'Strawberries, Bananas, Lilikoi Sorbet, Passion Orange Juice',
-            price: ''
-          },
-          {
-            name: 'StarBerry',
-            description: 'Strawberries, Lychee Sorbet, Guava Juice',
-            price: ''
-          },
-          {
-            name: 'StrawberryPotion',
-            description: 'Strawberries, Bananas, Soymilk',
-            price: ''
-          },
-          {
-            name: 'VeryBerryGood',
-            description: 'Strawberries, Mixberries, Bananas, Grape Juice',
-            price: ''
-          },
-          {
-            name: 'HomeGrown',
-            description: 'Strawberries, Mixberries, Guava Sorbet, Guava Juice',
-            price: ''
-          },
-          {
-            name: 'Grenade',
-            description: 'Strawberries, Pomegranate Sorbet, Grape Juice',
-            price: ''
-          },
-          {
-            name: 'SouthBerry',
-            description: 'Strawberries, Mixberries, Acai & Haupia Sorbet, Guava Juice, Soymilk',
-            price: ''
-          },
-          {
-            name: 'AlohaBerry',
-            description: 'Mixberries, Bananas, Haupia Sorbet, Guava Juice, Soymilk',
-            price: ''
-          },
-          {
-            name: 'Kalakauan',
-            description: 'Mixberries, Bananas, Pomegranate Sorbet, Apple Juice',
-            price: ''
-          },
-          {
-            name: 'CocoOno',
-            description: 'Bananas, Haupia Sorbet, Soymilk',
-            price: ''
-          },
-          {
-            name: 'LocoStyle',
-            description: 'Bananas, Acai Sorbet, Soymilk',
-            price: ''
-          },
-          {
-            name: 'MangoTango',
-            description: 'Mangoes, Bananas, Lilikoi Sorbet, Passion Orange & Lemon Juice',
-            price: ''
-          },
-          {
-            name: 'Mangolicious',
-            description: 'Mangoes, Lychee Sorbet, Passion Orange Juice',
-            price: ''
-          },
-          {
-            name: 'DaMango',
-            description: 'Mangoes, Haupia Sorbet, Orange Juice',
-            price: ''
-          },
-          {
-            name: 'Pinaco',
-            description: 'Pineapples, Haupia Sorbet, Passion Orange Juice',
-            price: ''
-          },
-          {
-            name: 'PineParadise',
-            description: 'Pineapples, Strawberries, Bananas, Apple Juice',
-            price: ''
-          },
-          {
-            name: 'OrangeSunset',
-            description: 'Peaches, Lychee Sorbet, Passion Orange Juice',
-            price: ''
-          },
-          {
-            name: 'LiquidSunshine',
-            description: 'Peaches, Pears, Acai Sorbet, Apple Juice',
-            price: ''
-          },
-          {
-            name: 'SunnySunrise',
-            description: 'Pears, Pineapples, Lilikoi Sorbet, Orange Juice',
-            price: ''
-          },
-          {
-            name: 'LocoCoco',
-            description: 'Pears, Haupia Sorbet, Soymilk',
-            price: ''
-          },
-          {
-            name: 'DaKeez',
-            description: 'Kiwis, Strawberries, Bananas, Apple Juice',
-            price: ''
-          },
-          {
-            name: 'WaikiKiwi',
-            description: 'Kiwi, Mango, Guava Sorbet, Guava Juice',
-            price: ''
-          },
-          {
-            name: 'MochaJava',
-            description: 'Mocha, Haupia Sorbet, Brewed Coffee, Soymilk',
-            price: ''
-          },
-          {
-            name: 'Chocolatta',
-            description: 'Chocolate, Bananas, Soymilk',
-            price: ''
-          },
-          {
-            name: 'PeanutButta',
-            description: 'Peanut Butter, Haupia Sorbet, Soymilk',
-            price: ''
-          },
-          {
-            name: 'Queens',
-            description: 'Peanut Butter, Bananas, Acai Sorbet, Soymilk',
-            price: ''
-          },
-        ]
-      },
-      {
-        name: 'Plates',
-        description: 'Mini: 6.00 Regular: 8.00 Combo: 10.00.  All plates come with rice and salad.',
-        items: [
-          {
-            name: 'Roasted Veggies',
-            description: '',
-            price: ''
-          },
-          {
-            name: 'Veggie Chili',
-            description: '',
-            price: ''
-          },
-          {
-            name: 'Malaysian',
-            description: '',
-            price: ''
-          },
-          {
-            name: 'Thai Veggie Curry',
-            description: '',
-            price: ''
-          },
-          {
-            name: 'Eggplant Parmesan',
-            description: '',
-            price: ''
           },
         ]
       },

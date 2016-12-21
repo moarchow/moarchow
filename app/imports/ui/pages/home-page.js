@@ -41,10 +41,16 @@ Template.Home_Page.helpers({
       let closeTime = [close[0], close[1].substring(0, 2)];
       /* changes times to 24hours */
       if (open[1].substring(2, 4) == 'pm') {
-        openTime[0] = parseInt(open[0]) + 12;
+        if(open[0]==12)
+          openTime[0] = 12;
+        else
+          openTime[0] = parseInt(open[0]) + 12;
       }
       if (close[1].substring(2, 4) == 'pm') {
-        closeTime[0] = parseInt(close[0]) + 12;
+        if(close[0]==12)
+          closeTime[0] = 12;
+        else
+          closeTime[0] = parseInt(close[0]) + 12;
       }
 
       if (currHour == openTime[0]) {
@@ -95,14 +101,31 @@ Template.Home_Page.helpers({
     });
   },
   averageRating(vendor){
-    if(vendor['reviews'].length > 1){
-      var sum = _.reduce(vendor['reviews'], function(memo, num){ return memo + num; }, 0);
-      var rating = sum/(vendor['reviews'].length -1);
+    if (vendor['reviews'].length > 1) {
+      var sum = _.reduce(vendor['reviews'], function (memo, num) {
+        return memo + num;
+      }, 0);
+      var rating = sum / (vendor['reviews'].length - 1);
       return rating;
     }
     else return 0;
   },
+  userRating(vendor){
+    const userID = Meteor.userId();
+
+    const userReview = _.find(vendor['reviews'], function (num) {
+      return num.user == userID;
+    });
+
+    if (userReview != null) return userReview.rating;
+    else return 0;
+  },
+
+  'vendorImage': function (vendor) {
+    return vendor.image;
+  },
 });
+
 Template.Home_Page.events({
 
   'click .chow-search': function (event) {
@@ -120,15 +143,18 @@ Template.Home_Page.events({
     });
     Session.set("SearchList", searchList);
   },
-  'click .remove-vendor':function(event){
-    //Remove and refresh
+
+  'click .remove-vendor': function (event) {
+    var favorite = Vendors.findOne(event.currentTarget.id).favorite;
+    var userID = Meteor.userId();
+    var index = favorite.indexOf(userID);
+    favorite.splice(index, 1)
+    Vendors.update(event.currentTarget.id, { "$set": { "favorite": favorite } });
   },
 
-
-});
-
+})
+;
 Handlebars.registerHelper("SearchList", function (input) {
   return Session.get("SearchList");
 });
-
 
